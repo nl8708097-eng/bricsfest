@@ -455,7 +455,7 @@
       font-size: 13px; color: var(--text-main); line-height: 1.7;
     }
     .apply-text strong { color: var(--text-strong); }
-    .apply-form {
+   .apply-form {
       display: flex; flex-direction: column;
       gap: 10px; font-size: 13px;
     }
@@ -465,6 +465,7 @@
     .field-label {
       font-size: 11px; text-transform: uppercase;
       letter-spacing: 0.16em; color: var(--text-muted);
+      margin-top: 10px;
     }
     .field-label span { color: var(--accent); }
     input, select, textarea {
@@ -472,6 +473,7 @@
       background: rgba(15, 23, 42, 0.92);
       padding: 9px 11px; color: var(--text-main);
       font-family: inherit; font-size: 13px; outline: none;
+      
     }
     input::placeholder, textarea::placeholder {
       color: rgba(148, 163, 184, 0.7);
@@ -483,7 +485,7 @@
     .submit-row {
       display: flex; flex-wrap: wrap;
       gap: 10px; justify-content: space-between; align-items: center;
-      margin-top: 4px;
+      margin-top: 12px;
     }
     .btn-submit {
       padding: 10px 18px; border-radius: var(--radius-pill);
@@ -995,38 +997,38 @@
   action="https://formspree.io/f/xkglkrnd" 
   method="POST"
 >
-   <div class="field-group">
+          <div class="field-group">
             <label class="field-label">ФИО режиссёра <span>*</span></label>
-            <input type="text" placeholder="Имя Фамилия" required />
+            <input type="text" name="director_name" placeholder="Имя Фамилия" required />
           </div>
-          <div class="field-group"><p></p><p></p>
+          <div class="field-group">
             <label class="field-label">Контактный e-mail <span>*</span></label>
-            <input type="email" placeholder="name@example.com" required />
+            <input type="email" name="email" placeholder="name@example.com" required />
           </div>
-          <div class="field-group"><p></p><p></p>
+          <div class="field-group">
             <label class="field-label">Страна</label>
-            <input type="text" placeholder="Страна производства / проживания" />
+            <input type="text" name="country" placeholder="Страна производства / проживания" />
           </div>
-          <div class="field-group"><p></p><p></p>
+          <div class="field-group">
             <label class="field-label">Название фильма <span>*</span></label>
-            <input type="text" placeholder="Оригинальное и/или международное название" required />
+            <input type="text" name="film_title" placeholder="Оригинальное и/или международное название" required />
           </div>
-          <div class="field-group"><p></p><p></p>
+          <div class="field-group">
             <label class="field-label">Категория</label>
-            <select>
+            <select name="category">
               <option>Игровое полнометражное кино</option>
               <option>Документальное полнометражное кино</option>
               <option>Короткий метр</option>
               <option>Специальная программа / внеконкурс</option>
             </select>
           </div>
-          <div class="field-group"><p></p><p></p>
+          <div class="field-group">
             <label class="field-label">Ссылка на кадр из фильма <span>*</span></label>
-            <input type="url" placeholder="https://..." required />
+            <input type="url" name="frame_url" placeholder="https://..." required />
           </div>
-          <div class="field-group"><p></p><p></p>
+          <div class="field-group">
             <label class="field-label">Синопсис</label>
-            <textarea placeholder="Краткое содержание фильма (до 1000 символов)"></textarea>
+            <textarea name="synopsis" placeholder="Краткое содержание фильма (до 1000 символов)"></textarea>
           </div>
           <div class="submit-row">
             <button class="btn-submit" type="submit">Отправить заявку</button>
