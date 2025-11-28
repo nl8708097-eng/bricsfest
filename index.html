@@ -112,6 +112,22 @@
       width: 8px; height: 8px; border-radius: 999px;
       background: #22c55e; box-shadow: 0 0 12px rgba(34, 197, 94, 0.9);
     }
+        .lang-switch {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--text-muted);
+    }
+    .lang-switch a {
+      opacity: 0.85;
+    }
+    .lang-switch a.current {
+      color: var(--text-strong);
+      opacity: 1;
+    }
     .burger {
       display: none; width: 36px; height: 36px; border-radius: 999px;
       border: 1px solid rgba(148, 163, 184, 0.6);
@@ -592,6 +608,11 @@
         <span class="nav-cta-dot"></span>
         Подать фильм
       </a>
+     <div class="lang-switch">
+        <a href="/en/">EN</a>
+        <span>•</span>
+        <a href="/" class="current">RU</a>
+      </div>
     </nav>
     <button class="burger" id="burger" aria-label="Открыть меню">
       <span></span>
