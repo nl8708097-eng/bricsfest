@@ -1,0 +1,1147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>BRICS+ International Film Festival • 17–27 May 2026</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="BRICS+ International Film Festival • 17–27 May 2026, Saint Petersburg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="../favicon.png">
+  <link rel="shortcut icon" href="../favicon.png" type="image/png">
+  <style>
+    :root {
+      --bg-gradient: radial-gradient(circle at top left, #3b82f6 0, transparent 50%),
+                      radial-gradient(circle at bottom right, #ec4899 0, transparent 55%),
+                      radial-gradient(circle at top right, #22c55e 0, transparent 50%);
+      --glass-bg: rgba(15, 23, 42, 0.52);
+      --glass-border: rgba(148, 163, 184, 0.4);
+      --accent: #f97316;
+      --text-main: #e5e7eb;
+      --text-muted: #9ca3af;
+      --text-strong: #f9fafb;
+      --radius-lg: 24px;
+      --radius-pill: 999px;
+      --blur-strong: 28px;
+      --shadow-soft: 0 32px 90px rgba(15, 23, 42, 0.85);
+      --header-offset: 110px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #020617;
+      color: var(--text-main);
+      min-height: 100vh;
+      overflow-x: hidden;
+      position: relative;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      inset: -20%;
+      background: var(--bg-gradient);
+      opacity: 0.9;
+      filter: blur(60px);
+      z-index: -2;
+    }
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='3' numOctaves='2' stitchTiles='noStitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
+      mix-blend-mode: soft-light;
+      pointer-events: none;
+      z-index: -1;
+    }
+    a { color: inherit; text-decoration: none; }
+    .shell { max-width: 1240px; margin: 0 auto; padding: 0 20px 80px; }
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(22px);
+      background: linear-gradient(to bottom, rgba(15,23,42,0.96), rgba(15,23,42,0.7), transparent);
+      border-bottom: 1px solid rgba(148, 163, 184, 0.25);
+    }
+    .nav-inner {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    .logo-lockup { display: flex; align-items: center; gap: 12px; }
+    .brand-logo-img { height: 55px; width: auto; display: block; border-radius: 14px; }
+    .logo-text-main {
+      font-size: 14px; font-weight: 600; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--text-muted);
+    }
+    .logo-text-sub { font-size: 12px; color: var(--text-muted); }
+    nav { display: flex; align-items: center; gap: 20px; }
+    .nav-links {
+      display: flex; gap: 14px; font-size: 12px;
+      text-transform: uppercase; letter-spacing: 0.12em;
+    }
+    .nav-links a {
+      position: relative; padding-bottom: 4px;
+      color: var(--text-muted); transition: color 0.2s ease;
+      white-space: nowrap;
+    }
+    .nav-links a::after {
+      content: ""; position: absolute; left: 0; bottom: 0;
+      width: 0; height: 2px; border-radius: 999px;
+      background: linear-gradient(90deg, #3b82f6, #ec4899);
+      transition: width 0.2s ease;
+    }
+    .nav-links a:hover { color: var(--text-strong); }
+    .nav-links a:hover::after { width: 100%; }
+    .nav-cta {
+      padding: 8px 14px; border-radius: var(--radius-pill);
+      border: 1px solid rgba(248, 250, 252, 0.15);
+      background: radial-gradient(circle at 0 0, rgba(248, 250, 252, 0.14), transparent 60%);
+      font-size: 12px; font-weight: 500; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--text-strong);
+      display: inline-flex; align-items: center; gap: 8px;
+      box-shadow: 0 12px 35px rgba(15, 23, 42, 0.9);
+    }
+    .nav-cta-dot {
+      width: 8px; height: 8px; border-radius: 999px;
+      background: #22c55e; box-shadow: 0 0 12px rgba(34, 197, 94, 0.9);
+    }
+    .lang-switch {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--text-muted);
+    }
+    .lang-switch a {
+      opacity: 0.85;
+    }
+    .lang-switch a.current {
+      color: var(--text-strong);
+      opacity: 1;
+    }
+    .burger {
+      display: none; width: 36px; height: 36px; border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      background: rgba(15, 23, 42, 0.8);
+      align-items: center; justify-content: center;
+    }
+    .burger span {
+      width: 16px; height: 2px; border-radius: 1px;
+      background: #e5e7eb; position: relative;
+    }
+    .burger span::before,
+    .burger span::after {
+      content: ""; position: absolute; left: 0;
+      width: 16px; height: 2px; border-radius: 1px; background: inherit;
+    }
+    .burger span::before { top: -5px; }
+    .burger span::after { top: 5px; }
+    .mobile-nav {
+      display: none; padding: 0 20px 12px;
+      border-bottom: 1px solid rgba(148, 163, 184, 0.25);
+      background: rgba(15, 23, 42, 0.96);
+      backdrop-filter: blur(18px);
+    }
+    .mobile-nav-links {
+      display: flex; flex-direction: column; gap: 10px;
+      padding-top: 24px;
+      font-size: 13px; text-transform: uppercase; letter-spacing: 0.16em;
+    }
+    .hero {
+      padding-top: 48px; padding-bottom: 40px;
+      display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+      gap: 32px; align-items: center;
+    }
+    .tagline {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 4px 10px 4px 4px;
+      border-radius: var(--radius-pill);
+      background: rgba(15, 23, 42, 0.8);
+      border: 1px solid rgba(148, 163, 184, 0.65);
+      backdrop-filter: blur(20px);
+      font-size: 11px; text-transform: uppercase;
+      letter-spacing: 0.18em; color: var(--text-muted);
+      margin-bottom: 18px;
+    }
+    .tagline-dot {
+      width: 24px; height: 24px; border-radius: 999px;
+      background: radial-gradient(circle at 30% 20%, #f97316, #ec4899);
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 0 24px rgba(236, 72, 153, 0.8);
+    }
+    .tagline-dot-inner {
+      width: 70%; height: 70%; border-radius: inherit;
+      background: rgba(15, 23, 42, 0.8);
+    }
+    .hero-title {
+      font-size: clamp(32px, 4vw, 42px);
+      line-height: 1.08; color: var(--text-strong);
+      letter-spacing: 0.02em; margin-bottom: 18px;
+    }
+    .hero-subtitle {
+      font-size: 16px; color: var(--text-muted);
+      max-width: 540px; line-height: 1.6; margin-bottom: 22px;
+    }
+    .hero-meta { display: flex; flex-wrap: wrap; gap: 14px; margin-bottom: 26px; }
+    .hero-pill {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 9px 14px; border-radius: var(--radius-pill);
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      background: rgba(15, 23, 42, 0.8);
+      backdrop-filter: blur(16px);
+      font-size: 13px; color: var(--text-main);
+      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.9);
+    }
+    .hero-pill-label {
+      font-size: 11px; text-transform: uppercase;
+      letter-spacing: 0.16em; color: var(--text-muted);
+    }
+    .hero-actions {
+      display: flex; flex-wrap: wrap;
+      gap: 14px; align-items: center; margin-bottom: 16px;
+    }
+    .btn-primary {
+      padding: 11px 20px; border-radius: var(--radius-pill);
+      border: none; outline: none;
+      background: radial-gradient(circle at 0 0, #3b82f6, transparent 55%),
+                  radial-gradient(circle at 100% 100%, #ec4899, transparent 55%),
+                  linear-gradient(135deg, #0f172a, #020617);
+      color: var(--text-strong); font-size: 13px; font-weight: 500;
+      letter-spacing: 0.14em; text-transform: uppercase;
+      display: inline-flex; align-items: center; gap: 10px;
+      box-shadow: 0 16px 45px rgba(15, 23, 42, 0.95);
+      cursor: pointer;
+    }
+    .btn-primary .icon {
+      width: 18px; height: 18px; border-radius: 999px;
+      background: rgba(248, 250, 252, 0.12);
+      display: inline-flex; align-items: center; justify-content: center;
+      font-size: 14px;
+    }
+    .btn-ghost {
+      padding: 11px 16px; border-radius: var(--radius-pill);
+      border: 1px solid rgba(148, 163, 184, 0.7);
+      background: rgba(15, 23, 42, 0.72);
+      color: var(--text-main); font-size: 13px;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      display: inline-flex; align-items: center; gap: 8px;
+      cursor: pointer;
+    }
+    .hero-note { font-size: 12px; color: var(--text-muted); }
+    .hero-right { position: relative; }
+    .glass-orbit {
+      position: relative; padding: 18px; border-radius: 32px;
+      background: radial-gradient(circle at 0 0, rgba(59, 130, 246, 0.35), transparent 60%),
+                  radial-gradient(circle at 100% 100%, rgba(236, 72, 153, 0.35), transparent 60%);
+      box-shadow: var(--shadow-soft); overflow: hidden;
+    }
+    .glass-orbit-inner {
+      position: relative; border-radius: 24px;
+      background: radial-gradient(circle at 20% 0, rgba(248, 250, 252, 0.14), transparent 60%),
+                  radial-gradient(circle at 80% 100%, rgba(15, 23, 42, 0.9), #020617);
+      border: 1px solid rgba(148, 163, 184, 0.65);
+      backdrop-filter: blur(var(--blur-strong));
+      padding: 18px 18px 16px; overflow: hidden;
+    }
+    .glass-orbit-inner::before {
+      content: ""; position: absolute; inset: 0;
+      background: radial-gradient(circle at 20% 20%, rgba(248, 250, 252, 0.18), transparent 65%);
+      mix-blend-mode: screen; opacity: 0.8; pointer-events: none;
+    }
+    .glass-heading {
+      font-size: 13px; letter-spacing: 0.16em;
+      text-transform: uppercase; color: var(--text-muted);
+      margin-bottom: 6px;
+    }
+    .glass-main-title {
+      font-size: 18px; font-weight: 600;
+      color: var(--text-strong); margin-bottom: 12px;
+    }
+    .glass-meta-grid {
+      display: grid; grid-template-columns: 1.2fr 1fr;
+      gap: 10px; margin-bottom: 10px;
+    }
+    .glass-chip {
+      padding: 8px 10px; border-radius: 16px;
+      background: rgba(15, 23, 42, 0.88);
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      font-size: 11px; display: flex; flex-direction: column; gap: 4px;
+    }
+    .glass-chip-label {
+      font-size: 10px; text-transform: uppercase;
+      letter-spacing: 0.16em; color: var(--text-muted);
+    }
+    .glass-chip-value { font-size: 13px; color: var(--text-main); }
+    .glass-stats { display: flex; gap: 8px; margin-bottom: 10px; }
+    .stat-pill {
+      flex: 1; padding: 6px 8px; border-radius: 14px;
+      background: rgba(15, 23, 42, 0.8);
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      font-size: 11px; display: flex; flex-direction: column; gap: 2px;
+    }
+    .stat-number { font-size: 13px; font-weight: 500; color: var(--text-strong); }
+    .stat-label { font-size: 10px; color: var(--text-muted); }
+    .glass-footer {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 10px; font-size: 11px; color: var(--text-muted);
+    }
+    .glass-pulse {
+      width: 24px; height: 24px; border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.7);
+      display: flex; align-items: center; justify-content: center;
+      position: relative; overflow: hidden;
+    }
+    .glass-pulse::before {
+      content: ""; position: absolute; inset: -40%;
+      background: conic-gradient(from 180deg, #3b82f6, #22c55e, #eab308, #ec4899, #3b82f6);
+      opacity: 0.75; animation: spin 8s linear infinite;
+    }
+    .glass-pulse-inner {
+      position: relative; width: 80%; height: 80%;
+      border-radius: inherit; background: rgba(15, 23, 42, 0.96);
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    section { margin-top: 40px;
+      scroll-margin-top: var(--header-offset);
+    }
+    .section-header {
+      display: flex; justify-content: space-between;
+      align-items: baseline; gap: 20px; margin-bottom: 20px;
+    }
+    .section-title {
+      font-size: 18px; text-transform: uppercase;
+      letter-spacing: 0.18em; color: var(--text-muted);
+    }
+    .section-subtitle {
+      font-size: 13px; color: var(--text-main); max-width: 420px;
+    }
+    .section-subtitle span { color: var(--accent); }
+    .glass-block {
+      border-radius: var(--radius-lg);
+      background: var(--glass-bg);
+      border: 1px solid var(--glass-border);
+      backdrop-filter: blur(var(--blur-strong));
+      box-shadow: var(--shadow-soft);
+      padding: 18px;
+      position: relative;
+      overflow: hidden;
+    }
+    .glass-block::before {
+      content: ""; position: absolute; inset: -30%;
+      background: radial-gradient(circle at 0 0, rgba(248, 250, 252, 0.06), transparent 55%);
+      opacity: 0.9; pointer-events: none;
+    }
+    .news-grid {
+      display: grid; grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px; font-size: 13px;
+    }
+    .news-card {
+      border-radius: 18px; padding: 12px;
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      display: flex; flex-direction: column; gap: 6px;
+    }
+    .news-tag {
+      font-size: 11px; text-transform: uppercase;
+      letter-spacing: 0.16em; color: var(--text-muted);
+    }
+    .news-title {
+      font-size: 14px; color: var(--text-strong); font-weight: 500;
+    }
+    .news-text { font-size: 13px; color: var(--text-main); }
+
+    .jury-grid {
+      display: grid; grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 14px;
+    }
+    .jury-card {
+      border-radius: 18px; padding: 12px;
+      background: rgba(15, 23, 42, 0.88);
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      display: flex; flex-direction: column; gap: 6px;
+    }
+    .jury-top { display: flex; align-items: center; gap: 10px; }
+    .jury-avatar {
+      width: 34px; height: 34px; border-radius: 999px;
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(148, 163, 184, 0.7);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 20px;
+    }
+    .jury-name { font-size: 13px; color: var(--text-strong); font-weight: 500; }
+    .jury-role { font-size: 11px; color: var(--text-muted); }
+    .jury-country { font-size: 11px; color: var(--text-muted); }
+    .jury-tagline { font-size: 11px; color: var(--text-main); }
+
+    .reglament-layout {
+      display: grid; grid-template-columns: 1.2fr 1fr;
+      gap: 16px;
+    }
+    .reg-list {
+      list-style: none; display: flex;
+      flex-direction: column; gap: 8px; font-size: 13px;
+    }
+    .reg-list li {
+      display: flex; gap: 10px; align-items: flex-start;
+    }
+    .reg-bullet {
+      width: 18px; height: 18px; border-radius: 999px;
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(148, 163, 184, 0.7);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 10px; color: var(--accent); flex-shrink: 0;
+    }
+    .reg-note { font-size: 12px; color: var(--text-muted); margin-top: 6px; }
+    .reg-pill-stack {
+      display: flex; flex-direction: column;
+      gap: 8px; font-size: 12px;
+    }
+    .reg-pill {
+      padding: 8px 10px; border-radius: 16px;
+      background: rgba(15, 23, 42, 0.92);
+      border: 1px solid rgba(148, 163, 184, 0.65);
+      display: flex; justify-content: space-between; gap: 10px;
+    }
+    .reg-pill .label {
+      text-transform: uppercase; letter-spacing: 0.16em;
+      font-size: 10px; color: var(--text-muted);
+    }
+    .reg-pill .value { font-size: 12px; color: var(--text-main); }
+
+    .awards-layout {
+      display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+      gap: 20px; align-items: center;
+    }
+    .award-text-main {
+      font-size: 14px; color: var(--text-main); line-height: 1.7;
+    }
+    .award-text-main strong { color: var(--text-strong); }
+    .award-image-wrap {
+      border-radius: 24px; overflow: hidden;
+      background: radial-gradient(circle at 0 0, rgba(251, 191, 36, 0.12), transparent 55%);
+      border: 1px solid rgba(251, 191, 36, 0.5); padding: 10px;
+    }
+    .award-image-wrap img { width: 100%; height: auto; display: block; }
+
+    .program-grid {
+      display: grid; grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+    }
+    .day-card {
+      border-radius: 18px; padding: 12px;
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      display: flex; flex-direction: column; gap: 8px;
+      font-size: 12px;
+    }
+    .day-label {
+      font-size: 11px; text-transform: uppercase;
+      letter-spacing: 0.16em; color: var(--text-muted);
+    }
+    .day-date { font-size: 13px; color: var(--text-strong); font-weight: 500; }
+    .day-items {
+      display: flex; flex-direction: column;
+      gap: 4px; margin-top: 4px;
+    }
+    .day-item {
+      display: flex; justify-content: space-between;
+      gap: 10px; color: var(--text-main);
+    }
+    .day-time {
+      font-size: 11px; color: var(--text-muted); white-space: nowrap;
+    }
+    .program-note {
+      margin-top: 10px; font-size: 12px; color: var(--text-muted);
+    }
+
+    .apply-grid {
+      display: grid; grid-template-columns: 1.1fr 1fr;
+      gap: 16px;
+    }
+    .apply-text {
+      font-size: 13px; color: var(--text-main); line-height: 1.7;
+    }
+    .apply-text strong { color: var(--text-strong); }
+    .apply-form {
+      display: flex; flex-direction: column;
+      gap: 10px; font-size: 13px;
+    }
+    .field-group {
+      display: flex; flex-direction: column; gap: 4px;
+    }
+    .field-label {
+      font-size: 11px; text-transform: uppercase;
+      letter-spacing: 0.16em; color: var(--text-muted);
+      margin-top: 10px;
+    }
+    .field-label span { color: var(--accent); }
+    input, select, textarea {
+      border-radius: 14px; border: 1px solid rgba(148, 163, 184, 0.7);
+      background: rgba(15, 23, 42, 0.92);
+      padding: 9px 11px; color: var(--text-main);
+      font-family: inherit; font-size: 13px; outline: none;
+    }
+    input::placeholder, textarea::placeholder {
+      color: rgba(148, 163, 184, 0.7);
+    }
+    textarea { min-height: 80px; resize: vertical; }
+    .form-footnote {
+      font-size: 11px; color: var(--text-muted);
+    }
+    .submit-row {
+      display: flex; flex-wrap: wrap;
+      gap: 10px; justify-content: space-between; align-items: center;
+      margin-top: 12px;
+    }
+    .btn-submit {
+      padding: 10px 18px; border-radius: var(--radius-pill);
+      border: none; background: linear-gradient(135deg, #22c55e, #16a34a);
+      color: #022c22; font-size: 13px; font-weight: 600;
+      letter-spacing: 0.14em; text-transform: uppercase;
+      cursor: pointer; box-shadow: 0 15px 40px rgba(22, 163, 74, 0.55);
+    }
+
+    .team-grid {
+      display: grid; grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+    }
+    .team-card {
+      border-radius: 18px; padding: 12px;
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      display: flex; flex-direction: column;
+      gap: 8px; font-size: 13px;
+      align-items: center; text-align: center;
+    }
+    .team-photo-wrap {
+      width: 88px; height: 88px; border-radius: 999px;
+      overflow: hidden; border: 1px solid rgba(148, 163, 184, 0.7);
+      background: rgba(15, 23, 42, 0.9);
+    }
+    .team-photo-wrap img {
+      width: 100%; height: 100%; object-fit: cover;
+    }
+    .team-name { font-size: 14px; color: var(--text-strong); font-weight: 500; }
+    .team-role { font-size: 12px; color: var(--text-main); }
+    .team-extra { font-size: 11px; color: var(--text-muted); }
+
+    footer {
+      margin-top: 40px;
+      border-top: 1px solid rgba(148, 163, 184, 0.4);
+      font-size: 11px; color: var(--text-muted);
+      width: 100%;
+      padding: 40px 0 60px;
+    }
+
+    footer a {
+      text-decoration: underline; text-decoration-style: dotted;
+      text-underline-offset: 3px;
+    }
+
+    footer > div {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 20px;
+      text-align: left;
+    }
+
+    @media (max-width: 900px) {
+      .hero { grid-template-columns: minmax(0, 1fr); }
+      .hero-right { order: -1; }
+      .glass-orbit { max-width: 420px; margin: 0 auto; }
+      .jury-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .program-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .apply-grid, .reglament-layout, .awards-layout {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .news-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .team-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (max-width: 720px) {
+      nav { display: none; }
+      .burger { display: inline-flex; }
+      .hero { padding-top: 28px; }
+      .hero-title { font-size: 28px; }
+      .jury-grid, .program-grid, .news-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .shell { padding-bottom: 56px; }
+    }
+    @media (max-width: 480px) {
+      .nav-inner { padding-inline: 16px; }
+      .shell { padding-inline: 16px; }
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="nav-inner">
+    <div class="logo-lockup">
+      <img src="../brics_icon_transparent.png"
+           alt="BRICS+ icon"
+           class="brand-logo-img" />
+      <div>
+        <div class="logo-text-main">BRICS+ INTERNATIONAL FILM FESTIVAL</div>
+        <div class="logo-text-sub">
+          <p>International Film Festival</p>
+          <p>17–27 May 2026 • Saint Petersburg</p>
+        </div>
+      </div>
+    </div>
+    <nav>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#jury">Jury</a>
+        <a href="#reglament">Regulations</a>
+        <a href="#program">Program</a>
+        <a href="#team">Team</a>
+      </div>
+      <div class="lang-switch">
+        <a href="/en/" class="current">EN</a>
+        <span>•</span>
+        <a href="/">RU</a>
+      </div>
+      <a href="#apply" class="nav-cta">
+        <span class="nav-cta-dot"></span>
+        Submit a Film
+      </a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Open menu">
+      <span></span>
+    </button>
+  </div>
+  <div class="mobile-nav" id="mobileNav">
+    <div class="mobile-nav-links">
+      <a href="#about">About</a>
+      <a href="#news">News</a>
+      <a href="#jury">Jury</a>
+      <a href="#reglament">Regulations</a>
+      <a href="#awards">Grand Prix</a>
+      <a href="#program">Program</a>
+      <a href="#apply">Submissions</a>
+      <a href="#team">Team</a>
+    </div>
+  </div>
+</header>
+
+<main class="shell">
+  <section id="about" class="hero">
+    <div>
+      <div class="tagline">
+        <div class="tagline-dot"><div class="tagline-dot-inner"></div></div>
+        BRICS+ International Film Festival
+      </div>
+      <h1 class="hero-title">
+        BRICS+ International<br />Film Festival
+      </h1>
+      <p class="hero-subtitle">
+        Author-driven, national and cross-cultural cinema united on a single festival platform.
+        Premieres, competitions, industry pitchings and special programs from BRICS+ countries.
+      </p>
+      <div class="hero-meta">
+        <div class="hero-pill">
+          <div>
+            <div class="hero-pill-label">Dates</div>
+            <div>17–27 May 2026</div>
+          </div>
+        </div>
+        <div class="hero-pill">
+          <div>
+            <div class="hero-pill-label">Host city</div>
+            <div>Saint Petersburg</div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-actions">
+        <button class="btn-primary" onclick="document.querySelector('#apply').scrollIntoView({behavior:'smooth'})">
+          Submit a film <span class="icon">↗</span>
+        </button>
+        <button class="btn-ghost" onclick="document.querySelector('#program').scrollIntoView({behavior:'smooth'})">
+          2026 Program
+        </button>
+      </div>
+      <div class="hero-note">
+        Regulations and submission form can be found below on this page. Working languages of the festival: Russian and English.
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="glass-orbit">
+        <div class="glass-orbit-inner">
+          <div class="glass-heading">BRICS+ 2026</div>
+          <div class="glass-main-title">Festival dates: 17–27 May</div>
+          <div class="glass-meta-grid">
+            <div class="glass-chip">
+              <div class="glass-chip-label">Location</div>
+              <div class="glass-chip-value">Saint Petersburg</div>
+            </div>
+            <div class="glass-chip">
+              <div class="glass-chip-label">Film submission</div>
+              <div class="glass-chip-value">Online form</div>
+            </div>
+          </div>
+          <div class="glass-stats">
+            <div class="stat-pill">
+              <div class="stat-number">60+</div>
+              <div class="stat-label">Films in the program</div>
+            </div>
+            <div class="stat-pill">
+              <div class="stat-number">15+</div>
+              <div class="stat-label">Participating countries</div>
+            </div>
+          </div>
+          <div class="glass-footer">
+            <div class="glass-pulse"><div class="glass-pulse-inner"></div></div>
+            <div class="glass-footer-text">
+              <strong>Open competition</strong><br />
+              Fiction, documentary and short films.
+            </div>
+            <div class="glass-footer-tag">BRICS+ EDITION • 2026</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="news">
+    <div class="section-header">
+      <h2 class="section-title">News</h2>
+    </div>
+    <div class="glass-block">
+      <div class="news-grid">
+        <article class="news-card">
+          <div class="news-tag">🔥 Update</div>
+          <div class="news-title">Film submissions will open soon</div>
+          <div class="news-text">
+            Starting from 1 December, films from BRICS+ countries and international co-productions
+            may be submitted to competition and non-competition sections of the festival.
+          </div>
+        </article>
+        <article class="news-card">
+          <div class="news-tag">🎉 Recognition</div>
+          <div class="news-title">Festival General Producer awarded the honorary status “BRICS Culture and Arts Ambassador”</div>
+          <div class="news-text">
+            The President of the international BRICS House network has recognized Viktoria Lukina’s contribution
+            to public diplomacy and cultural cooperation within BRICS, awarding her the title “BRICS Culture and Arts Ambassador”.
+          </div>
+        </article>
+        <article class="news-card">
+          <div class="news-tag">🎞️ Events</div>
+          <div class="news-title">Festival presented at the BRICS Public Diplomacy Leaders Forum</div>
+          <div class="news-text">
+            The festival is presented at the BRICS Public Diplomacy Leaders Forum as a platform for cultural dialogue
+            and joint film projects between the countries of the association.
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="jury">
+    <div class="section-header">
+      <h2 class="section-title">Jury</h2>
+    </div>
+    <div class="glass-block">
+      <div class="jury-grid">
+        <div class="jury-card">
+          <div class="jury-top">
+            <div class="jury-avatar">🇮🇳</div>
+            <div>
+              <div class="jury-name">Resul Pookutty</div>
+              <div class="jury-role">Sound designer, director, producer, actor</div>
+            </div>
+          </div>
+          <div class="jury-country">India</div>
+          <div class="jury-tagline">
+            Academy Award winner for Best Sound Mixing for the film “Slumdog Millionaire”.
+            In 2010 he received the Padma Shri award from the Government of India.
+          </div>
+        </div>
+        <div class="jury-card">
+          <div class="jury-top">
+            <div class="jury-avatar">🇷🇺</div>
+            <div>
+              <div class="jury-name">Nikolai Volkov</div>
+              <div class="jury-role">Cinematographer</div>
+            </div>
+          </div>
+          <div class="jury-country">Russia</div>
+          <div class="jury-tagline">
+            Honoured Artist of the Russian Federation, Professor, Head of the Cinematography Department
+            at the Saint Petersburg State University of Film and Television.
+          </div>
+        </div>
+        <div class="jury-card">
+          <div class="jury-top">
+            <div class="jury-avatar">🇷🇺</div>
+            <div>
+              <div class="jury-name">Ivan Bolotnikov</div>
+              <div class="jury-role">Film director, screenwriter, producer of fiction and documentary films</div>
+            </div>
+          </div>
+          <div class="jury-country">Russia</div>
+          <div class="jury-tagline">
+            Laureate of Russian and international film festivals. Founder and head of the film company “Studio Avtor”.
+          </div>
+        </div>
+        <div class="jury-card">
+          <div class="jury-top">
+            <div class="jury-avatar">🇨🇳</div>
+            <div>
+              <div class="jury-name">Gavin Lee</div>
+              <div class="jury-role">Film director</div>
+            </div>
+          </div>
+          <div class="jury-country">China</div>
+          <div class="jury-tagline">
+            <p>Has worked in the field of film festival organization and international agency relations for over 11 years.</p>
+            <p>Founder of MOVIEST Culture, a company engaged in the production of short and feature-length films.</p>
+          </div>
+        </div>
+        <div class="jury-card">
+          <div class="jury-top">
+            <div class="jury-avatar">🇿🇦</div>
+            <div>
+              <div class="jury-name">Thandi Davids</div>
+              <div class="jury-role">Film producer</div>
+            </div>
+          </div>
+          <div class="jury-country">South Africa</div>
+          <div class="jury-tagline">
+            <p>Selected works:</p>
+            <p>“Influence” (2020);</p>
+            <p>“Senzo: Murder of a Soccer Star” (2022).</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="reglament">
+    <div class="section-header">
+      <h2 class="section-title">Regulations</h2>
+      <p class="section-subtitle">
+        Main structure of the regulations. The full official festival regulations will be approved and published
+        later as a separate <span>PDF document</span>.
+      </p>
+    </div>
+    <div class="glass-block">
+      <div class="reglament-layout">
+        <div>
+          <ul class="reg-list">
+            <li>
+              <div class="reg-bullet">1</div>
+              <div>
+                Feature-length and short films produced in BRICS+ countries, as well as co-productions with the participation
+                of these countries, are eligible for submission.
+              </div>
+            </li>
+            <li>
+              <div class="reg-bullet">2</div>
+              <div>
+                The production year of the film will be specified in the official version of the regulations
+                (for example, not earlier than 2023).
+              </div>
+            </li>
+            <li>
+              <div class="reg-bullet">3</div>
+              <div>
+                Main competition sections: <em>fiction films</em>, <em>documentary films</em>, <em>short films</em>.
+                Special programs are held out of competition.
+              </div>
+            </li>
+            <li>
+              <div class="reg-bullet">4</div>
+              <div>
+                Working languages: Russian and English. The film must have subtitles in one of these languages.
+              </div>
+            </li>
+          </ul>
+          <div class="reg-note">
+            The full regulations of the festival (including submission deadlines, technical requirements and selection procedures)
+            will be published later as a separate document.
+          </div>
+        </div>
+        <div class="reg-pill-stack">
+          <div class="reg-pill">
+            <span class="label">Submission period</span>
+            <span class="value">1 December 2025 – 31 March 2026</span>
+          </div>
+          <div class="reg-pill">
+            <span class="label">Submission format</span>
+            <span class="value">Online form + link to a film still</span>
+          </div>
+          <div class="reg-pill">
+            <span class="label">Selection results</span>
+            <span class="value">Official program announcement — Spring 2026</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="awards">
+    <div class="section-header">
+      <h2 class="section-title">Grand Prix</h2>
+    </div>
+    <div class="awards-layout">
+      <div class="award-image-wrap">
+        <img src="../brics_award.png" alt="Grand Prix statuette of the BRICS+ International Film Festival">
+      </div>
+    </div>
+  </section>
+
+  <section id="program">
+    <div class="section-header">
+      <h2 class="section-title">Festival program</h2>
+      <p class="section-subtitle">
+        The screening schedule and events will be updated.
+      </p>
+    </div>
+    <div class="glass-block">
+      <div class="program-grid">
+        <div class="day-card">
+          <div class="day-label">Day 1</div>
+          <div class="day-date">17 May 2026 • Opening</div>
+          <div class="day-items">
+            <div class="day-item">
+              <span>Opening ceremony of the festival</span>
+              <span class="day-time">19:00</span>
+            </div>
+            <div class="day-item">
+              <span>Opening film premiere</span>
+              <span class="day-time">20:00</span>
+            </div>
+          </div>
+        </div>
+        <div class="day-card">
+          <div class="day-label">Days 2–4</div>
+          <div class="day-date">18–20 May • Competitions</div>
+          <div class="day-items">
+            <div class="day-item">
+              <span>Screenings of competition fiction films</span>
+              <span class="day-time">daytime</span>
+            </div>
+            <div class="day-item">
+              <span>Panels and Q&amp;A sessions with filmmakers</span>
+              <span class="day-time">evening</span>
+            </div>
+          </div>
+        </div>
+        <div class="day-card">
+          <div class="day-label">Days 5–7</div>
+          <div class="day-date">21–23 May • Industry</div>
+          <div class="day-items">
+            <div class="day-item">
+              <span>Pitching sessions of BRICS+ projects</span>
+              <span class="day-time">10:00–16:00</span>
+            </div>
+            <div class="day-item">
+              <span>Networking and meetings</span>
+              <span class="day-time">16:00–20:00</span>
+            </div>
+          </div>
+        </div>
+        <div class="day-card">
+          <div class="day-label">Days 8–10</div>
+          <div class="day-date">24–26 May • Special programs</div>
+          <div class="day-items">
+            <div class="day-item">
+              <span>Focus program of BRICS+ countries</span>
+              <span class="day-time">daytime</span>
+            </div>
+            <div class="day-item">
+              <span>Retrospectives and special screenings</span>
+              <span class="day-time">evening</span>
+            </div>
+          </div>
+        </div>
+        <div class="day-card">
+          <div class="day-label">Day 11</div>
+          <div class="day-date">27 May • Closing</div>
+          <div class="day-items">
+            <div class="day-item">
+              <span>Awards ceremony</span>
+              <span class="day-time">18:00</span>
+            </div>
+            <div class="day-item">
+              <span>Closing film</span>
+              <span class="day-time">20:00</span>
+            </div>
+          </div>
+        </div>
+        <div class="day-card">
+          <div class="day-label">Online</div>
+          <div class="day-date">Parallel screenings</div>
+          <div class="day-items">
+            <div class="day-item">
+              <span>Digital showcase and online screenings</span>
+              <span class="day-time">as scheduled</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="program-note">
+        The program is subject to change: exact time slots, venues and links for ticket purchase/registration
+        will be added after the final approval of the schedule.
+      </div>
+    </div>
+  </section>
+
+  <section id="apply">
+    <div class="section-header">
+      <h2 class="section-title">Submissions</h2>
+      <p class="section-subtitle">
+        Submissions for the BRICS+ International Film Festival will open on <span>1 December 2025.</span>
+      </p>
+    </div>
+    <div class="glass-block">
+      <div class="apply-grid">
+        <div class="apply-text">
+          <p>
+            To have a film considered for selection, the following is required:
+          </p>
+          <ul style="padding-left:18px; margin-bottom:10px;">
+            <li>complete the online form with information about the filmmaker and the film;</li>
+            <li>provide a valid link to a film still (or upload it to a chosen platform);</li>
+            <li>attach a synopsis and a short artistic biography;</li>
+            <li>confirm your consent to the festival regulations.</li>
+          </ul>
+          <p>
+            <strong>Important:</strong> submission of the form does not guarantee inclusion of the film in the program.
+            The final decision is made by the festival’s selection committee.
+          </p>
+        </div>
+        <form
+          action="https://formhub.dev/io/0481532f118bb61dbad992b87dc54191692a0594b8200"
+          method="POST"
+        >
+          <div class="field-group">
+            <label class="field-label">Director’s full name <span>*</span></label>
+            <input type="text" name="director_name" placeholder="First name Last name" required />
+          </div>
+          <div class="field-group">
+            <label class="field-label">Contact e-mail <span>*</span></label>
+            <input type="email" name="email" placeholder="name@example.com" required />
+          </div>
+          <div class="field-group">
+            <label class="field-label">Country</label>
+            <input type="text" name="country" placeholder="Country of production" />
+          </div>
+          <div class="field-group">
+            <label class="field-label">Film title <span>*</span></label>
+            <input type="text" name="film_title" placeholder="Original and/or international title" required />
+          </div>
+          <div class="field-group">
+            <label class="field-label">Category</label>
+            <select name="category">
+              <option>Feature fiction film</option>
+              <option>Feature documentary film</option>
+              <option>Short film</option>
+              <option>Special program / out of competition</option>
+            </select>
+          </div>
+          <div class="field-group">
+            <label class="field-label">Link to film still <span>*</span></label>
+            <input type="url" name="frame_url" placeholder="https://..." required />
+          </div>
+          <div class="field-group">
+            <label class="field-label">Link to film (file sharing) <span>*</span></label>
+            <input type="url" name="film_url" placeholder="https://..." required />
+          </div>
+          <div class="field-group">
+            <label class="field-label">Synopsis</label>
+            <textarea name="synopsis" placeholder="Short synopsis of the film (up to 1000 characters)"></textarea>
+          </div>
+          <div class="submit-row">
+            <button class="btn-submit" type="submit">Submit</button>
+            <div class="form-footnote">
+              By clicking “Submit”, you confirm your agreement with the festival regulations and personal data processing.
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section id="team">
+    <div class="section-header">
+      <h2 class="section-title">Festival team</h2>
+    </div>
+    <div class="glass-block">
+      <div class="team-grid">
+        <div class="team-card">
+          <div class="team-photo-wrap">
+            <img src="../brics_crew_viktoria.JPG" alt="Viktoria Lukina" />
+          </div>
+          <div class="team-name">Viktoria Lukina</div>
+          <div class="team-role">General Producer</div>
+          <div class="team-extra">Member of the Union of Cinematographers of Russia</div>
+        </div>
+        <div class="team-card">
+          <div class="team-photo-wrap">
+            <img src="../brics_crew_nina.JPG" alt="Nina Kochelyaeva" />
+          </div>
+          <div class="team-name">Nina Kochelyaeva</div>
+          <div class="team-role">Festival Program Director</div>
+          <div class="team-extra"></div>
+        </div>
+        <div class="team-card">
+          <div class="team-photo-wrap">
+            <img src="../brics_crew_ivan.JPG" alt="Ivan Bolotnikov" />
+          </div>
+          <div class="team-name">Ivan Bolotnikov</div>
+          <div class="team-role">Film Director and Producer</div>
+          <div class="team-extra"></div>
+        </div>
+        <div class="team-card">
+          <div class="team-photo-wrap">
+            <img src="../brics_crew_yulia.JPG" alt="Yulia Pechagina" />
+          </div>
+          <div class="team-name">Yulia Pechagina</div>
+          <div class="team-role">Executive Producer</div>
+          <div class="team-extra"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div>
+    <p>© BRICS+ International Film Festival, 2026. Saint Petersburg.</p>
+    <br><br>
+    <p><strong>Festival office contacts:</strong></p>
+    <p>
+      Viktoria Lukina — General Producer<br>
+      viktoria.brics@yandex.ru<br>
+      +7 909 957-67-78
+    </p>
+  </div>
+</footer>
+
+<script>
+  const burger = document.getElementById('burger');
+  const mobileNav = document.getElementById('mobileNav');
+  if (burger && mobileNav) {
+    burger.addEventListener('click', () => {
+      const isOpen = mobileNav.style.display === 'block';
+      mobileNav.style.display = isOpen ? 'none' : 'block';
+    });
+    mobileNav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileNav.style.display = 'none';
+      });
+    });
+  }
+</script>
+</body>
+</html>
