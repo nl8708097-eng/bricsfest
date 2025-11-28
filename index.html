@@ -970,7 +970,7 @@
     <div class="section-header">
       <h2 class="section-title">Заявки</h2>
       <p class="section-subtitle">
-        Приём заявок на участие в Международном кинофестивале стран БРИКС+ будет открыт в установленный регламентом период.
+        Приём заявок на участие в Международном кинофестивале стран БРИКС+ будет открыт с <span>1 декабря 2025 года.</span>
       </p>
     </div>
     <div class="glass-block">
@@ -979,7 +979,6 @@
           <p>
             Для рассмотрения фильма необходимо:
           </p>
-          <br />
           <ul style="padding-left:18px; margin-bottom:10px;">
             <li>заполнить онлайн-форму с информацией об авторе и фильме;</li>
             <li>указать рабочую ссылку на кадр из фильма (или загрузить на выбранную платформу);</li>
@@ -991,24 +990,28 @@
             Решение отбора принимает программный комитет фестиваля.
           </p>
         </div>
-        <form class="apply-form" onsubmit="event.preventDefault(); alert('Спасибо! Форма пока демо — реальная отправка будет подключена позже.');">
-          <div class="field-group">
+<form 
+  class="apply-form"
+  action="https://formspree.io/f/xkglkrnd" 
+  method="POST"
+>
+   <div class="field-group">
             <label class="field-label">ФИО режиссёра <span>*</span></label>
             <input type="text" placeholder="Имя Фамилия" required />
           </div>
-          <div class="field-group">
+          <div class="field-group"><p></p><p></p>
             <label class="field-label">Контактный e-mail <span>*</span></label>
             <input type="email" placeholder="name@example.com" required />
           </div>
-          <div class="field-group">
+          <div class="field-group"><p></p><p></p>
             <label class="field-label">Страна</label>
             <input type="text" placeholder="Страна производства / проживания" />
           </div>
-          <div class="field-group">
+          <div class="field-group"><p></p><p></p>
             <label class="field-label">Название фильма <span>*</span></label>
             <input type="text" placeholder="Оригинальное и/или международное название" required />
           </div>
-          <div class="field-group">
+          <div class="field-group"><p></p><p></p>
             <label class="field-label">Категория</label>
             <select>
               <option>Игровое полнометражное кино</option>
@@ -1017,11 +1020,11 @@
               <option>Специальная программа / внеконкурс</option>
             </select>
           </div>
-          <div class="field-group">
+          <div class="field-group"><p></p><p></p>
             <label class="field-label">Ссылка на кадр из фильма <span>*</span></label>
             <input type="url" placeholder="https://..." required />
           </div>
-          <div class="field-group">
+          <div class="field-group"><p></p><p></p>
             <label class="field-label">Синопсис</label>
             <textarea placeholder="Краткое содержание фильма (до 1000 символов)"></textarea>
           </div>
@@ -1031,7 +1034,7 @@
               Нажимая «Отправить», вы подтверждаете согласие с регламентом фестиваля и обработкой данных.
             </div>
           </div>
-        </form>
+</form>
       </div>
     </div>
   </section>
