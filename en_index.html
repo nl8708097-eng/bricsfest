@@ -121,6 +121,14 @@
       gap: 8px;
       color: var(--text-muted);
     }
+            .lang-switch--mobile {
+      display: none;
+      align-items: center;
+      gap: 8px;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
     .lang-switch a {
       opacity: 0.85;
     }
@@ -575,6 +583,12 @@
         grid-template-columns: minmax(0, 1fr);
       }
       .shell { padding-bottom: 56px; }
+              nav .lang-switch {
+    display: none;
+  }
+  .lang-switch--mobile {
+    display: flex;
+  }
     }
     @media (max-width: 480px) {
       .nav-inner { padding-inline: 16px; }
@@ -616,6 +630,11 @@
         <a href="index.html">RU</a>
       </div>
     </nav>
+     <div class="lang-switch lang-switch--mobile">
+        <a href="https://bricsfilmfest.com/en_index.html" class="current">EN</a>
+        <span>•</span>
+        <a href="index.html">RU</a>
+      </div>
     <button class="burger" id="burger" aria-label="Open menu">
       <span></span>
     </button>

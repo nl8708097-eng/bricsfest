@@ -121,6 +121,14 @@
       gap: 8px;
       color: var(--text-muted);
     }
+        .lang-switch--mobile {
+      display: none;
+      align-items: center;
+      gap: 8px;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
     .lang-switch a {
       opacity: 0.85;
     }
@@ -576,6 +584,12 @@
         grid-template-columns: minmax(0, 1fr);
       }
       .shell { padding-bottom: 56px; }
+        nav .lang-switch {
+    display: none;
+  }
+  .lang-switch--mobile {
+    display: flex;
+  }
     }
     @media (max-width: 480px) {
       .nav-inner { padding-inline: 16px; }
@@ -584,6 +598,7 @@
   </style>
 </head>
 <body>
+
 <header>
   <div class="nav-inner">
     <div class="logo-lockup">
@@ -596,6 +611,7 @@
         <p>17–27 мая 2026 • Санкт-Петербург</p></div>
       </div>
     </div>
+    
     <nav>
       <div class="nav-links">
         <a href="#about">О фестивале</a>
@@ -614,6 +630,11 @@
         <a href="index.html" class="current">RU</a>
       </div>
     </nav>
+     <div class="lang-switch lang-switch--mobile">
+        <a href="https://bricsfilmfest.com/en_index.html">EN</a>
+        <span>•</span>
+        <a href="index.html" class="current">RU</a>
+      </div>
     <button class="burger" id="burger" aria-label="Открыть меню">
       <span></span>
     </button>
@@ -993,7 +1014,7 @@
     <div class="section-header">
       <h2 class="section-title">Заявки</h2>
       <p class="section-subtitle">
-        Приём заявок на участие в Международном кинофестивале стран БРИКС+ будет открыт с <span>1 декабря 2025 года.</span>
+        Приём заявок на участие в Международном кинофестивале стран БРИКС+ будет открыт с <br><span>1 декабря 2025 года.</span>
       </p>
     </div>
     <div class="glass-block">
