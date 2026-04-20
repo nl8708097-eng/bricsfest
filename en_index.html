@@ -1065,7 +1065,7 @@
             <input type="email" name="email" placeholder="name@example.com" required />
           </div>
           <div class="field-group">
-            <label class="field-label">Country</label>
+            <label class="field-label">Country <span>*</span></label>
             <input type="text" name="country" placeholder="Country of production" />
           </div>
           <div class="field-group">
@@ -1073,7 +1073,7 @@
             <input type="text" name="film_title" placeholder="Original and/or international title" required />
           </div>
           <div class="field-group">
-            <label class="field-label">Category</label>
+            <label class="field-label">Category <span>*</span></label>
             <select name="category">
               <option>Feature fiction film</option>
               <option>Feature documentary film</option>
@@ -1090,8 +1090,12 @@
             <input type="url" name="film_url" placeholder="https://..." required />
           </div>
           <div class="field-group">
-            <label class="field-label">Synopsis</label>
+            <label class="field-label">Synopsis <span>*</span></label>
             <textarea name="synopsis" placeholder="Short synopsis of the film (up to 1000 characters)"></textarea>
+          </div>
+          <div class="field-group">
+            <label class="field-label">Duration <span>*</span></label>
+            <input type="text" name="duration" placeholder="Format hh:mm:ss" />
           </div>
          <input type="hidden" name="redirect-to" value="https://bricsfilmfest.com/en_thanks.html">
           <div class="submit-row">
