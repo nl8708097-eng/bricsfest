@@ -1066,14 +1066,14 @@
           </div>
           <div class="field-group">
             <label class="field-label">Country <span>*</span></label>
-            <input type="text" name="country" placeholder="Country of production" />
+            <input type="text" name="country" placeholder="Country of production" required />
           </div>
           <div class="field-group">
             <label class="field-label">Film title <span>*</span></label>
             <input type="text" name="film_title" placeholder="Original and/or international title" required />
           </div>
           <div class="field-group">
-            <label class="field-label">Category <span>*</span></label>
+            <label class="field-label">Category </label>
             <select name="category">
               <option>Feature fiction film</option>
               <option>Feature documentary film</option>
@@ -1091,11 +1091,11 @@
           </div>
           <div class="field-group">
             <label class="field-label">Synopsis <span>*</span></label>
-            <textarea name="synopsis" placeholder="Short synopsis of the film (up to 1000 characters)"></textarea>
+            <textarea name="synopsis" placeholder="Short synopsis of the film (up to 1000 characters)" required ></textarea>
           </div>
           <div class="field-group">
             <label class="field-label">Duration <span>*</span></label>
-            <input type="text" name="duration" placeholder="Format hh:mm:ss" />
+            <input type="text" name="duration" placeholder="Format hh:mm:ss" required />
           </div>
          <input type="hidden" name="redirect-to" value="https://bricsfilmfest.com/en_thanks.html">
           <div class="submit-row">

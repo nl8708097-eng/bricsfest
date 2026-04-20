@@ -1056,14 +1056,14 @@
           </div>
           <div class="field-group">
             <label class="field-label">Страна <span>*</span></label>
-            <input type="text" name="country" placeholder="Страна производства" />
+            <input type="text" name="country" placeholder="Страна производства" required />
           </div>
           <div class="field-group">
             <label class="field-label">Название фильма <span>*</span></label>
             <input type="text" name="film_title" placeholder="Оригинальное и/или международное название" required />
           </div>
           <div class="field-group">
-            <label class="field-label">Категория <span>*</span></label>
+            <label class="field-label">Категория </label>
             <select name="category">
               <option>Игровое полнометражное кино</option>
               <option>Документальное полнометражное кино</option>
@@ -1081,11 +1081,11 @@
           </div>
           <div class="field-group">
             <label class="field-label">Синопсис <span>*</span></label>
-            <textarea name="synopsis" placeholder="Краткое содержание фильма (до 1000 символов)"></textarea>
+            <textarea name="synopsis" placeholder="Краткое содержание фильма (до 1000 символов)" required ></textarea>
           </div>
           <div class="field-group">
             <label class="field-label">Хронометраж <span>*</span></label>
-            <input type="text" name="duration" placeholder="Формат чч:мм:сс" />
+            <input type="text" name="duration" placeholder="Формат чч:мм:сс" required />
           </div>
           <input type="hidden" name="redirect-to" value="https://bricsfilmfest.com/thanks.html">
           <div class="submit-row">
