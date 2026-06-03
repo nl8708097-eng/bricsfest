@@ -358,6 +358,28 @@
       border: 1px solid rgba(148, 163, 184, 0.6);
       display: flex; flex-direction: column; gap: 6px;
     }
+    .news-image-wrap {
+      width: 100%;
+      height: 170px;
+      border-radius: 14px;
+      overflow: hidden;
+      margin-bottom: 8px;
+      border: 1px solid rgba(212, 175, 55, 0.24);
+      background: rgba(8, 7, 6, 0.55);
+      box-shadow: 0 14px 34px rgba(0, 0, 0, 0.28);
+    }
+    .news-image-wrap img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+      filter: saturate(0.92) contrast(1.05);
+      transition: transform 0.35s ease, filter 0.35s ease;
+    }
+    .news-card:hover .news-image-wrap img {
+      transform: scale(1.035);
+      filter: saturate(1.02) contrast(1.08);
+    }
     .news-tag {
       font-size: 11px; text-transform: uppercase;
       letter-spacing: 0.16em; color: var(--text-muted);
@@ -798,7 +820,7 @@
 <header>
   <div class="nav-inner">
     <div class="logo-lockup">
-<img src="brics_icon_transparent.png" 
+<img src="brics_icon.png" 
      alt="BRICS+ icon" 
      class="brand-logo-img" />
       <div>
@@ -934,6 +956,9 @@
     <div class="glass-block">
       <div class="news-grid">
         <article class="news-card">
+          <div class="news-image-wrap">
+            <img src="news_submissions.png" alt="Приём заявок на кинофестиваль БРИКС+" />
+          </div>
           <div class="news-tag">🔥 Актуально</div>
           <div class="news-title">Открыт приём заявок</div>
           <div class="news-text">
@@ -942,6 +967,9 @@
           </div>
         </article>
         <article class="news-card">
+          <div class="news-image-wrap">
+            <img src="news_ambassador.png" alt="Виктория Лукина — Посол культуры и искусств БРИКС" />
+          </div>
           <div class="news-tag">🎉 Поздравляем</div>
           <div class="news-title">Генеральный продюсер фестиваля удостоена почётного статуса «Посол культуры и искусств БРИКС» </div>
           <div class="news-text">
@@ -949,6 +977,9 @@
           </div>
         </article>
         <article class="news-card">
+          <div class="news-image-wrap">
+            <img src="news_forum.png" alt="Фестиваль на форуме лидеров общественной дипломатии БРИКС" />
+          </div>
           <div class="news-tag">🎞️ События</div>
           <div class="news-title">Фестиваль на форуме лидеров общественной дипломатии БРИКС</div>
           <div class="news-text">

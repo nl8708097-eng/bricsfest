@@ -356,7 +356,17 @@
       border-radius: 18px; padding: 12px;
       background: rgba(15, 23, 42, 0.9);
       border: 1px solid rgba(148, 163, 184, 0.6);
-      display: flex; flex-direction: column; gap: 6px;
+      display: flex; flex-direction: column; gap: 8px;
+      overflow: hidden;
+    }
+    .news-image {
+      width: calc(100% + 24px);
+      height: 180px;
+      margin: -12px -12px 8px;
+      object-fit: cover;
+      display: block;
+      border-bottom: 1px solid rgba(212, 175, 55, 0.26);
+      background: rgba(212, 175, 55, 0.08);
     }
     .news-tag {
       font-size: 11px; text-transform: uppercase;
@@ -796,7 +806,7 @@
 <header>
   <div class="nav-inner">
     <div class="logo-lockup">
-      <img src="brics_icon_transparent.png"
+      <img src="brics_icon.png"
            alt="BRICS+ icon"
            class="brand-logo-img" />
       <div>
@@ -934,6 +944,7 @@
     <div class="glass-block">
       <div class="news-grid">
         <article class="news-card">
+          <img class="news-image" src="news_submissions.png" alt="Film submissions are open">
           <div class="news-tag">🔥 Update</div>
           <div class="news-title">Film submissions are open</div>
           <div class="news-text">
@@ -942,6 +953,7 @@
           </div>
         </article>
         <article class="news-card">
+          <img class="news-image" src="news_ambassador.png" alt="BRICS Culture and Arts Ambassador award">
           <div class="news-tag">🎉 Recognition</div>
           <div class="news-title">Festival General Producer awarded the honorary status “BRICS Culture and Arts Ambassador”</div>
           <div class="news-text">
@@ -950,6 +962,7 @@
           </div>
         </article>
         <article class="news-card">
+          <img class="news-image" src="news_forum.png" alt="BRICS Public Diplomacy Leaders Forum">
           <div class="news-tag">🎞️ Events</div>
           <div class="news-title">Festival presented at the BRICS Public Diplomacy Leaders Forum</div>
           <div class="news-text">
