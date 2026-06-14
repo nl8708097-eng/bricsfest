@@ -528,26 +528,66 @@
       cursor: pointer; box-shadow: 0 15px 40px rgba(22, 163, 74, 0.55);
     }
 
+    .team-showcase {
+      position: relative;
+      overflow: hidden;
+      padding: clamp(22px, 3vw, 34px);
+      border-radius: 32px;
+      background:
+        radial-gradient(circle at 12% 12%, rgba(240, 215, 122, 0.13), transparent 34%),
+        radial-gradient(circle at 90% 88%, rgba(212, 175, 55, 0.10), transparent 30%),
+        linear-gradient(145deg, rgba(18,17,15,.97), rgba(5,7,12,.94));
+      border: 1px solid rgba(212, 175, 55, 0.34);
+      box-shadow: 0 36px 100px rgba(0, 0, 0, 0.72);
+    }
+    .team-showcase::before,
+    .team-showcase::after {
+      content: "";
+      position: absolute;
+      width: 360px;
+      height: 360px;
+      border: 1px solid rgba(212, 175, 55, 0.12);
+      transform: rotate(35deg);
+      pointer-events: none;
+    }
+    .team-showcase::before { left: -250px; top: 70px; }
+    .team-showcase::after { right: -250px; bottom: 40px; }
     .team-grid {
-      display: grid; grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 14px;
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 22px;
     }
     .team-card {
-      border-radius: 18px; padding: 12px;
-      background: rgba(15, 23, 42, 0.9);
-      border: 1px solid rgba(148, 163, 184, 0.6);
-      display: flex; flex-direction: column;
-      gap: 8px; font-size: 13px;
-      align-items: center; text-align: center;
+      min-height: 100%;
+      border-radius: 26px;
+      padding: 20px 16px 18px;
+      background:
+        radial-gradient(circle at 50% 0%, rgba(240, 215, 122, 0.08), transparent 36%),
+        linear-gradient(180deg, rgba(16, 15, 13, 0.92), rgba(6, 7, 10, 0.94));
+      border: 1px solid rgba(212, 175, 55, 0.30);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      align-items: center;
+      text-align: center;
+      box-shadow: 0 24px 64px rgba(0, 0, 0, 0.48);
+      transition: transform 0.28s ease, border-color 0.28s ease, box-shadow 0.28s ease;
+    }
+    .team-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(240, 215, 122, 0.58);
+      box-shadow: 0 30px 76px rgba(0, 0, 0, 0.58);
     }
     .team-photo-wrap {
-      width: 120px;
-      height: 150px;
-      border-radius: 12px;
+      width: min(100%, 170px);
+      aspect-ratio: 4 / 5;
+      border-radius: 20px;
       overflow: hidden;
-      border: 1px solid rgba(212, 175, 55, 0.35);
-      background: rgba(15, 23, 42, 0.9);
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+      border: 1px solid rgba(240, 215, 122, 0.42);
+      background: rgba(12, 12, 12, 0.92);
+      box-shadow: 0 18px 48px rgba(0, 0, 0, 0.52);
     }
     .team-photo-wrap img {
       width: 100%;
@@ -556,10 +596,58 @@
       border: none;
       box-shadow: none;
       display: block;
+      filter: saturate(0.96) contrast(1.05);
+      transition: transform 0.35s ease, filter 0.35s ease;
     }
-    .team-name { font-size: 14px; color: var(--text-strong); font-weight: 500; }
-    .team-role { font-size: 12px; color: var(--text-main); }
-    .team-extra { font-size: 11px; color: var(--text-muted); }
+    .team-card:hover .team-photo-wrap img {
+      transform: scale(1.035);
+      filter: saturate(1.04) contrast(1.08);
+    }
+    .team-name {
+      margin-top: 8px;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: clamp(22px, 2vw, 28px);
+      line-height: 1.05;
+      color: var(--accent-soft);
+      font-weight: 700;
+    }
+    .team-role {
+      min-height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      line-height: 1.28;
+      color: var(--text-strong);
+      font-weight: 500;
+    }
+    .team-divider {
+      width: 42px;
+      height: 1px;
+      margin: 2px auto 4px;
+      background: linear-gradient(90deg, transparent, var(--accent), transparent);
+    }
+    .team-extra {
+      font-size: 13px;
+      line-height: 1.45;
+      color: var(--text-muted);
+    }
+    .team-summary {
+      position: relative;
+      z-index: 1;
+      max-width: 880px;
+      margin: 28px auto 0;
+      padding: 18px 28px;
+      border-radius: 22px;
+      border: 1px solid rgba(212, 175, 55, 0.34);
+      background: rgba(10, 10, 10, 0.62);
+      text-align: center;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: clamp(22px, 2.4vw, 30px);
+      line-height: 1.22;
+      color: var(--accent-soft);
+      box-shadow: 0 18px 56px rgba(0, 0, 0, 0.42);
+    }
 
     footer {
       margin-top: 40px;
@@ -581,6 +669,11 @@
       text-align: left;
     }
 
+
+    @media (max-width: 1100px) {
+      .team-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .team-role { min-height: auto; }
+    }
     @media (max-width: 900px) {
       .hero { grid-template-columns: minmax(0, 1fr); }
       .hero-right { order: -1; }
@@ -608,6 +701,12 @@
   .lang-switch--mobile {
     display: flex;
   }
+    }
+
+    @media (max-width: 560px) {
+      .team-grid { grid-template-columns: minmax(0, 1fr); }
+      .team-showcase { padding: 18px; border-radius: 24px; }
+      .team-summary { padding: 16px 18px; }
     }
     @media (max-width: 480px) {
       .nav-inner { padding-inline: 16px; }
@@ -1315,43 +1414,48 @@ The Grand Prix and Special Jury Awards are granted by the International Jury.
 
   <section id="team">
     <div class="section-header">
-      <h2 class="section-title">Festival team</h2>
+      <h2 class="section-title">Festival Team</h2>
     </div>
-    <div class="glass-block">
+    <div class="team-showcase">
       <div class="team-grid">
         <div class="team-card">
           <div class="team-photo-wrap">
             <img src="brics_crew_viktoria.JPG" alt="Viktoria Lukina" />
           </div>
           <div class="team-name">Viktoria Lukina</div>
-          <div class="team-role">General Producer</div>
-          <div class="team-extra">Member of the Union of Cinematographers of Russia</div>
+          <div class="team-role">General Producer of the Festival</div>
+          <div class="team-divider"></div>
+          <div class="team-extra">Journalist, film producer and public figure. Chair of the Council for Cinematography and New Media of the International BRICS Development Organization. Member of the Union of Cinematographers of Russia.</div>
         </div>
         <div class="team-card">
           <div class="team-photo-wrap">
             <img src="brics_crew_elena_avramova.jpg" alt="Elena Avramova" />
           </div>
           <div class="team-name">Elena Avramova</div>
-          <div class="team-role">Program director of the festivlal</div>
-          <div class="team-extra">Film Director, producer</div>
+          <div class="team-role">Program Director of the Festival</div>
+          <div class="team-divider"></div>
+          <div class="team-extra">Film director and producer. Expert in international film festival programming.</div>
         </div>
         <div class="team-card">
           <div class="team-photo-wrap">
             <img src="brics_crew_ivan.JPG" alt="Ivan Bolotnikov" />
           </div>
           <div class="team-name">Ivan Bolotnikov</div>
-          <div class="team-role">Film Director and Producer</div>
-          <div class="team-extra">Member of the Union of Cinematographers of Russia</div>
+          <div class="team-role">Member of the Festival Directorate</div>
+          <div class="team-divider"></div>
+          <div class="team-extra">Film director and producer. Member of the Union of Cinematographers of Russia.</div>
         </div>
         <div class="team-card">
           <div class="team-photo-wrap">
             <img src="brics_crew_yulia.JPG" alt="Yulia Pechagina" />
           </div>
           <div class="team-name">Yulia Pechagina</div>
-          <div class="team-role">Executive Producer</div>
-          <div class="team-extra"></div>
+          <div class="team-role">Executive Producer of the Festival</div>
+          <div class="team-divider"></div>
+          <div class="team-extra">Producer of international cultural and film projects.</div>
         </div>
       </div>
+      <div class="team-summary">The BRICS+ International Film Festival team brings together professionals from the film industry, cultural diplomacy and international humanitarian cooperation.</div>
     </div>
   </section>
 </main>
