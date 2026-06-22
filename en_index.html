@@ -899,7 +899,166 @@
     }
 
   
-  </style>
+  
+/* Unified Premium Headings EN */
+.premium-section-header{text-align:center;max-width:980px;margin:0 auto 34px;}
+.premium-section-kicker{display:inline-flex;align-items:center;gap:10px;color:var(--accent);font-size:11px;letter-spacing:.22em;text-transform:uppercase;}
+.premium-section-kicker:before,.premium-section-kicker:after{content:"";width:42px;height:1px;background:rgba(212,175,55,.8);}
+.premium-section-title{font-family:"Cormorant Garamond",serif;font-size:clamp(42px,5vw,66px);letter-spacing:.08em;text-transform:uppercase;color:var(--accent-soft);}
+.premium-section-title:after{content:"";display:block;width:96px;height:1px;margin:18px auto 0;background:linear-gradient(90deg,transparent,var(--accent),transparent);}
+.premium-section-description{max-width:780px;margin:18px auto 0;line-height:1.7;}
+/* Premium Jury */
+.jury-premium-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:22px;}
+.jury-premium-card{width:calc(25% - 17px);min-width:260px;border-radius:26px;padding:20px 16px;background:linear-gradient(180deg,rgba(16,15,13,.94),rgba(6,7,10,.96));border:1px solid rgba(212,175,55,.3);text-align:center;}
+.jury-photo-wrap{width:min(100%,190px);aspect-ratio:4/5;overflow:hidden;border-radius:20px;margin:0 auto 12px;border:1px solid rgba(240,215,122,.42);}
+.jury-photo-wrap img{width:100%;height:100%;object-fit:cover;}
+.jury-country-badge{color:var(--accent-soft);font-size:11px;letter-spacing:.14em;text-transform:uppercase;}
+.jury-premium-name{font-family:"Cormorant Garamond",serif;font-size:34px;color:var(--accent-soft);}
+.jury-premium-role{color:var(--text-strong);min-height:42px;}
+.jury-premium-bio{font-size:13px;line-height:1.55;color:var(--text-muted);}
+@media(max-width:1200px){.jury-premium-card{width:calc(33.333% - 15px);}}
+@media(max-width:900px){.jury-premium-card{width:calc(50% - 11px);}}
+@media(max-width:560px){.jury-premium-card{width:100%;}}
+
+
+/* Full unified premium section headings EN */
+.premium-section-description span,
+.premium-section-description a span {
+  color: var(--accent-soft);
+}
+@media (max-width: 720px) {
+  .premium-section-header { margin-bottom: 24px; }
+  .premium-section-title {
+    font-size: clamp(34px, 12vw, 48px);
+    letter-spacing: 0.045em;
+  }
+  .premium-section-kicker { letter-spacing: 0.16em; }
+  .premium-section-kicker:before,
+  .premium-section-kicker:after { width: 26px; }
+}
+
+
+/* Mobile premium menu — final polish */
+.burger{
+  border:1px solid rgba(212,175,55,.35)!important;
+  background:linear-gradient(145deg,rgba(18,17,15,.95),rgba(8,7,6,.92))!important;
+  box-shadow:0 12px 30px rgba(0,0,0,.45);
+}
+.burger span,
+.burger span::before,
+.burger span::after{
+  background:var(--accent-soft)!important;
+}
+.mobile-nav{
+  background:linear-gradient(180deg,rgba(8,7,6,.98),rgba(15,15,15,.96))!important;
+  border-top:1px solid rgba(212,175,55,.18);
+  border-bottom:1px solid rgba(212,175,55,.22)!important;
+  box-shadow:0 20px 50px rgba(0,0,0,.5);
+}
+.mobile-nav-links a{
+  padding:12px 14px;
+  border-radius:14px;
+  border:1px solid rgba(212,175,55,.12);
+  background:rgba(255,255,255,.02);
+  transition:.25s;
+}
+.mobile-nav-links a:hover{
+  border-color:rgba(212,175,55,.35);
+  background:rgba(212,175,55,.06);
+  transform:translateX(4px);
+}
+
+/* Grand Prix final polish EN */
+.grand-prix-showcase {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(22px, 3vw, 34px);
+  border-radius: 32px;
+  background:
+    radial-gradient(circle at 12% 12%, rgba(240, 215, 122, 0.13), transparent 34%),
+    radial-gradient(circle at 90% 88%, rgba(212, 175, 55, 0.10), transparent 30%),
+    linear-gradient(145deg, rgba(18,17,15,.97), rgba(5,7,12,.94));
+  border: 1px solid rgba(212, 175, 55, 0.34);
+  box-shadow: 0 36px 100px rgba(0, 0, 0, 0.72);
+}
+.grand-prix-showcase::before,
+.grand-prix-showcase::after {
+  content: "";
+  position: absolute;
+  width: 360px;
+  height: 360px;
+  border: 1px solid rgba(212, 175, 55, 0.12);
+  transform: rotate(35deg);
+  pointer-events: none;
+}
+.grand-prix-showcase::before { left: -250px; top: 70px; }
+.grand-prix-showcase::after { right: -250px; bottom: 40px; }
+
+.grand-prix-inner {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  gap: clamp(22px, 3vw, 36px);
+  align-items: center;
+}
+.grand-prix-image-wrap {
+  border-radius: 26px;
+  overflow: hidden;
+  border: 1px solid rgba(240, 215, 122, 0.42);
+  background: rgba(12, 12, 12, 0.92);
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.52);
+}
+.grand-prix-image-wrap img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transform: scale(1.08);
+  filter: saturate(0.98) contrast(1.05);
+}
+.grand-prix-description {
+  max-width: 620px;
+  margin: auto;
+  border-radius: 26px;
+  padding: clamp(20px, 3vw, 34px);
+  background:
+    radial-gradient(circle at 50% 0%, rgba(240, 215, 122, 0.08), transparent 36%),
+    linear-gradient(180deg, rgba(16, 15, 13, 0.78), rgba(6, 7, 10, 0.82));
+  border: 1px solid rgba(212, 175, 55, 0.26);
+  text-align: center;
+  box-shadow: 0 18px 56px rgba(0, 0, 0, 0.38);
+}
+.grand-prix-description::before,
+.grand-prix-description::after {
+  content: "✦";
+  display: block;
+  color: var(--accent);
+  font-size: 18px;
+  line-height: 1;
+  opacity: 0.95;
+}
+.grand-prix-description::before { margin-bottom: 18px; }
+.grand-prix-description::after { margin-top: 18px; }
+
+.grand-prix-text {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(24px, 2.35vw, 34px);
+  line-height: 1.25;
+  color: var(--text-strong);
+}
+.grand-prix-text span {
+  color: var(--accent-soft);
+  font-style: italic;
+}
+@media (max-width: 900px) {
+  .grand-prix-inner { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 560px) {
+  .grand-prix-showcase { padding: 18px; border-radius: 24px; }
+  .grand-prix-description { padding: 20px 16px; }
+}
+
+</style>
 </head>
 <body>
 <header>
@@ -919,8 +1078,10 @@
     <nav>
       <div class="nav-links">
         <a href="#about">About</a>
+        <a href="#news">News</a>
         <a href="#jury">Jury</a>
         <a href="#reglament">Regulations</a>
+        <a href="#awards">Grand Prix</a>
         <a href="#program">Program</a>
         <a href="#team">Team</a>
       </div>
@@ -1037,10 +1198,11 @@
   </section>
 
   <section id="news">
-    <div class="section-header">
-      <h2 class="section-title">News</h2>
+    <div class="premium-section-header">
+      <div class="premium-section-kicker">BRICS+ 2026</div>
+      <h2 class="premium-section-title">News</h2>
     </div>
-    <div class="glass-block">
+<div class="glass-block">
       <div class="news-grid">
         <article class="news-card">
           <img class="news-image" src="news_submissions.png" alt="Film submissions are open">
@@ -1073,96 +1235,46 @@
     </div>
   </section>
 
-  <section id="jury">
-    <div class="section-header">
-      <h2 class="section-title">Jury</h2>
-            <p class="section-subtitle">
-        The jury composition is currently being finalized.<br>
-        The updated list of jury members will be published at a later date.
-      </p>
-    </div>
-    <div class="glass-block">
-      <div class="jury-grid">
-        <div class="jury-card india">
-          <div class="jury-top">
-            <div class="jury-avatar">🇮🇳</div>
-            <div>
-              <div class="jury-name">Name Lastname</div>
-              <div class="jury-role">Sound designer, director</div>
-            </div>
-          </div>
-          <div class="jury-country">India</div>
-          <div class="jury-tagline">
-            Representative of the professional filmmaking community.
-          </div>
-        </div>
-        <div class="jury-card russia">
-          <div class="jury-top">
-            <div class="jury-avatar">🇷🇺</div>
-            <div>
-              <div class="jury-name">Name Lastname</div>
-              <div class="jury-role">Cinematographer</div>
-            </div>
-          </div>
-          <div class="jury-country">Russia</div>
-          <div class="jury-tagline">
-            Works in the field of film and media production.
-            Has experience participating in national and international projects.
-          </div>
-        </div>
-        <div class="jury-card brazil">
-          <div class="jury-top">
-            <div class="jury-avatar">🇧🇷</div>
-            <div>
-              <div class="jury-name">Name Lastname</div>
-              <div class="jury-role">Film director, screenwriter</div>
-            </div>
-          </div>
-          <div class="jury-country">Brazil</div>
-          <div class="jury-tagline">
-            Specializes in visual storytelling
-            and work with auteur and documentary cinema.
-          </div>
-        </div>
-        <div class="jury-card china">
-          <div class="jury-top">
-            <div class="jury-avatar">🇨🇳</div>
-            <div>
-              <div class="jury-name">Name Lastname</div>
-              <div class="jury-role">Film director</div>
-            </div>
-          </div>
-          <div class="jury-country">China</div>
-          <div class="jury-tagline">
-            Expert in film studies and festival selection processes.
-          </div>
-        </div>
-        <div class="jury-card south-africa">
-          <div class="jury-top">
-            <div class="jury-avatar">🇿🇦</div>
-            <div>
-              <div class="jury-name">Name Lastname</div>
-              <div class="jury-role">Film producer</div>
-            </div>
-          </div>
-          <div class="jury-country">South Africa</div>
-          <div class="jury-tagline">
-            Actively involved in international film festivals and cultural projects.
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+  
+<section id="jury">
+<div class="premium-section-header">
+<div class="premium-section-kicker">International Jury</div>
+<h2 class="premium-section-title">Festival Jury</h2>
+<p class="premium-section-description">The international jury brings together filmmakers, producers and cultural leaders from BRICS+ countries and partner states.</p>
+</div>
+<div class="team-showcase">
+<div class="jury-premium-grid">
+
+<article class="jury-premium-card"><div class="jury-photo-wrap"><img src="jury_antonio_miano_brazil.png" alt="Antonio Miano"></div><div class="jury-country-badge">🇧🇷 Brazil</div><h3 class="jury-premium-name">Antonio Miano</h3><div class="jury-premium-role">Actor, Director, Curator</div><div class="team-divider"></div><p class="jury-premium-bio">Brazilian actor and director working across cinema, theatre, and performance art. Director of short and documentary films. Curator of film programs and audience development initiatives.</p></article>
+
+<article class="jury-premium-card"><div class="jury-photo-wrap"><img src="jury_alejandro_gil_alvarez_cuba.png" alt="Alejandro Gil Álvarez"></div><div class="jury-country-badge">🇨🇺 Cuba</div><h3 class="jury-premium-name">Alejandro Gil Álvarez</h3><div class="jury-premium-role">Director, Screenwriter</div><div class="team-divider"></div><p class="jury-premium-bio">Cuban film director and screenwriter, recipient of national cultural awards and international film festival honors. Author of documentary and fiction films, television projects, and music videos. Jury member of major film festivals across Latin America and Europe.</p></article>
+
+<article class="jury-premium-card"><div class="jury-photo-wrap"><img src="jury_iran_babak_khajehpasha_iran.png" alt="Babak Khajehpasha"></div><div class="jury-country-badge">🇮🇷 Iran</div><h3 class="jury-premium-name">Babak Khajehpasha</h3><div class="jury-premium-role">Director, Screenwriter</div><div class="team-divider"></div><p class="jury-premium-bio">Iranian director and screenwriter, creator of feature films and theatre productions. His film In the Arms of the Tree was selected as Iran’s submission for the 2025 Academy Awards. Recipient of international awards at film festivals in the United States, India, Italy, and Canada, including honors for Best Director and Best Screenplay.</p></article>
+
+<article class="jury-premium-card"><div class="jury-photo-wrap"><img src="jury_jayita_ghosh_india.png" alt="Jayita Ghosh"></div><div class="jury-country-badge">🇮🇳 India</div><h3 class="jury-premium-name">Jayita Ghosh</h3><div class="jury-premium-role">International Cultural Relations Expert</div><div class="team-divider"></div><p class="jury-premium-bio">Indian expert in cinema, international communications, and cultural diplomacy. Leads international initiatives aimed at strengthening cooperation between creative industries, business communities, and public institutions. Actively promotes cultural exchange and international film collaboration.</p></article>
+
+<article class="jury-premium-card"><div class="jury-photo-wrap"><img src="jury_vladimir_zinkevich_belarus.png" alt="Vladimir Zinkevich"></div><div class="jury-country-badge">🇧🇾 Belarus</div><h3 class="jury-premium-name">Vladimir Zinkevich</h3><div class="jury-premium-role">Film Director, Screenwriter</div><div class="team-divider"></div><p class="jury-premium-bio">Belarusian film director and screenwriter, founder of the production company Avantdrive. Director of the acclaimed films Spice Boys and Welcome to the Family. Recipient of the Best Feature Film Award at the New Season Online Cinema Festival.</p></article>
+
+<article class="jury-premium-card"><div class="jury-photo-wrap"><img src="jury_ivan_bolotnikov_russia.png" alt="Ivan Bolotnikov"></div><div class="jury-country-badge">🇷🇺 Russia</div><h3 class="jury-premium-name">Ivan Bolotnikov</h3><div class="jury-premium-role">Film Director, Screenwriter, Producer</div><div class="team-divider"></div><p class="jury-premium-bio">Russian director, screenwriter, and producer, founder of Studio Avtor. Director of the films Kharms, Palmira, and Don’t Bury Me Without Ivan. Recipient of two Golden Goblet Awards at the Shanghai International Film Festival. A graduate of the Higher Courses for Scriptwriters and Directors, he worked in Aleksei German’s creative team on the film Hard to Be a God.</p></article>
+
+<article class="jury-premium-card"><div class="jury-photo-wrap"><img src="jury_nikolai_izvolov_russia.png" alt="Nikolai Izvolov"></div><div class="jury-country-badge">🇷🇺 Russia</div><h3 class="jury-premium-name">Nikolai Izvolov</h3><div class="jury-premium-role">Film Historian, Cinema Scholar</div><div class="team-divider"></div><p class="jury-premium-bio">PhD in Art History and one of the leading experts on early Russian and Soviet cinema. Author of major research works and restoration projects dedicated to lost films by Dziga Vertov, Lev Kuleshov, and Alexander Medvedkin. Lecturer at VGIK and the Higher Courses for Scriptwriters and Directors.</p></article>
+
+</div>
+<div class="team-summary">Professionalism, independence and respect for cultural diversity are the guiding principles of the Festival Jury.</div>
+</div>
+</section>
+
 
   <section id="reglament">
-    <div class="section-header">
-      <h2 class="section-title">Regulations</h2>
-<p class="section-subtitle">
-  Main structure of the regulations. The full festival regulations are available as a
-  <a href="reglament_brics_2026_EN.pdf" target="_blank"><span>PDF document</span></a>.
-</p>
+    <div class="premium-section-header">
+      <div class="premium-section-kicker">Official Conditions</div>
+      <h2 class="premium-section-title">Regulations</h2>
+      <p class="premium-section-description">
+        Main structure of the regulations. The full festival regulations are available as a
+        <a href="reglament_brics_2026_EN.pdf" target="_blank"><span>PDF document</span></a>.
+      </p>
     </div>
-    <div class="glass-block">
+<div class="glass-block">
       <div class="reglament-layout">
         <div>
           <ul class="reg-list">
@@ -1211,29 +1323,41 @@
   </section>
 
   <section id="awards">
-    <div class="section-header">
-      <h2 class="section-title">Grand Prix</h2>
-                  <p class="section-subtitle">
-The highest award of the BRICS+ International Film Festival.
-The Grand Prix and Special Jury Awards are granted by the International Jury.
-
+    <div class="premium-section-header">
+      <div class="premium-section-kicker">Main Award</div>
+      <h2 class="premium-section-title">Grand Prix</h2>
+      <p class="premium-section-description">
+        The highest award of the BRICS+ International Film Festival.<br>
+        The Grand Prix and Special Jury Awards are granted by the International Jury.
       </p>
     </div>
-    <div class="awards-layout">
-      <div class="award-image-wrap">
-        <img src="en_brics_award.png" alt="Grand Prix statuette of the BRICS+ International Film Festival">
+
+    <div class="grand-prix-showcase">
+      <div class="grand-prix-inner">
+        <div class="grand-prix-image-wrap">
+          <img src="brics_award.png" alt="Grand Prix statuette of the BRICS+ International Film Festival">
+        </div>
+
+        <div class="grand-prix-description">
+          <p class="grand-prix-text">
+            The festival Grand Prix statuette is a symbol of the movement of BRICS+ cultures orbiting around the art of cinema and creating the energy of new stories.
+            <br><br>
+            <span>The flame within the orbits</span> is a metaphor for the creator whose work becomes the center of global attention.
+          </p>
+        </div>
       </div>
     </div>
   </section>
 
   <section id="program">
-    <div class="section-header">
-      <h2 class="section-title">Festival program</h2>
-      <p class="section-subtitle">
-        The program is subject to change.
+    <div class="premium-section-header">
+      <div class="premium-section-kicker">14–19 October 2026</div>
+      <h2 class="premium-section-title">Festival Program</h2>
+      <p class="premium-section-description">
+        The program may be updated as the official festival schedule is finalized.
       </p>
     </div>
-    <div class="glass-block">
+<div class="glass-block">
       
       <div class="program-grid">
 
@@ -1329,13 +1453,15 @@ The Grand Prix and Special Jury Awards are granted by the International Jury.
   </section>
 
   <section id="apply">
-    <div class="section-header">
-      <h2 class="section-title">Submissions</h2>
-      <p class="section-subtitle">
-        Submissions for participation in the BRICS+ International Film Festival are accepted until <span>31 August 2026.</span>
+    <div class="premium-section-header">
+      <div class="premium-section-kicker">Film Submissions</div>
+      <h2 class="premium-section-title">Submissions</h2>
+      <p class="premium-section-description">
+        Submissions for participation in the BRICS+ International Film Festival are accepted until
+        <span>31 August 2026.</span>
       </p>
     </div>
-    <div class="glass-block">
+<div class="glass-block">
       <div class="apply-grid">
         <div class="apply-text">
           <p>
@@ -1404,7 +1530,7 @@ The Grand Prix and Special Jury Awards are granted by the International Jury.
           <div class="submit-row">
             <button class="btn-submit" type="submit">Submit</button>
             <div class="form-footnote">
-              By clicking “Submit”, you confirm your agreement with the festival regulations and personal data processing.
+              By clicking “Submit”, you confirm your agreement with the <a href="reglament_brics_2026_EN.pdf" target="_blank"><span>festival regulations</span></a> and personal data processing.
             </div>
           </div>
         </form>
@@ -1413,10 +1539,11 @@ The Grand Prix and Special Jury Awards are granted by the International Jury.
   </section>
 
   <section id="team">
-    <div class="section-header">
-      <h2 class="section-title">Festival Team</h2>
+    <div class="premium-section-header">
+      <div class="premium-section-kicker">Organizing Team</div>
+      <h2 class="premium-section-title">Festival Team</h2>
     </div>
-    <div class="team-showcase">
+<div class="team-showcase">
       <div class="team-grid">
         <div class="team-card">
           <div class="team-photo-wrap">
@@ -1425,7 +1552,7 @@ The Grand Prix and Special Jury Awards are granted by the International Jury.
           <div class="team-name">Viktoria Lukina</div>
           <div class="team-role">General Producer of the Festival</div>
           <div class="team-divider"></div>
-          <div class="team-extra">Journalist, film producer and public figure. Chair of the Council for Cinematography and New Media of the International BRICS Development Organization. Member of the Union of Cinematographers of Russia.</div>
+          <div class="team-extra">Film producer, journalist and public figure. Chair of the Council for Cinematography and New Media of the International BRICS Development Organization. Member of the Union of Cinematographers of Russia.</div>
         </div>
         <div class="team-card">
           <div class="team-photo-wrap">
@@ -1438,12 +1565,12 @@ The Grand Prix and Special Jury Awards are granted by the International Jury.
         </div>
         <div class="team-card">
           <div class="team-photo-wrap">
-            <img src="brics_crew_ivan.JPG" alt="Ivan Bolotnikov" />
+            <img src="brics_crew_elena_bondarenko.png" alt="Elena Bondarenko" />
           </div>
-          <div class="team-name">Ivan Bolotnikov</div>
-          <div class="team-role">Member of the Festival Directorate</div>
+          <div class="team-name">Elena Bondarenko</div>
+          <div class="team-role">Director of Film Education Projects</div>
           <div class="team-divider"></div>
-          <div class="team-extra">Film director and producer. Member of the Union of Cinematographers of Russia.</div>
+          <div class="team-extra">President of the Association for Film Education and Media Pedagogy of the Russian Federation, Deputy Chair of the Commission on Film Pedagogy and Media Education, and Associate Professor at VGIK.</div>
         </div>
         <div class="team-card">
           <div class="team-photo-wrap">
