@@ -1059,19 +1059,34 @@
 }
 
 
-/* Jury 3x3 final grid */
+
+/* Jury 10 cards — 4+4+2 compact centered grid */
 .jury-premium-grid{
   display:grid!important;
-  grid-template-columns:repeat(3,minmax(0,1fr))!important;
-  justify-content:stretch!important;
+  grid-template-columns:repeat(4,minmax(0,1fr))!important;
   gap:22px!important;
+  justify-items:center!important;
 }
 .jury-premium-card{
-  width:auto!important;
+  width:100%!important;
+  max-width:290px;
   min-width:0!important;
+}
+.jury-premium-card:nth-last-child(2){
+  grid-column:2;
+  justify-self:end;
+}
+.jury-premium-card:nth-last-child(1){
+  grid-column:3;
+  justify-self:start;
 }
 @media (max-width:900px){
   .jury-premium-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;}
+  .jury-premium-card:nth-last-child(2),
+  .jury-premium-card:nth-last-child(1){
+    grid-column:auto;
+    justify-self:stretch;
+  }
 }
 @media (max-width:560px){
   .jury-premium-grid{grid-template-columns:minmax(0,1fr)!important;}
@@ -1263,6 +1278,9 @@
 </div>
 <div class="team-showcase">
 <div class="jury-premium-grid">
+
+
+<article class="jury-premium-card"><div class="jury-photo-wrap"><img src="jury_alexandra_ochirova_russia.png" alt="Alexandra Ochirova"></div><div class="jury-country-badge">🇷🇺 RUSSIA</div><h3 class="jury-premium-name">Alexandra Ochirova</h3><div class="jury-premium-role">Doctor of Philosophy, Public Figure</div><div class="team-divider"></div><p class="jury-premium-bio">Doctor of Philosophy and Full Member of the Russian Academy of Arts. UNESCO Goodwill Ambassador and Co-Chair of the General Council of the Assembly of the Peoples of the World. Co-President of the All-Russian Public Movement For the Preservation of the Nation.</p></article>
 
 <article class="jury-premium-card"><div class="jury-photo-wrap"><img src="jury_antonio_miano_brazil.png" alt="Antonio Miano"></div><div class="jury-country-badge">🇧🇷 Brazil</div><h3 class="jury-premium-name">Antonio Miano</h3><div class="jury-premium-role">Actor, Director, Curator</div><div class="team-divider"></div><p class="jury-premium-bio">Brazilian actor and director working across cinema, theatre, and performance art. Director of short and documentary films. Curator of film programs and audience development initiatives.</p></article>
 
@@ -1555,6 +1573,7 @@
           <div class="submit-row">
             <button class="btn-submit" type="submit">Submit</button>
             <div class="form-footnote">
+              Submitting your application may take a few seconds. There is no need to click the button again.<br><br>
               By clicking “Submit”, you confirm your agreement with the <a href="reglament_brics_2026_EN.pdf" target="_blank"><span>festival regulations</span></a> and personal data processing.
             </div>
           </div>

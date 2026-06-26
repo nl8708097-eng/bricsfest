@@ -1,16 +1,17 @@
 <!DOCTYPE html>
+
 <html lang="ru">
 <head>
-  <meta charset="UTF-8" />
-  <title>Международный кинофестиваль стран БРИКС+ • 14–19 октября 2026</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Международный кинофестиваль стран БРИКС+ • 14–19 октября 2026, Санкт-Петербург" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="icon" type="image/png" href="favicon.png">
-  <link rel="shortcut icon" href="favicon.png" type="image/png">
-  <style>
+<meta charset="utf-8"/>
+<title>Международный кинофестиваль стран БРИКС+ • 14–19 октября 2026</title>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="Международный кинофестиваль стран БРИКС+ • 14–19 октября 2026, Санкт-Петербург" name="description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="favicon.png" rel="icon" type="image/png"/>
+<link href="favicon.png" rel="shortcut icon" type="image/png"/>
+<style>
     :root {
       --bg-gradient: radial-gradient(circle at top left, #3b82f6 0, transparent 50%),
                       radial-gradient(circle at bottom right, #ec4899 0, transparent 55%),
@@ -1198,636 +1199,615 @@
 }
 
 
-/* Jury 3x3 final grid */
+/* Jury 4+4+2 grid */
 .jury-premium-grid{
-  display:grid!important;
-  grid-template-columns:repeat(3,minmax(0,1fr))!important;
-  justify-content:stretch!important;
-  gap:22px!important;
+display:grid!important;
+grid-template-columns:repeat(4,minmax(0,1fr))!important;
+gap:22px!important;
+justify-items:center!important;
 }
-.jury-premium-card{
-  width:auto!important;
-  min-width:0!important;
+.jury-premium-card{width:100%!important;max-width:290px;}
+.jury-premium-card:nth-last-child(2){
+grid-column:2;
+justify-self:end;
+}
+.jury-premium-card:nth-last-child(1){
+grid-column:3;
+justify-self:start;
 }
 @media (max-width:900px){
-  .jury-premium-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;}
+.jury-premium-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;}
+.jury-premium-card:nth-last-child(2),
+.jury-premium-card:nth-last-child(1){grid-column:auto;justify-self:stretch;}
 }
 @media (max-width:560px){
-  .jury-premium-grid{grid-template-columns:minmax(0,1fr)!important;}
+.jury-premium-grid{grid-template-columns:minmax(0,1fr)!important;}
 }
 
 </style>
 </head>
 <body>
-
 <header>
-  <div class="nav-inner">
-    <div class="logo-lockup">
-<img src="brics_icon.png" 
-     alt="BRICS+ icon" 
-     class="brand-logo-img" />
-      <div>
-        <div class="logo-text-main">BRICS+ INTERNATIONAL FILM FESTIVAL</div>
-        <div class="logo-text-sub"><p>Международный кинофестиваль</p>
-        <p>14-19 октября 2026 • Санкт-Петербург</p></div>
-      </div>
-    </div>
-    
-    <nav>
-      <div class="nav-links">
-        <a href="#about">О фестивале</a>
-        <a href="#jury">Жюри</a>
-        <a href="#reglament">Регламент</a>
-        <a href="#program">Программа</a>
-        <a href="#team">Команда</a>
-      </div>
-      <a href="#apply" class="nav-cta">
-        <span class="nav-cta-dot"></span>
+<div class="nav-inner">
+<div class="logo-lockup">
+<img alt="BRICS+ icon" class="brand-logo-img" src="brics_icon.png"/>
+<div>
+<div class="logo-text-main">BRICS+ INTERNATIONAL FILM FESTIVAL</div>
+<div class="logo-text-sub"><p>Международный кинофестиваль</p>
+<p>14-19 октября 2026 • Санкт-Петербург</p></div>
+</div>
+</div>
+<nav>
+<div class="nav-links">
+<a href="#about">О фестивале</a>
+<a href="#jury">Жюри</a>
+<a href="#reglament">Регламент</a>
+<a href="#program">Программа</a>
+<a href="#team">Команда</a>
+</div>
+<a class="nav-cta" href="#apply">
+<span class="nav-cta-dot"></span>
         Подать фильм
       </a>
-     <div class="lang-switch">
-        <a href="https://bricsfilmfest.com/en_index.html">EN</a>
-        <span>•</span>
-        <a href="index.html" class="current">RU</a>
-      </div>
-    </nav>
-     <div class="lang-switch lang-switch--mobile">
-        <a href="https://bricsfilmfest.com/en_index.html">EN</a>
-        <span>•</span>
-        <a href="index.html" class="current">RU</a>
-      </div>
-    <button class="burger" id="burger" aria-label="Открыть меню">
-      <span></span>
-    </button>
-  </div>
-  <div class="mobile-nav" id="mobileNav">
-    <div class="mobile-nav-links">
-      <a href="#about">О фестивале</a>
-      <a href="#news">Новости</a>
-      <a href="#jury">Жюри</a>
-      <a href="#reglament">Регламент</a>
-      <a href="#awards">Гран-при</a>
-      <a href="#program">Программа</a>
-      <a href="#apply">Заявки</a>
-      <a href="#team">Команда</a>
-    </div>
-  </div>
+<div class="lang-switch">
+<a href="https://bricsfilmfest.com/en_index.html">EN</a>
+<span>•</span>
+<a class="current" href="index.html">RU</a>
+</div>
+</nav>
+<div class="lang-switch lang-switch--mobile">
+<a href="https://bricsfilmfest.com/en_index.html">EN</a>
+<span>•</span>
+<a class="current" href="index.html">RU</a>
+</div>
+<button aria-label="Открыть меню" class="burger" id="burger">
+<span></span>
+</button>
+</div>
+<div class="mobile-nav" id="mobileNav">
+<div class="mobile-nav-links">
+<a href="#about">О фестивале</a>
+<a href="#news">Новости</a>
+<a href="#jury">Жюри</a>
+<a href="#reglament">Регламент</a>
+<a href="#awards">Гран-при</a>
+<a href="#program">Программа</a>
+<a href="#apply">Заявки</a>
+<a href="#team">Команда</a>
+</div>
+</div>
 </header>
-
 <main class="shell">
-  <section id="about" class="hero">
-    <div>
-      <div class="tagline">
-        <div class="tagline-dot"><div class="tagline-dot-inner"></div></div>
+<section class="hero" id="about">
+<div>
+<div class="tagline">
+<div class="tagline-dot"><div class="tagline-dot-inner"></div></div>
         Международный кинофестиваль стран БРИКС+
       </div>
-      <h1 class="hero-title">
-        Международный кинофестиваль<br> стран БРИКС+
+<h1 class="hero-title">
+        Международный кинофестиваль<br/> стран БРИКС+
       </h1>
-      <p class="hero-subtitle">
+<p class="hero-subtitle">
         Авторское, национальное и кросс-культурное кино на одной фестивальной площадке.
         Премьеры, конкурсы, индустриальные питчинги и специальные программы от стран БРИКС+.
       </p>
-      <div class="hero-meta">
-        <div class="hero-pill">
-          <div>
-            <div class="hero-pill-label">Даты проведения</div>
-            <div>14-19 октября 2026 года</div>
-          </div>
-        </div>
-        <div class="hero-pill">
-          <div>
-            <div class="hero-pill-label">Город проведения</div>
-            <div>Санкт-Петербург</div>
-          </div>
-        </div>
-      </div>
-      <div class="hero-actions">
-        <button class="btn-primary" onclick="document.querySelector('#apply').scrollIntoView({behavior:'smooth'})">
+<div class="hero-meta">
+<div class="hero-pill">
+<div>
+<div class="hero-pill-label">Даты проведения</div>
+<div>14-19 октября 2026 года</div>
+</div>
+</div>
+<div class="hero-pill">
+<div>
+<div class="hero-pill-label">Город проведения</div>
+<div>Санкт-Петербург</div>
+</div>
+</div>
+</div>
+<div class="hero-actions">
+<button class="btn-primary" onclick="document.querySelector('#apply').scrollIntoView({behavior:'smooth'})">
           Подать фильм <span class="icon">↗</span>
-        </button>
-        <button class="btn-ghost" onclick="document.querySelector('#program').scrollIntoView({behavior:'smooth'})">
+</button>
+<button class="btn-ghost" onclick="document.querySelector('#program').scrollIntoView({behavior:'smooth'})">
           Программа 2026
         </button>
-      </div>
-      <div class="hero-note">
+</div>
+<div class="hero-note">
         Регламент и приём заявок — ниже на странице. Рабочий язык фестиваля: русский и английский.
       </div>
-    </div>
-    <div class="hero-right">
-      <div class="glass-orbit">
-        <div class="glass-orbit-inner">
-          <div class="glass-heading">BRICS+ 2026</div>
-          <div class="glass-main-title">Время проведения: 14–19 октября 2026</div>
-          <div class="glass-meta-grid">
-            <div class="glass-chip">
-              <div class="glass-chip-label">Локация</div>
-              <div class="glass-chip-value">Санкт-Петербург</div>
-            </div>
-            <div class="glass-chip">
-              <div class="glass-chip-label">Подача фильмов</div>
-              <div class="glass-chip-value">Онлайн форма</div>
-            </div>
-          </div>
-          <div class="glass-stats">
-            <div class="stat-pill">
-              <div class="stat-number">60+</div>
-              <div class="stat-label">Фильмов в программе</div>
-            </div>
-            <div class="stat-pill">
-              <div class="stat-number">15+</div>
-              <div class="stat-label">Стран-участниц</div>
-            </div>
-          </div>
-          <div class="glass-footer">
-            <div class="glass-pulse"><div class="glass-pulse-inner"></div></div>
-            <div class="glass-footer-text">
-              <strong>Открытый конкурс</strong><br />
+</div>
+<div class="hero-right">
+<div class="glass-orbit">
+<div class="glass-orbit-inner">
+<div class="glass-heading">BRICS+ 2026</div>
+<div class="glass-main-title">Время проведения: 14–19 октября 2026</div>
+<div class="glass-meta-grid">
+<div class="glass-chip">
+<div class="glass-chip-label">Локация</div>
+<div class="glass-chip-value">Санкт-Петербург</div>
+</div>
+<div class="glass-chip">
+<div class="glass-chip-label">Подача фильмов</div>
+<div class="glass-chip-value">Онлайн форма</div>
+</div>
+</div>
+<div class="glass-stats">
+<div class="stat-pill">
+<div class="stat-number">60+</div>
+<div class="stat-label">Фильмов в программе</div>
+</div>
+<div class="stat-pill">
+<div class="stat-number">15+</div>
+<div class="stat-label">Стран-участниц</div>
+</div>
+</div>
+<div class="glass-footer">
+<div class="glass-pulse"><div class="glass-pulse-inner"></div></div>
+<div class="glass-footer-text">
+<strong>Открытый конкурс</strong><br>
               Игровое, документальное кино и короткий метр.
-            </div>
-            <div class="glass-footer-tag">BRICS+ EDITION • 2026</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="news">
-    <div class="premium-section-header">
-      <div class="premium-section-kicker">BRICS+ 2026</div>
-      <h2 class="premium-section-title">Новости</h2>
-    </div>
+            </br></div>
+<div class="glass-footer-tag">BRICS+ EDITION • 2026</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="news">
+<div class="premium-section-header">
+<div class="premium-section-kicker">BRICS+ 2026</div>
+<h2 class="premium-section-title">Новости</h2>
+</div>
 <div class="glass-block">
-      <div class="news-grid">
-        <article class="news-card">
-          <div class="news-image-wrap">
-            <img src="news_submissions.png" alt="Приём заявок на кинофестиваль БРИКС+" />
-          </div>
-          <div class="news-tag">🔥 Актуально</div>
-          <div class="news-title">Открыт приём заявок</div>
-          <div class="news-text">
+<div class="news-grid">
+<article class="news-card">
+<div class="news-image-wrap">
+<img alt="Приём заявок на кинофестиваль БРИКС+" src="news_submissions.png"/>
+</div>
+<div class="news-tag">🔥 Актуально</div>
+<div class="news-title">Открыт приём заявок</div>
+<div class="news-text">
             С 1 июня фильмы из стран БРИКС+ и  работы международного производства могут быть поданы на участие
             в конкурсных и внеконкурсных программах фестиваля. Прием заявок продлится до 31 августа 2026 года.
           </div>
-        </article>
-        <article class="news-card">
-          <div class="news-image-wrap">
-            <img src="news_ambassador.png" alt="Виктория Лукина — Посол культуры и искусств БРИКС" />
-          </div>
-          <div class="news-tag">🎉 Поздравляем</div>
-          <div class="news-title">Генеральный продюсер фестиваля удостоена почётного статуса «Посол культуры и искусств БРИКС» </div>
-          <div class="news-text">
+</article>
+<article class="news-card">
+<div class="news-image-wrap">
+<img alt="Виктория Лукина — Посол культуры и искусств БРИКС" src="news_ambassador.png"/>
+</div>
+<div class="news-tag">🎉 Поздравляем</div>
+<div class="news-title">Генеральный продюсер фестиваля удостоена почётного статуса «Посол культуры и искусств БРИКС» </div>
+<div class="news-text">
             Президент международной сети «Дом БРИКС» отметил вклад Виктории Лукиной в развитие общественной дипломатии и культурного сотрудничества стран объединения, присудив звание «Посол культуры и искусств БРИКС». 
           </div>
-        </article>
-        <article class="news-card">
-          <div class="news-image-wrap">
-            <img src="news_forum.png" alt="Фестиваль на форуме лидеров общественной дипломатии БРИКС" />
-          </div>
-          <div class="news-tag">🎞️ События</div>
-          <div class="news-title">Фестиваль на форуме лидеров общественной дипломатии БРИКС</div>
-          <div class="news-text">
+</article>
+<article class="news-card">
+<div class="news-image-wrap">
+<img alt="Фестиваль на форуме лидеров общественной дипломатии БРИКС" src="news_forum.png"/>
+</div>
+<div class="news-tag">🎞️ События</div>
+<div class="news-title">Фестиваль на форуме лидеров общественной дипломатии БРИКС</div>
+<div class="news-text">
             Фестиваль представлен на форуме лидеров общественной дипломатии БРИКС
             как площадка для диалога культур и совместных кинопроектов стран объединения.
           </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section id="jury">
-    <div class="premium-section-header">
-      <div class="premium-section-kicker">Международный состав</div>
-      <h2 class="premium-section-title">Жюри фестиваля</h2>
-      <p class="premium-section-description">
+</article>
+</div>
+</div>
+</section>
+<section id="jury">
+<div class="premium-section-header">
+<div class="premium-section-kicker">Международный состав</div>
+<h2 class="premium-section-title">Жюри фестиваля</h2>
+<p class="premium-section-description">
         Международное жюри фестиваля объединяет выдающихся деятелей киноиндустрии,
         режиссёров, продюсеров и экспертов в области киноискусства из стран БРИКС+
         и государств-партнёров.
       </p>
-    </div>
-
-    <div class="team-showcase jury-showcase">
-      <div class="jury-premium-grid">
-        <article class="jury-premium-card">
-          <div class="jury-photo-wrap"><img src="jury_antonio_miano_brazil.png" alt="Антонио Миано"></div>
-          <div class="jury-country-badge">🇧🇷 Бразилия</div>
-          <h3 class="jury-premium-name">Антонио Миано</h3>
-          <div class="jury-premium-role">Актёр, режиссёр, куратор</div>
-          <div class="team-divider"></div>
-          <p class="jury-premium-bio">Бразильский актёр и режиссёр, работающий в кино, театре и перформансе. Автор короткометражных и документальных фильмов. Куратор кинопрограмм и проектов по развитию зрительской аудитории.</p>
-        </article>
-
-        <article class="jury-premium-card">
-          <div class="jury-photo-wrap"><img src="jury_alejandro_gil_alvarez_cuba.png" alt="Алехандро Гиль Альварес"></div>
-          <div class="jury-country-badge">🇨🇺 Куба</div>
-          <h3 class="jury-premium-name">Алехандро Гиль Альварес</h3>
-          <div class="jury-premium-role">Режиссёр, сценарист</div>
-          <div class="team-divider"></div>
-          <p class="jury-premium-bio">Кубинский режиссёр и сценарист, лауреат национальных культурных наград и международных кинофестивалей. Автор документальных и игровых фильмов, телевизионных проектов и музыкальных клипов. Член жюри крупнейших кинофестивалей Латинской Америки и Европы.</p>
-        </article>
-
-        <article class="jury-premium-card">
-          <div class="jury-photo-wrap"><img src="jury_iran_babak_khajehpasha_iran.png" alt="Бабак Хаджепаша"></div>
-          <div class="jury-country-badge">🇮🇷 Иран</div>
-          <h3 class="jury-premium-name">Бабак Хаджепаша</h3>
-          <div class="jury-premium-role">Режиссёр, сценарист</div>
-          <div class="team-divider"></div>
-          <p class="jury-premium-bio">Иранский режиссёр и сценарист, автор художественных фильмов и театральных постановок. Его фильм «В объятиях дерева» был выдвинут от Ирана на премию «Оскар» 2025 года. Лауреат международных кинофестивалей в США, Индии, Италии и Канаде, обладатель наград за лучшую режиссуру и сценарий.
+</div>
+<div class="team-showcase jury-showcase">
+<div class="jury-premium-grid"><article class="jury-premium-card">
+<div class="jury-photo-wrap"><img alt="Александра Очирова" src="jury_alexandra_ochirova_russia.png"/></div>
+<div class="jury-country-badge">🇷🇺 РОССИЯ</div>
+<h3 class="jury-premium-name">Александра Очирова</h3>
+<div class="jury-premium-role">Доктор философских наук, общественный деятель</div>
+<div class="team-divider"></div>
+<p class="jury-premium-bio">Доктор философских наук, действительный член Российской академии художеств. Посол доброй воли ЮНЕСКО, сопредседатель Генерального совета Ассамблеи народов мира. Сопрезидент Общероссийского общественного движения «За сбережение народа».</p>
+</article>
+<article class="jury-premium-card">
+<div class="jury-photo-wrap"><img alt="Антонио Миано" src="jury_antonio_miano_brazil.png"/></div>
+<div class="jury-country-badge">🇧🇷 Бразилия</div>
+<h3 class="jury-premium-name">Антонио Миано</h3>
+<div class="jury-premium-role">Актёр, режиссёр, куратор</div>
+<div class="team-divider"></div>
+<p class="jury-premium-bio">Бразильский актёр и режиссёр, работающий в кино, театре и перформансе. Автор короткометражных и документальных фильмов. Куратор кинопрограмм и проектов по развитию зрительской аудитории.</p>
+</article>
+<article class="jury-premium-card">
+<div class="jury-photo-wrap"><img alt="Алехандро Гиль Альварес" src="jury_alejandro_gil_alvarez_cuba.png"/></div>
+<div class="jury-country-badge">🇨🇺 Куба</div>
+<h3 class="jury-premium-name">Алехандро Гиль Альварес</h3>
+<div class="jury-premium-role">Режиссёр, сценарист</div>
+<div class="team-divider"></div>
+<p class="jury-premium-bio">Кубинский режиссёр и сценарист, лауреат национальных культурных наград и международных кинофестивалей. Автор документальных и игровых фильмов, телевизионных проектов и музыкальных клипов. Член жюри крупнейших кинофестивалей Латинской Америки и Европы.</p>
+</article>
+<article class="jury-premium-card">
+<div class="jury-photo-wrap"><img alt="Бабак Хаджепаша" src="jury_iran_babak_khajehpasha_iran.png"/></div>
+<div class="jury-country-badge">🇮🇷 Иран</div>
+<h3 class="jury-premium-name">Бабак Хаджепаша</h3>
+<div class="jury-premium-role">Режиссёр, сценарист</div>
+<div class="team-divider"></div>
+<p class="jury-premium-bio">Иранский режиссёр и сценарист, автор художественных фильмов и театральных постановок. Его фильм «В объятиях дерева» был выдвинут от Ирана на премию «Оскар» 2025 года. Лауреат международных кинофестивалей в США, Индии, Италии и Канаде, обладатель наград за лучшую режиссуру и сценарий.
 </p>
-        </article>
-
-        <article class="jury-premium-card">
-          <div class="jury-photo-wrap"><img src="jury_jayita_ghosh_india.png" alt="Джайита Гош"></div>
-          <div class="jury-country-badge">🇮🇳 Индия</div>
-          <h3 class="jury-premium-name">Джайита Гош</h3>
-          <div class="jury-premium-role">Эксперт по международным культурным связям</div>
-          <div class="team-divider"></div>
-          <p class="jury-premium-bio">Индийский эксперт в сфере кино, международных коммуникаций и культурной дипломатии. Руководитель международных инициатив, направленных на развитие сотрудничества между творческими индустриями, бизнесом и государственными институтами. Активно содействует культурному обмену и продвижению международных кинопроектов.</p>
-        </article>
-
-        <article class="jury-premium-card">
-          <div class="jury-photo-wrap"><img src="jury_vladimir_zinkevich_belarus.png" alt="Владимир Зинкевич"></div>
-          <div class="jury-country-badge">🇧🇾 Белоруссия</div>
-          <h3 class="jury-premium-name">Владимир Зинкевич</h3>
-          <div class="jury-premium-role">Кинорежиссёр, сценарист</div>
-          <div class="team-divider"></div>
-          <p class="jury-premium-bio">Белорусский кинорежиссёр и сценарист, основатель кинокомпании «Авантдрайв». Автор популярных фильмов «Спайс Бойз» и «Добро пожаловать в семью». Обладатель награды «Лучший фильм» фестиваля онлайн-кинотеатров «Новый сезон» за лучший полнометражный фильм.</p>
-        </article>
-
-        <article class="jury-premium-card">
-          <div class="jury-photo-wrap"><img src="jury_ivan_bolotnikov_russia.png" alt="Иван Болотников"></div>
-          <div class="jury-country-badge">🇷🇺 Россия</div>
-          <h3 class="jury-premium-name">Иван Болотников</h3>
-          <div class="jury-premium-role">Кинорежиссёр, сценарист, продюсер</div>
-          <div class="team-divider"></div>
-          <p class="jury-premium-bio">Российский режиссёр, сценарист и продюсер, основатель кинокомпании «Студия „Автор“». Автор фильмов «Хармс», «Пальмира» и «Не хороните меня без Ивана». Обладатель двух «Золотых кубков» Шанхайского международного кинофестиваля, выпускник Высших курсов режиссёров и сценаристов, работал в творческой группе Алексея Германа над фильмом «Трудно быть богом».</p>
-        </article>
-
-        <article class="jury-premium-card">
-          <div class="jury-photo-wrap"><img src="jury_nikolai_izvolov_russia.png" alt="Николай Изволов"></div>
-          <div class="jury-country-badge">🇷🇺 Россия</div>
-          <h3 class="jury-premium-name">Николай Изволов</h3>
-          <div class="jury-premium-role">Киновед, историк кино</div>
-          <div class="team-divider"></div>
-          <p class="jury-premium-bio">Кандидат искусствоведения, один из ведущих специалистов по истории раннего российского и советского кинематографа. Автор фундаментальных исследований и проектов по восстановлению утраченных фильмов Дзиги Вертова, Льва Кулешова и Александра Медведкина. Преподаёт во ВГИКе и на Высших курсах сценаристов и режиссёров.</p>
-        </article>
-
-        <article class="jury-premium-card">
-          <div class="jury-photo-wrap"><img src="jury_anuar_kenzhibayev_Kazakhstan.png" alt="Ануар Кенжибаев"></div>
-          <div class="jury-country-badge">🇰🇿 КАЗАХСТАН</div>
-          <h3 class="jury-premium-name">Ануар Кенжибаев</h3>
-          <div class="jury-premium-role">Президент Kazakh Festival Hub</div>
-          <div class="team-divider"></div>
-          <p class="jury-premium-bio">Основатель и президент фонда Kazakh Festival Hub, развивающего фестивальную и индустриальную инфраструктуру кинематографа Казахстана. Создатель международных проектов Baiqonyr Film Festival, Almaty Animation Festival, Almaty Series Week и Almaty Film Critics Forum. Инициатор профессиональных платформ, способствующих развитию киноиндустрии и международного сотрудничества.</p>
-        </article>
-
-        <article class="jury-premium-card">
-          <div class="jury-photo-wrap"><img src="jury_Padu Palmerio_Brazil.png" alt="Паду Палмерио"></div>
-          <div class="jury-country-badge">🇧🇷 БРАЗИЛИЯ</div>
-          <h3 class="jury-premium-name">Паду Палмерио</h3>
-          <div class="jury-premium-role">Режиссёр, кинооператор</div>
-          <div class="team-divider"></div>
-          <p class="jury-premium-bio">Бразильский режиссёр и кинооператор, работающий в игровом и документальном кино. Снимал проекты более чем в 40 странах мира и участвовал в международных кинопроектах Латинской Америки. Лауреат и номинант международных операторских премий, член жюри и наставник международных кинолабораторий.</p>
-        </article>
-      </div>
-
-      <div class="team-summary">
+</article>
+<article class="jury-premium-card">
+<div class="jury-photo-wrap"><img alt="Джайита Гош" src="jury_jayita_ghosh_india.png"/></div>
+<div class="jury-country-badge">🇮🇳 Индия</div>
+<h3 class="jury-premium-name">Джайита Гош</h3>
+<div class="jury-premium-role">Эксперт по международным культурным связям</div>
+<div class="team-divider"></div>
+<p class="jury-premium-bio">Индийский эксперт в сфере кино, международных коммуникаций и культурной дипломатии. Руководитель международных инициатив, направленных на развитие сотрудничества между творческими индустриями, бизнесом и государственными институтами. Активно содействует культурному обмену и продвижению международных кинопроектов.</p>
+</article>
+<article class="jury-premium-card">
+<div class="jury-photo-wrap"><img alt="Владимир Зинкевич" src="jury_vladimir_zinkevich_belarus.png"/></div>
+<div class="jury-country-badge">🇧🇾 Белоруссия</div>
+<h3 class="jury-premium-name">Владимир Зинкевич</h3>
+<div class="jury-premium-role">Кинорежиссёр, сценарист</div>
+<div class="team-divider"></div>
+<p class="jury-premium-bio">Белорусский кинорежиссёр и сценарист, основатель кинокомпании «Авантдрайв». Автор популярных фильмов «Спайс Бойз» и «Добро пожаловать в семью». Обладатель награды «Лучший фильм» фестиваля онлайн-кинотеатров «Новый сезон» за лучший полнометражный фильм.</p>
+</article>
+<article class="jury-premium-card">
+<div class="jury-photo-wrap"><img alt="Иван Болотников" src="jury_ivan_bolotnikov_russia.png"/></div>
+<div class="jury-country-badge">🇷🇺 Россия</div>
+<h3 class="jury-premium-name">Иван Болотников</h3>
+<div class="jury-premium-role">Кинорежиссёр, сценарист, продюсер</div>
+<div class="team-divider"></div>
+<p class="jury-premium-bio">Российский режиссёр, сценарист и продюсер, основатель кинокомпании «Студия „Автор“». Автор фильмов «Хармс», «Пальмира» и «Не хороните меня без Ивана». Обладатель двух «Золотых кубков» Шанхайского международного кинофестиваля, выпускник Высших курсов режиссёров и сценаристов, работал в творческой группе Алексея Германа над фильмом «Трудно быть богом».</p>
+</article>
+<article class="jury-premium-card">
+<div class="jury-photo-wrap"><img alt="Николай Изволов" src="jury_nikolai_izvolov_russia.png"/></div>
+<div class="jury-country-badge">🇷🇺 Россия</div>
+<h3 class="jury-premium-name">Николай Изволов</h3>
+<div class="jury-premium-role">Киновед, историк кино</div>
+<div class="team-divider"></div>
+<p class="jury-premium-bio">Кандидат искусствоведения, один из ведущих специалистов по истории раннего российского и советского кинематографа. Автор фундаментальных исследований и проектов по восстановлению утраченных фильмов Дзиги Вертова, Льва Кулешова и Александра Медведкина. Преподаёт во ВГИКе и на Высших курсах сценаристов и режиссёров.</p>
+</article>
+<article class="jury-premium-card">
+<div class="jury-photo-wrap"><img alt="Ануар Кенжибаев" src="jury_anuar_kenzhibayev_Kazakhstan.png"/></div>
+<div class="jury-country-badge">🇰🇿 КАЗАХСТАН</div>
+<h3 class="jury-premium-name">Ануар Кенжибаев</h3>
+<div class="jury-premium-role">Президент Kazakh Festival Hub</div>
+<div class="team-divider"></div>
+<p class="jury-premium-bio">Основатель и президент фонда Kazakh Festival Hub, развивающего фестивальную и индустриальную инфраструктуру кинематографа Казахстана. Создатель международных проектов Baiqonyr Film Festival, Almaty Animation Festival, Almaty Series Week и Almaty Film Critics Forum. Инициатор профессиональных платформ, способствующих развитию киноиндустрии и международного сотрудничества.</p>
+</article>
+<article class="jury-premium-card">
+<div class="jury-photo-wrap"><img alt="Паду Палмерио" src="jury_Padu Palmerio_Brazil.png"/></div>
+<div class="jury-country-badge">🇧🇷 БРАЗИЛИЯ</div>
+<h3 class="jury-premium-name">Паду Палмерио</h3>
+<div class="jury-premium-role">Режиссёр, кинооператор</div>
+<div class="team-divider"></div>
+<p class="jury-premium-bio">Бразильский режиссёр и кинооператор, работающий в игровом и документальном кино. Снимал проекты более чем в 40 странах мира и участвовал в международных кинопроектах Латинской Америки. Лауреат и номинант международных операторских премий, член жюри и наставник международных кинолабораторий.</p>
+</article>
+</div>
+<div class="team-summary">
         Профессионализм, независимость и уважение к культурному разнообразию —
         ключевые принципы работы жюри Международного кинофестиваля БРИКС+.
       </div>
-    </div>
-  </section>
-
-  <section id="reglament">
-    <div class="premium-section-header">
-      <div class="premium-section-kicker">Официальные условия</div>
-      <h2 class="premium-section-title">Регламент</h2>
-      <p class="premium-section-description">
+</div>
+</section>
+<section id="reglament">
+<div class="premium-section-header">
+<div class="premium-section-kicker">Официальные условия</div>
+<h2 class="premium-section-title">Регламент</h2>
+<p class="premium-section-description">
         Основная структура регламента. Полный регламент фестиваля опубликован в этом
         <a href="reglament_brics_2026.pdf" target="_blank"><span>PDF-документе</span></a>.
       </p>
-    </div>
+</div>
 <div class="glass-block">
-      <div class="reglament-layout">
-        <div>
+<div class="reglament-layout">
+<div>
 <ul class="reg-list">
-  <li>
-    <div class="reg-bullet">1</div>
-    <div>
+<li>
+<div class="reg-bullet">1</div>
+<div>
       К участию принимаются полнометражные, короткометражные, неигровые и научно-популярные фильмы стран БРИКС+ и международные копродукции.
     </div>
-  </li>
-   <li>
-    <div class="reg-bullet">2</div>
-    <div>
+</li>
+<li>
+<div class="reg-bullet">2</div>
+<div>
       К участию принимаются фильмы, завершённые не ранее 1 января 2024 года.
     </div>
-  </li>
-  <li>
-    <div class="reg-bullet">3</div>
-    <div>
+</li>
+<li>
+<div class="reg-bullet">3</div>
+<div>
       Обязательное наличие английских субтитров, а для фильмов на иностранных языках — русских и английских субтитров.
     </div>
-  </li>
-  <li>
-    <div class="reg-bullet">4</div>
-    <div>
+</li>
+<li>
+<div class="reg-bullet">4</div>
+<div>
       Победителям присуждаются Гран-при, специальные призы жюри и специальные награды фестиваля.
     </div>
-  </li>
+</li>
 </ul>
 </div>
-        <div class="reg-pill-stack">
-          <div class="reg-pill">
-            <span class="label">Приём заявок</span>
-            <span class="value">1 июня 2026 – 31 августа 2026</span>
-          </div>
-          <div class="reg-pill">
-            <span class="label">Формат подачи</span>
-            <span class="value">Онлайн-форма с ссылкой на фильм и сопроводительные материалы</span>
-          </div>
-          <div class="reg-pill">
-            <span class="label">Отборочные результаты</span>
-            <span class="value">Публикация официальной программы — сентябрь 2026</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="awards">
-    <div class="premium-section-header">
-      <div class="premium-section-kicker">Главная награда</div>
-      <h2 class="premium-section-title">Гран-при</h2>
-      <p class="premium-section-description">
-        Главная награда Международного кинофестиваля БРИКС+.<br>
+<div class="reg-pill-stack">
+<div class="reg-pill">
+<span class="label">Приём заявок</span>
+<span class="value">1 июня 2026 – 31 августа 2026</span>
+</div>
+<div class="reg-pill">
+<span class="label">Формат подачи</span>
+<span class="value">Онлайн-форма с ссылкой на фильм и сопроводительные материалы</span>
+</div>
+<div class="reg-pill">
+<span class="label">Отборочные результаты</span>
+<span class="value">Публикация официальной программы — сентябрь 2026</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="awards">
+<div class="premium-section-header">
+<div class="premium-section-kicker">Главная награда</div>
+<h2 class="premium-section-title">Гран-при</h2>
+<p class="premium-section-description">
+        Главная награда Международного кинофестиваля БРИКС+.<br/>
         Гран-при и специальные призы вручаются по решению международного жюри.
       </p>
-    </div>
-
-    <div class="awards-layout">
-      <div class="award-image-wrap">
-        <img src="brics_award.png" alt="Статуэтка Гран-при фестиваля БРИКС+">
-      </div>
-
-      <div class="award-description-card">
-        <p class="award-description-text">
+</div>
+<div class="awards-layout">
+<div class="award-image-wrap">
+<img alt="Статуэтка Гран-при фестиваля БРИКС+" src="brics_award.png"/>
+</div>
+<div class="award-description-card">
+<p class="award-description-text">
           Статуэтка Гран-при фестиваля — символ движения культур БРИКС+, которые вращаются вокруг искусства кино и создают энергию новых историй.
-          <br><br>
-          <span>Пламя внутри орбит</span> — метафора творца, чья работа становится центром мирового внимания.
+          <br/><br/>
+<span>Пламя внутри орбит</span> — метафора творца, чья работа становится центром мирового внимания.
         </p>
-      </div>
-    </div>
-  </section>
-
-  <section id="program">
-    <div class="premium-section-header">
-      <div class="premium-section-kicker">14–19 октября 2026</div>
-      <h2 class="premium-section-title">Программа фестиваля</h2>
-      <p class="premium-section-description">
+</div>
+</div>
+</section>
+<section id="program">
+<div class="premium-section-header">
+<div class="premium-section-kicker">14–19 октября 2026</div>
+<h2 class="premium-section-title">Программа фестиваля</h2>
+<p class="premium-section-description">
         Программа может быть обновлена по мере формирования официального расписания фестиваля.
       </p>
-    </div>
+</div>
 <div class="glass-block">
-      
-      <div class="program-grid">
-
-        <div class="day-card">
-          <div class="day-label">День 1</div>
-          <div class="day-date">14 октября 2026 • Открытие</div>
-          <div class="day-items">
-            <div class="day-item">
-              <span>Церемония открытия фестиваля</span>
-              <span class="day-time">19:00</span>
-            </div>
-            <div class="day-item">
-              <span>Премьерный показ фильма открытия</span>
-              <span class="day-time">20:00</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="day-card">
-          <div class="day-label">Дни 2–3</div>
-          <div class="day-date">15–16 октября • Конкурсная программа</div>
-          <div class="day-items">
-            <div class="day-item">
-              <span>Показы конкурсных игровых фильмов</span>
-              <span class="day-time">день</span>
-            </div>
-            <div class="day-item">
-              <span>Q&amp;A с режиссёрами</span>
-              <span class="day-time">вечер</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="day-card">
-          <div class="day-label">День 4</div>
-          <div class="day-date">17 октября • Индустриальная программа</div>
-          <div class="day-items">
-            <div class="day-item">
-              <span>Питчинги проектов стран БРИКС+</span>
-              <span class="day-time">10:00–16:00</span>
-            </div>
-            <div class="day-item">
-              <span>Нетворкинг и деловые встречи</span>
-              <span class="day-time">16:00–20:00</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="day-card">
-          <div class="day-label">День 5</div>
-          <div class="day-date">18 октября • Специальные программы</div>
-          <div class="day-items">
-            <div class="day-item">
-              <span>Фокус-программы стран БРИКС+</span>
-              <span class="day-time">день</span>
-            </div>
-            <div class="day-item">
-              <span>Ретроспективы и спецпоказы</span>
-              <span class="day-time">вечер</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="day-card">
-          <div class="day-label">День 6</div>
-          <div class="day-date">19 октября • Закрытие</div>
-          <div class="day-items">
-            <div class="day-item">
-              <span>Церемония награждения</span>
-              <span class="day-time">18:00</span>
-            </div>
-            <div class="day-item">
-              <span>Фильм закрытия</span>
-              <span class="day-time">20:00</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="day-card">
-          <div class="day-label">Онлайн</div>
-          <div class="day-date">Параллельные показы</div>
-          <div class="day-items">
-            <div class="day-item">
-              <span>Цифровая витрина и онлайн-показы</span>
-              <span class="day-time">по расписанию</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="program-note">
-      </div>
-    </div>
-  </section>
-
-  <section id="apply">
-    <div class="premium-section-header">
-      <div class="premium-section-kicker">Приём фильмов</div>
-      <h2 class="premium-section-title">Заявки</h2>
-      <p class="premium-section-description">
+<div class="program-grid">
+<div class="day-card">
+<div class="day-label">День 1</div>
+<div class="day-date">14 октября 2026 • Открытие</div>
+<div class="day-items">
+<div class="day-item">
+<span>Церемония открытия фестиваля</span>
+<span class="day-time">19:00</span>
+</div>
+<div class="day-item">
+<span>Премьерный показ фильма открытия</span>
+<span class="day-time">20:00</span>
+</div>
+</div>
+</div>
+<div class="day-card">
+<div class="day-label">Дни 2–3</div>
+<div class="day-date">15–16 октября • Конкурсная программа</div>
+<div class="day-items">
+<div class="day-item">
+<span>Показы конкурсных игровых фильмов</span>
+<span class="day-time">день</span>
+</div>
+<div class="day-item">
+<span>Q&amp;A с режиссёрами</span>
+<span class="day-time">вечер</span>
+</div>
+</div>
+</div>
+<div class="day-card">
+<div class="day-label">День 4</div>
+<div class="day-date">17 октября • Индустриальная программа</div>
+<div class="day-items">
+<div class="day-item">
+<span>Питчинги проектов стран БРИКС+</span>
+<span class="day-time">10:00–16:00</span>
+</div>
+<div class="day-item">
+<span>Нетворкинг и деловые встречи</span>
+<span class="day-time">16:00–20:00</span>
+</div>
+</div>
+</div>
+<div class="day-card">
+<div class="day-label">День 5</div>
+<div class="day-date">18 октября • Специальные программы</div>
+<div class="day-items">
+<div class="day-item">
+<span>Фокус-программы стран БРИКС+</span>
+<span class="day-time">день</span>
+</div>
+<div class="day-item">
+<span>Ретроспективы и спецпоказы</span>
+<span class="day-time">вечер</span>
+</div>
+</div>
+</div>
+<div class="day-card">
+<div class="day-label">День 6</div>
+<div class="day-date">19 октября • Закрытие</div>
+<div class="day-items">
+<div class="day-item">
+<span>Церемония награждения</span>
+<span class="day-time">18:00</span>
+</div>
+<div class="day-item">
+<span>Фильм закрытия</span>
+<span class="day-time">20:00</span>
+</div>
+</div>
+</div>
+<div class="day-card">
+<div class="day-label">Онлайн</div>
+<div class="day-date">Параллельные показы</div>
+<div class="day-items">
+<div class="day-item">
+<span>Цифровая витрина и онлайн-показы</span>
+<span class="day-time">по расписанию</span>
+</div>
+</div>
+</div>
+</div>
+<div class="program-note">
+</div>
+</div>
+</section>
+<section id="apply">
+<div class="premium-section-header">
+<div class="premium-section-kicker">Приём фильмов</div>
+<h2 class="premium-section-title">Заявки</h2>
+<p class="premium-section-description">
         Приём заявок на участие в Международном кинофестивале стран БРИКС+ продлится до
         <span>31 августа 2026 года.</span>
-      </p>
-    </div>
+</p>
+</div>
 <div class="glass-block">
-      <div class="apply-grid">
-        <div class="apply-text">
-          <p>
+<div class="apply-grid">
+<div class="apply-text">
+<p>
             Для подачи заявки необходимо подготовить:
           </p>
-          <ul style="padding-left:18px; margin-bottom:10px;">
-            <li>ссылку на фильм, размещённый в облачном хранилище (Google Drive, Яндекс Диск, Dropbox и др.);</li>
-            <li>материалы о фильме и его создателях (кадры, постер, синопсис, фото режиссёра, биография и фильмография);</li>
-            <li>сведения о фильме (хронометраж, страна производства, год создания).</li>
-          </ul>
-          <p>
-            <strong>Важно:</strong> ссылки на YouTube, Instagram и другие социальные сети не рассматриваются.
+<ul style="padding-left:18px; margin-bottom:10px;">
+<li>ссылку на фильм, размещённый в облачном хранилище (Google Drive, Яндекс Диск, Dropbox и др.);</li>
+<li>материалы о фильме и его создателях (кадры, постер, синопсис, фото режиссёра, биография и фильмография);</li>
+<li>сведения о фильме (хронометраж, страна производства, год создания).</li>
+</ul>
+<p>
+<strong>Важно:</strong> ссылки на YouTube, Instagram и другие социальные сети не рассматриваются.
           </p>
-          <p>
+<p>
             Отправка формы не гарантирует включение фильма в программу.
             Решение отбора принимает программный комитет фестиваля.
           </p>
-        </div>
-<form
-  action="https://script.google.com/macros/s/AKfycbwMC1WpwvDkwJ8ZNO7xZA_zQ16gF9ps2_0ZLA6AOiTLHN_pNTL5vh5FZTd8Q6DXu9v2/exec"
-  method="POST"
->
-          <div class="field-group">
-            <label class="field-label">ФИО режиссёра <span>*</span></label>
-            <input type="text" name="director_name" placeholder="Имя Фамилия" required />
-          </div>
-          <div class="field-group">
-            <label class="field-label">Контактный e-mail <span>*</span></label>
-            <input type="email" name="email" placeholder="name@example.com" required />
-          </div>
-          <div class="field-group">
-            <label class="field-label">Страна <span>*</span></label>
-            <input type="text" name="country" placeholder="Страна производства" required />
-          </div>
-          <div class="field-group">
-            <label class="field-label">Название фильма <span>*</span></label>
-            <input type="text" name="film_title" placeholder="Оригинальное и/или международное название" required />
-          </div>
-          <div class="field-group">
-            <label class="field-label">Категория </label>
-            <select name="category">
-              <option>Игровое полнометражное кино</option>
-              <option>Документальное полнометражное кино</option>
-              <option>Короткий метр</option>
-              <option>Специальная программа / внеконкурс</option>
-            </select>
-          </div>
-          <div class="field-group">
-            <label class="field-label">Ссылка на материалы к фильму <span>*</span></label>
-            <input type="url" name="frame_url" placeholder="https://..." required />
-          </div>
-          <div class="field-group">
-            <label class="field-label">Ссылка на фильм (Google Drive, Dropbox и др.) <span>*</span></label>
-            <input type="url" name="film_url" placeholder="https://..." required />
-          </div>
-          <div class="field-group">
-            <label class="field-label">Синопсис <span>*</span></label>
-            <textarea name="synopsis" placeholder="Краткое описание фильма (до 1000 символов)" required ></textarea>
-          </div>
-          <div class="field-group">
-            <label class="field-label">Хронометраж <span>*</span></label>
-            <input type="text" name="duration" placeholder="Формат чч:мм:сс" required />
-          </div>
-          <input type="hidden" name="redirect-to" value="https://bricsfilmfest.com/thanks.html">
-          <div class="submit-row">
-            <button class="btn-submit" type="submit">Отправить заявку</button>
-            <div class="form-footnote">
+</div>
+<form action="https://script.google.com/macros/s/AKfycbwMC1WpwvDkwJ8ZNO7xZA_zQ16gF9ps2_0ZLA6AOiTLHN_pNTL5vh5FZTd8Q6DXu9v2/exec" method="POST">
+<div class="field-group">
+<label class="field-label">ФИО режиссёра <span>*</span></label>
+<input name="director_name" placeholder="Имя Фамилия" required="" type="text"/>
+</div>
+<div class="field-group">
+<label class="field-label">Контактный e-mail <span>*</span></label>
+<input name="email" placeholder="name@example.com" required="" type="email"/>
+</div>
+<div class="field-group">
+<label class="field-label">Страна <span>*</span></label>
+<input name="country" placeholder="Страна производства" required="" type="text"/>
+</div>
+<div class="field-group">
+<label class="field-label">Название фильма <span>*</span></label>
+<input name="film_title" placeholder="Оригинальное и/или международное название" required="" type="text"/>
+</div>
+<div class="field-group">
+<label class="field-label">Категория </label>
+<select name="category">
+<option>Игровое полнометражное кино</option>
+<option>Документальное полнометражное кино</option>
+<option>Короткий метр</option>
+<option>Специальная программа / внеконкурс</option>
+</select>
+</div>
+<div class="field-group">
+<label class="field-label">Ссылка на материалы к фильму <span>*</span></label>
+<input name="frame_url" placeholder="https://..." required="" type="url"/>
+</div>
+<div class="field-group">
+<label class="field-label">Ссылка на фильм (Google Drive, Dropbox и др.) <span>*</span></label>
+<input name="film_url" placeholder="https://..." required="" type="url"/>
+</div>
+<div class="field-group">
+<label class="field-label">Синопсис <span>*</span></label>
+<textarea name="synopsis" placeholder="Краткое описание фильма (до 1000 символов)" required=""></textarea>
+</div>
+<div class="field-group">
+<label class="field-label">Хронометраж <span>*</span></label>
+<input name="duration" placeholder="Формат чч:мм:сс" required="" type="text"/>
+</div>
+<input name="redirect-to" type="hidden" value="https://bricsfilmfest.com/thanks.html"/>
+<div class="submit-row">
+<button class="btn-submit" type="submit">Отправить заявку</button>
+<div class="form-footnote">
+                        Отправка заявки занимает несколько секунд. Повторное нажатие кнопки не требуется.<br><br>
               Нажимая «Отправить», вы подтверждаете согласие с <a href="reglament_brics_2026.pdf" target="_blank"><span>регламентом фестиваля</span></a> и обработкой данных.
             </div>
-          </div>
+</div>
 </form>
-      </div>
-    </div>
-  </section>
-
-  <section id="team">
-    <div class="premium-section-header">
-      <div class="premium-section-kicker">Оргкомитет</div>
-      <h2 class="premium-section-title">Команда фестиваля</h2>
-    </div>
+</div>
+</div>
+</section>
+<section id="team">
+<div class="premium-section-header">
+<div class="premium-section-kicker">Оргкомитет</div>
+<h2 class="premium-section-title">Команда фестиваля</h2>
+</div>
 <div class="team-showcase">
-      <div class="team-grid">
-        <div class="team-card">
-          <div class="team-photo-wrap">
-            <img src="brics_crew_viktoria.JPG" alt="Виктория Лукина" />
-          </div>
-          <div class="team-name">Виктория Лукина</div>
-          <div class="team-role">Генеральный продюсер фестиваля</div>
-          <div class="team-divider"></div>
-          <div class="team-extra">Кинопродюсер, журналист, общественный деятель. Председатель Совета по кинематографии и новым медиа Международной организации развития БРИКС. Член Союза кинематографистов России.</div>
-        </div>
-        <div class="team-card">
-          <div class="team-photo-wrap">
-            <img src="brics_crew_elena_avramova.jpg" alt="Елена Аврамова" />
-          </div>
-          <div class="team-name">Елена Аврамова</div>
-          <div class="team-role">Программный директор фестиваля</div>
-          <div class="team-divider"></div>
-          <div class="team-extra">Кинорежиссёр, кинопродюсер. Эксперт в области международных кинофестивальных программ.</div>
-        </div>
-        <div class="team-card">
-          <div class="team-photo-wrap">
-            <img src="brics_crew_elena_bondarenko.png" alt="Елена Бондаренко" />
-          </div>
-          <div class="team-name">Елена Бондаренко</div>
-          <div class="team-role">Директор кинообразовательных проектов фестиваля</div>
-          <div class="team-divider"></div>
-          <div class="team-extra">Президент Ассоциации кинообразования и медиапедагогики Российской Федерации, член Союза кинематографистов России, заместитель Председателя комиссии «Кинопедагогика и медиаобразование», Доцент ВГИК имени С.А. Герасимова.</div>
-        </div>
-        <div class="team-card">
-          <div class="team-photo-wrap">
-            <img src="brics_crew_yulia.JPG" alt="Юлия Печагина" />
-          </div>
-          <div class="team-name">Юлия Печагина</div>
-          <div class="team-role">Исполнительный продюсер фестиваля</div>
-          <div class="team-divider"></div>
-          <div class="team-extra">Продюсер международных культурных и кинематографических проектов.</div>
-        </div>
-      </div>
-      <div class="team-summary">Команда Международного кинофестиваля БРИКС+ объединяет профессионалов киноиндустрии, культурной дипломатии и международного гуманитарного сотрудничества.</div>
-    </div>
-  </section>
+<div class="team-grid">
+<div class="team-card">
+<div class="team-photo-wrap">
+<img alt="Виктория Лукина" src="brics_crew_viktoria.JPG">
+</img></div>
+<div class="team-name">Виктория Лукина</div>
+<div class="team-role">Генеральный продюсер фестиваля</div>
+<div class="team-divider"></div>
+<div class="team-extra">Кинопродюсер, журналист, общественный деятель. Председатель Совета по кинематографии и новым медиа Международной организации развития БРИКС. Член Союза кинематографистов России.</div>
+</div>
+<div class="team-card">
+<div class="team-photo-wrap">
+<img alt="Елена Аврамова" src="brics_crew_elena_avramova.jpg">
+</img></div>
+<div class="team-name">Елена Аврамова</div>
+<div class="team-role">Программный директор фестиваля</div>
+<div class="team-divider"></div>
+<div class="team-extra">Кинорежиссёр, кинопродюсер. Эксперт в области международных кинофестивальных программ.</div>
+</div>
+<div class="team-card">
+<div class="team-photo-wrap">
+<img alt="Елена Бондаренко" src="brics_crew_elena_bondarenko.png">
+</img></div>
+<div class="team-name">Елена Бондаренко</div>
+<div class="team-role">Директор кинообразовательных проектов фестиваля</div>
+<div class="team-divider"></div>
+<div class="team-extra">Президент Ассоциации кинообразования и медиапедагогики Российской Федерации, член Союза кинематографистов России, заместитель Председателя комиссии «Кинопедагогика и медиаобразование», Доцент ВГИК имени С.А. Герасимова.</div>
+</div>
+<div class="team-card">
+<div class="team-photo-wrap">
+<img alt="Юлия Печагина" src="brics_crew_yulia.JPG">
+</img></div>
+<div class="team-name">Юлия Печагина</div>
+<div class="team-role">Исполнительный продюсер фестиваля</div>
+<div class="team-divider"></div>
+<div class="team-extra">Продюсер международных культурных и кинематографических проектов.</div>
+</div>
+</div>
+<div class="team-summary">Команда Международного кинофестиваля БРИКС+ объединяет профессионалов киноиндустрии, культурной дипломатии и международного гуманитарного сотрудничества.</div>
+</div>
+</section>
 </main>
-
 <footer>
-  <div>
-    <p>© Международный кинофестиваль стран БРИКС+, 2026. Санкт-Петербург.</p>
-    <br><br>
-    <p><strong>Контакты оргкомитета:</strong></p>
-    <p>Виктория Лукина — генеральный продюсер<br>
-    viktoria.brics@yandex.ru<br>
+<div>
+<p>© Международный кинофестиваль стран БРИКС+, 2026. Санкт-Петербург.</p>
+<br/><br/>
+<p><strong>Контакты оргкомитета:</strong></p>
+<p>Виктория Лукина — генеральный продюсер<br/>
+    viktoria.brics@yandex.ru<br/>
     8-909-957-67-78</p>
-  </div>
+</div>
 </footer>
-
 <script>
   const burger = document.getElementById('burger');
   const mobileNav = document.getElementById('mobileNav');
