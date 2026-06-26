@@ -1197,6 +1197,25 @@
   font-style:italic;
 }
 
+
+/* Jury 3x3 final grid */
+.jury-premium-grid{
+  display:grid!important;
+  grid-template-columns:repeat(3,minmax(0,1fr))!important;
+  justify-content:stretch!important;
+  gap:22px!important;
+}
+.jury-premium-card{
+  width:auto!important;
+  min-width:0!important;
+}
+@media (max-width:900px){
+  .jury-premium-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;}
+}
+@media (max-width:560px){
+  .jury-premium-grid{grid-template-columns:minmax(0,1fr)!important;}
+}
+
 </style>
 </head>
 <body>
@@ -1451,6 +1470,24 @@
           <div class="jury-premium-role">Киновед, историк кино</div>
           <div class="team-divider"></div>
           <p class="jury-premium-bio">Кандидат искусствоведения, один из ведущих специалистов по истории раннего российского и советского кинематографа. Автор фундаментальных исследований и проектов по восстановлению утраченных фильмов Дзиги Вертова, Льва Кулешова и Александра Медведкина. Преподаёт во ВГИКе и на Высших курсах сценаристов и режиссёров.</p>
+        </article>
+
+        <article class="jury-premium-card">
+          <div class="jury-photo-wrap"><img src="jury_anuar_kenzhibayev_Kazakhstan.png" alt="Ануар Кенжибаев"></div>
+          <div class="jury-country-badge">🇰🇿 КАЗАХСТАН</div>
+          <h3 class="jury-premium-name">Ануар Кенжибаев</h3>
+          <div class="jury-premium-role">Президент Kazakh Festival Hub</div>
+          <div class="team-divider"></div>
+          <p class="jury-premium-bio">Основатель и президент фонда Kazakh Festival Hub, развивающего фестивальную и индустриальную инфраструктуру кинематографа Казахстана. Создатель международных проектов Baiqonyr Film Festival, Almaty Animation Festival, Almaty Series Week и Almaty Film Critics Forum. Инициатор профессиональных платформ, способствующих развитию киноиндустрии и международного сотрудничества.</p>
+        </article>
+
+        <article class="jury-premium-card">
+          <div class="jury-photo-wrap"><img src="jury_Padu Palmerio_Brazil.png" alt="Паду Палмерио"></div>
+          <div class="jury-country-badge">🇧🇷 БРАЗИЛИЯ</div>
+          <h3 class="jury-premium-name">Паду Палмерио</h3>
+          <div class="jury-premium-role">Режиссёр, кинооператор</div>
+          <div class="team-divider"></div>
+          <p class="jury-premium-bio">Бразильский режиссёр и кинооператор, работающий в игровом и документальном кино. Снимал проекты более чем в 40 странах мира и участвовал в международных кинопроектах Латинской Америки. Лауреат и номинант международных операторских премий, член жюри и наставник международных кинолабораторий.</p>
         </article>
       </div>
 
