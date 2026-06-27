@@ -1060,33 +1060,21 @@
 
 
 
-/* Jury 10 cards — 4+4+2 compact centered grid */
+
+/* Jury 9 cards — 3x3 final grid */
 .jury-premium-grid{
   display:grid!important;
-  grid-template-columns:repeat(4,minmax(0,1fr))!important;
+  grid-template-columns:repeat(3,minmax(0,1fr))!important;
   gap:22px!important;
-  justify-items:center!important;
+  justify-items:stretch!important;
 }
 .jury-premium-card{
-  width:100%!important;
-  max-width:290px;
+  width:auto!important;
+  max-width:none!important;
   min-width:0!important;
-}
-.jury-premium-card:nth-last-child(2){
-  grid-column:2;
-  justify-self:end;
-}
-.jury-premium-card:nth-last-child(1){
-  grid-column:3;
-  justify-self:start;
 }
 @media (max-width:900px){
   .jury-premium-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;}
-  .jury-premium-card:nth-last-child(2),
-  .jury-premium-card:nth-last-child(1){
-    grid-column:auto;
-    justify-self:stretch;
-  }
 }
 @media (max-width:560px){
   .jury-premium-grid{grid-template-columns:minmax(0,1fr)!important;}
@@ -1295,9 +1283,6 @@
 <article class="jury-premium-card"><div class="jury-photo-wrap"><img src="jury_ivan_bolotnikov_russia.png" alt="Ivan Bolotnikov"></div><div class="jury-country-badge">🇷🇺 Russia</div><h3 class="jury-premium-name">Ivan Bolotnikov</h3><div class="jury-premium-role">Film Director, Screenwriter, Producer</div><div class="team-divider"></div><p class="jury-premium-bio">Russian director, screenwriter, and producer, founder of Studio Avtor. Director of the films Kharms, Palmira, and Don’t Bury Me Without Ivan. Recipient of two Golden Goblet Awards at the Shanghai International Film Festival. A graduate of the Higher Courses for Scriptwriters and Directors, he worked in Aleksei German’s creative team on the film Hard to Be a God.</p></article>
 
 <article class="jury-premium-card"><div class="jury-photo-wrap"><img src="jury_nikolai_izvolov_russia.png" alt="Nikolai Izvolov"></div><div class="jury-country-badge">🇷🇺 Russia</div><h3 class="jury-premium-name">Nikolai Izvolov</h3><div class="jury-premium-role">Film Historian, Cinema Scholar</div><div class="team-divider"></div><p class="jury-premium-bio">PhD in Art History and one of the leading experts on early Russian and Soviet cinema. Author of major research works and restoration projects dedicated to lost films by Dziga Vertov, Lev Kuleshov, and Alexander Medvedkin. Lecturer at VGIK and the Higher Courses for Scriptwriters and Directors.</p></article>
-
-
-<article class="jury-premium-card"><div class="jury-photo-wrap"><img src="jury_anuar_kenzhibayev_Kazakhstan.png" alt="Anuar Kenzhibayev"></div><div class="jury-country-badge">🇰🇿 KAZAKHSTAN</div><h3 class="jury-premium-name">Anuar Kenzhibayev</h3><div class="jury-premium-role">President of Kazakh Festival Hub</div><div class="team-divider"></div><p class="jury-premium-bio">Founder and President of the Kazakh Festival Hub Foundation, dedicated to developing Kazakhstan’s film festival and industry infrastructure. Founder of the international projects Baiqonyr Film Festival, Almaty Animation Festival, Almaty Series Week, and Almaty Film Critics Forum. Creator of professional platforms that foster the growth of the film industry and international cooperation.</p></article>
 
 <article class="jury-premium-card"><div class="jury-photo-wrap"><img src="jury_Padu Palmerio_Brazil.png" alt="Padu Palmério"></div><div class="jury-country-badge">🇧🇷 BRAZIL</div><h3 class="jury-premium-name">Padu Palmério</h3><div class="jury-premium-role">Director, Cinematographer</div><div class="team-divider"></div><p class="jury-premium-bio">Brazilian director and cinematographer working in both fiction and documentary cinema. Has filmed projects in more than 40 countries and collaborated on international productions across Latin America. Recipient and nominee of international cinematography awards, and an active jury member and mentor in international film laboratories.</p></article>
 
