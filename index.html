@@ -1219,6 +1219,84 @@
   .jury-premium-grid{grid-template-columns:minmax(0,1fr)!important;}
 }
 
+
+
+    .program-schedule{display:flex;flex-direction:column;gap:16px;}
+    .schedule-card{border-radius:18px;padding:18px;background:rgba(15,23,42,.9);border:1px solid rgba(148,163,184,.6);}
+    .schedule-venue{margin-top:5px;color:var(--text-muted);font-size:12px;line-height:1.5;}
+    .schedule-list{margin-top:14px;border-top:1px solid rgba(148,163,184,.2);}
+    .screening-row{display:grid;grid-template-columns:112px 1fr;gap:16px;padding:11px 0;border-bottom:1px solid rgba(148,163,184,.12);}
+    .screening-row:last-child{border-bottom:0;}
+    .screening-time{font-size:12px;color:var(--text-muted);font-variant-numeric:tabular-nums;white-space:nowrap;}
+    .screening-title{font-size:14px;color:var(--text-strong);font-weight:600;line-height:1.35;}
+    .screening-meta{margin-top:3px;font-size:12px;color:var(--text-main);line-height:1.45;}
+    .screening-type{margin-top:3px;font-size:11px;color:var(--text-muted);line-height:1.4;}
+    @media (max-width:700px){
+      .screening-row{grid-template-columns:88px 1fr;gap:10px;}
+      .screening-title{font-size:13px;}
+    }
+
+
+/* Program: two-column desktop layout */
+.program-schedule {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  align-items: start;
+}
+
+.schedule-card {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+@media (max-width: 900px) {
+  .program-schedule {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* Jury: 10 members — readable two-column desktop composition */
+@media (min-width: 901px) {
+  #jury .jury-premium-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 24px !important;
+    align-items: stretch;
+  }
+  #jury .jury-premium-card {
+    width: auto !important;
+    max-width: none !important;
+    min-width: 0 !important;
+  }
+}
+@media (max-width: 900px) {
+  #jury .jury-premium-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+
+/* Day headings match the English programme typography. */
+#program .schedule-day {
+  margin-bottom: 6px;
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  color: #d8b640;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .10em;
+  text-transform: uppercase;
+}
+#program .schedule-card h3 {
+  margin: 0;
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 1.17em;
+  font-weight: 700;
+  line-height: normal;
+  color: var(--text-main);
+}
+
 </style>
 </head>
 <body>
@@ -1330,9 +1408,9 @@
 <div class="glass-footer">
 <div class="glass-pulse"><div class="glass-pulse-inner"></div></div>
 <div class="glass-footer-text">
-<strong>Конкурсный отбор</strong><br>
+<strong>Конкурсный отбор</strong><br/>
               Игровое, документальное кино и короткий метр.
-            </br></div>
+            </div>
 <div class="glass-footer-tag">BRICS+ EDITION • 2026</div>
 </div>
 </div>
@@ -1379,14 +1457,6 @@
 </div>
 <div class="team-showcase jury-showcase">
 <div class="jury-premium-grid">
-<article class="jury-premium-card">
-<div class="jury-photo-wrap"><img alt="Александра Очирова" src="jury_alexandra_ochirova_russia.png"/></div>
-<div class="jury-country-badge">🇷🇺 РОССИЯ</div>
-<h3 class="jury-premium-name">Александра Очирова</h3>
-<div class="jury-premium-role">Доктор философских наук, общественный деятель</div>
-<div class="team-divider"></div>
-<p class="jury-premium-bio">Доктор философских наук, действительный член Российской академии художеств. Посол доброй воли ЮНЕСКО, сопредседатель Генерального совета Ассамблеи народов мира. Сопрезидент Общероссийского общественного движения «За сбережение народа».</p>
-</article>
 <article class="jury-premium-card">
 <div class="jury-photo-wrap"><img alt="Антонио Миано" src="jury_antonio_miano_brazil.png"/></div>
 <div class="jury-country-badge">🇧🇷 Бразилия</div>
@@ -1451,6 +1521,22 @@
 <div class="jury-premium-role">Киновед, историк кино</div>
 <div class="team-divider"></div>
 <p class="jury-premium-bio">Кандидат искусствоведения, один из ведущих специалистов по истории раннего российского и советского кинематографа. Автор фундаментальных исследований и проектов по восстановлению утраченных фильмов Дзиги Вертова, Льва Кулешова и Александра Медведкина. Преподаёт во ВГИКе и на Высших курсах сценаристов и режиссёров.</p>
+</article>
+<article class="jury-premium-card">
+<div class="jury-photo-wrap"><img alt="Алексей Кравченко" src="jury_alexey_kravchenko_russia.png"/></div>
+<div class="jury-country-badge">🇷🇺 РОССИЯ</div>
+<h3 class="jury-premium-name">Алексей Кравченко</h3>
+<div class="jury-premium-role">Журналист-международник</div>
+<div class="team-divider"></div>
+<p class="jury-premium-bio">Журналист-международник, шеф-редактор Аналитического центра ТАСС. Специализируется на международной повестке, аналитике и освещении глобальных политических и общественных процессов.</p>
+</article>
+<article class="jury-premium-card">
+<div class="jury-photo-wrap"><img alt="Александра Очирова" src="jury_alexandra_ochirova_russia.png"/></div>
+<div class="jury-country-badge">🇷🇺 РОССИЯ</div>
+<h3 class="jury-premium-name">Александра Очирова</h3>
+<div class="jury-premium-role">Доктор философских наук, общественный деятель</div>
+<div class="team-divider"></div>
+<p class="jury-premium-bio">Доктор философских наук, действительный член Российской академии художеств. Посол доброй воли ЮНЕСКО, сопредседатель Генерального совета Ассамблеи народов мира. Сопрезидент Общероссийского общественного движения «За сбережение народа».</p>
 </article>
 </div>
 <div class="team-summary">
@@ -1539,22 +1625,193 @@
 </section>
 <section id="program">
 <div class="premium-section-header">
-<div class="premium-section-kicker">30 октября – 3 ноября 2026</div>
+<div class="premium-section-kicker">29 октября – 3 ноября 2026</div>
 <h2 class="premium-section-title">Программа фестиваля</h2>
-<p class="premium-section-description">
-        Программа может быть обновлена по мере формирования официального расписания фестиваля.
-      </p>
+<p class="premium-section-description">Официальная программа и расписание показов. 29 октября — специальный день неигрового кино перед официальным открытием фестиваля.</p>
 </div>
 <div class="glass-block">
-<div class="program-grid">
-<div class="day-card"><div class="day-label">День 1</div><div class="day-date">30 октября 2026 • Открытие</div><div class="day-items"><div class="day-item"><span>Церемония открытия фестиваля</span><span class="day-time">19:00</span></div><div class="day-item"><span>Премьерный показ фильма открытия</span><span class="day-time">20:00</span></div></div></div>
-<div class="day-card"><div class="day-label">День 2</div><div class="day-date">31 октября • Конкурсная программа</div><div class="day-items"><div class="day-item"><span>Показы конкурсных фильмов</span><span class="day-time">день</span></div><div class="day-item"><span>Q&amp;A с режиссёрами</span><span class="day-time">вечер</span></div></div></div>
-<div class="day-card"><div class="day-label">День 3</div><div class="day-date">1 ноября • Конкурсная и индустриальная программа</div><div class="day-items"><div class="day-item"><span>Показы конкурсных фильмов</span><span class="day-time">день</span></div><div class="day-item"><span>Питчинги, нетворкинг и деловые встречи</span><span class="day-time">вечер</span></div></div></div>
-<div class="day-card"><div class="day-label">День 4</div><div class="day-date">2 ноября • Специальные программы</div><div class="day-items"><div class="day-item"><span>Фокус-программы стран БРИКС+</span><span class="day-time">день</span></div><div class="day-item"><span>Ретроспективы и специальные показы</span><span class="day-time">вечер</span></div></div></div>
-<div class="day-card"><div class="day-label">День 5</div><div class="day-date">3 ноября • Закрытие</div><div class="day-items"><div class="day-item"><span>Церемония награждения</span><span class="day-time">18:00</span></div><div class="day-item"><span>Фильм закрытия</span><span class="day-time">20:00</span></div></div></div>
+<div class="program-schedule"><article class="schedule-card">
+<div class="schedule-day">29 октября · Специальный показ</div>
+<h3>День неигрового кино</h3>
+<div class="schedule-venue">Центральный музей почвоведения им. В. В. Докучаева · Санкт-Петербург, Биржевой проезд, 6</div>
+<div class="schedule-list"><div class="screening-row">
+<div class="screening-time">16:15–16:42</div>
+<div class="screening-main"><div class="screening-title">«Искра»</div><div class="screening-meta">Россия · реж. Евгений Карелинов</div><div class="screening-type">Неигровой, научно-популярный · 27 мин.</div></div>
+</div><div class="screening-row">
+<div class="screening-time">16:42–16:57</div>
+<div class="screening-main"><div class="screening-title">Кофе-брейк</div></div>
+</div><div class="screening-row">
+<div class="screening-time">17:00–17:52</div>
+<div class="screening-main"><div class="screening-title">«Служба Солнца»</div><div class="screening-meta">Россия · реж. Валерия Семенчукова</div><div class="screening-type">Неигровой, научно-популярный · 52 мин.</div></div>
+</div><div class="screening-row">
+<div class="screening-time">17:52–18:07</div>
+<div class="screening-main"><div class="screening-title">Кофе-брейк</div></div>
+</div><div class="screening-row">
+<div class="screening-time">18:10–18:31</div>
+<div class="screening-main"><div class="screening-title">«Вместе с птицами»</div><div class="screening-meta">Россия · реж. Виктория Окунева</div><div class="screening-type">Неигровой короткий метр · 20 мин. 10 сек.</div></div>
+</div></div>
+</article><article class="schedule-card">
+<div class="schedule-day">30 октября · День 1</div>
+<h3>Торжественное открытие</h3>
+<div class="schedule-venue">Дом журналиста · Санкт-Петербург, Невский проспект, 70</div>
+<div class="schedule-list"><div class="screening-row">
+<div class="screening-time">16:30–17:00</div>
+<div class="screening-main"><div class="screening-title">Сбор гостей</div></div>
+</div><div class="screening-row">
+<div class="screening-time">17:00–17:20</div>
+<div class="screening-main"><div class="screening-title">Торжественное открытие</div><div class="screening-meta">Представление международного жюри</div><div class="screening-type">Открытие Международного кинофестиваля БРИКС+</div></div>
+</div><div class="screening-row">
+<div class="screening-time">17:20–19:12</div>
+<div class="screening-main"><div class="screening-title">Snow Flower / «Снежный цветок»</div><div class="screening-meta">Индия · реж. Gajendra Vitthal Ahire</div><div class="screening-type">Игровой полнометражный · 1 ч. 52 мин.</div></div>
+</div><div class="screening-row">
+<div class="screening-time">19:15–21:00</div>
+<div class="screening-main"><div class="screening-title">«Семь вёрст до рассвета»</div><div class="screening-meta">Россия · реж. Александр Андреев</div><div class="screening-type">Игровой полнометражный · 1 ч. 42 мин. · специальный показ</div></div>
+</div></div>
+</article><article class="schedule-card">
+<div class="schedule-day">31 октября · День 2</div>
+<h3>Международная конкурсная программа БРИКС+</h3>
+<div class="schedule-venue">Кинозал отеля Muse of Stars · Санкт-Петербург, наб. канала Грибоедова, 133Б</div>
+<div class="schedule-list">
+<div class="screening-row">
+<div class="screening-time">10:30–12:00</div>
+<div class="screening-main"><div class="screening-title">Проблема героя в современном мировом кинематографе</div><div class="screening-type">Круглый стол</div></div>
 </div>
-<div class="program-note">
+<div class="screening-row">
+<div class="screening-time">13:00–14:57</div>
+<div class="screening-main"><div class="screening-title">«Левша»</div><div class="screening-meta">Россия</div><div class="screening-type">Игровой полнометражный · 1 ч. 57 мин.</div></div>
+</div><div class="screening-row">
+<div class="screening-time">15:00–15:26</div>
+<div class="screening-main"><div class="screening-title">«Демонстратор»</div><div class="screening-meta">Беларусь · реж. Евгений Сетько</div><div class="screening-type">Игровой короткий метр · 26 мин.</div></div>
+</div><div class="screening-row">
+<div class="screening-time">15:30–15:50</div>
+<div class="screening-main"><div class="screening-title">Farewell Paris</div><div class="screening-meta">Иран · реж. Mohammad Ebrahim Shahbazi</div><div class="screening-type">Игровой короткий метр · 19 мин. 34 сек.</div></div>
+</div><div class="screening-row">
+<div class="screening-time">15:55–16:10</div>
+<div class="screening-main"><div class="screening-title">Ybi</div><div class="screening-meta">Бразилия · реж. Eliza Telles, Begê Muniz</div><div class="screening-type">Игровой короткий метр · 15 мин. 22 сек.</div></div>
+</div><div class="screening-row">
+<div class="screening-time">16:15–16:40</div>
+<div class="screening-main"><div class="screening-title">«Мужики не танцуют»</div><div class="screening-meta">Россия · реж. Анастасия Шаповалова</div><div class="screening-type">Игровой короткий метр · 24 мин. 32 сек.</div></div>
+</div><div class="screening-row">
+<div class="screening-time">16:45–17:06</div>
+<div class="screening-main"><div class="screening-title">«Парадиз / Paradise»</div><div class="screening-meta">Россия · реж. Антон Бессонов</div><div class="screening-type">Игровой короткий метр · 20 мин. 56 сек.</div></div>
+</div><div class="screening-row">
+<div class="screening-time">17:06–18:00</div>
+<div class="screening-main"><div class="screening-title">Перерыв</div></div>
+</div><div class="screening-row">
+<div class="screening-time">18:00–18:27</div>
+<div class="screening-main"><div class="screening-title">«Три сестры»</div><div class="screening-meta">Россия · реж. Лолита Исмаилова</div><div class="screening-type">Неигровой короткий метр · 26 мин. 10 сек.</div></div>
+</div><div class="screening-row">
+<div class="screening-time">18:30–18:52</div>
+<div class="screening-main"><div class="screening-title">«Там, где текли молочные реки»</div><div class="screening-meta">Россия · реж. Алина Куткова</div><div class="screening-type">Неигровой короткий метр · 21 мин. 40 сек.</div></div>
+</div><div class="screening-row">
+<div class="screening-time">18:55–19:52</div>
+<div class="screening-main"><div class="screening-title">«Куда уходят дети из города Гаммельна?»</div><div class="screening-meta">Россия · реж. Даниэлла Рыбакьян</div><div class="screening-type">Неигровой полнометражный · 57 мин.</div></div>
+</div><div class="screening-row">
+<div class="screening-time">19:55–21:15</div>
+<div class="screening-main"><div class="screening-title">Mijaín</div><div class="screening-meta">Куба · реж. Rolando Almirante, Ángel Alderete, Héctor Villar</div><div class="screening-type">Неигровой полнометражный · 1 ч. 20 мин.</div></div>
+</div><div class="screening-row">
+<div class="screening-time">21:20–22:57</div>
+<div class="screening-main"><div class="screening-title">«Тамерлан / Rise of the Conqueror»</div><div class="screening-meta">Узбекистан</div><div class="screening-type">Игровой полнометражный</div></div>
+</div><div class="screening-row">
+<div class="screening-time">23:00</div>
+<div class="screening-main"><div class="screening-title">Окончание программы</div></div>
+</div></div>
+</article><article class="schedule-card">
+<div class="schedule-day">1 ноября · День 3</div>
+<h3>Международная конкурсная программа БРИКС+</h3>
+<div class="schedule-venue">Кинозал отеля Muse of Stars · Санкт-Петербург, наб. канала Грибоедова, 133Б</div>
+<div class="schedule-list">
+<div class="screening-row">
+<div class="screening-time">10:30–12:00</div>
+<div class="screening-main"><div class="screening-title">Новые технологии и искусственный интеллект в современной визуальной культуре</div><div class="screening-type">Круглый стол</div></div>
 </div>
+<div class="screening-row">
+<div class="screening-time">13:00–15:30</div>
+<div class="screening-main"><div class="screening-title">Korean Kanakaraju / «Корейский Канакараджу»</div><div class="screening-meta">Индия</div><div class="screening-type">Игровой полнометражный · 2 ч. 30 мин.</div></div>
+</div><div class="screening-row">
+<div class="screening-time">15:30–15:40</div>
+<div class="screening-main"><div class="screening-title">Перерыв</div></div>
+</div><div class="screening-row">
+<div class="screening-time">15:40–17:04</div>
+<div class="screening-main"><div class="screening-title">Itacoatiaras</div><div class="screening-meta">Бразилия · реж. Sérgio Andrade, Patricia Goùvea</div><div class="screening-type">Неигровой полнометражный · 1 ч. 23 мин. 45 сек.</div></div>
+</div><div class="screening-row">
+<div class="screening-time">17:05–18:25</div>
+<div class="screening-main"><div class="screening-title">People’s Child</div><div class="screening-meta">Иран</div><div class="screening-type">Игровой полнометражный · 1 ч. 20 мин.</div></div>
+</div><div class="screening-row">
+<div class="screening-time">18:25–18:40</div>
+<div class="screening-main"><div class="screening-title">Перерыв</div></div>
+</div><div class="screening-row">
+<div class="screening-time">18:40–19:45</div>
+<div class="screening-main"><div class="screening-title">«Два дня в Ясной Поляне»</div><div class="screening-meta">Россия · реж. Галина Евтушенко</div><div class="screening-type">Неигровой полнометражный · 1 ч. 05 мин.</div></div>
+</div><div class="screening-row">
+<div class="screening-time">19:50–20:02</div>
+<div class="screening-main"><div class="screening-title">«Холодная весна / Cold Spring»</div><div class="screening-meta">Узбекистан · реж. Нодир Абдукаримов</div><div class="screening-type">Игровой короткий метр · 12 мин.</div></div>
+</div><div class="screening-row">
+<div class="screening-time">20:02–20:15</div>
+<div class="screening-main"><div class="screening-title">Перерыв</div></div>
+</div><div class="screening-row">
+<div class="screening-time">20:15–22:10</div>
+<div class="screening-main"><div class="screening-title">«Воин от Бога / Khodaye Jang»</div><div class="screening-meta">Иран · реж. Хосейн Дараби</div><div class="screening-type">Игровой полнометражный · 1 ч. 55 мин.</div></div>
+</div><div class="screening-row">
+<div class="screening-time">22:10–23:49</div>
+<div class="screening-main"><div class="screening-title">Maira: Whisper from Papua</div><div class="screening-meta">Индонезия · реж. Anggi Frisca</div><div class="screening-type">Игровой полнометражный · 1 ч. 39 мин.</div></div>
+</div><div class="screening-row">
+<div class="screening-time">23:49</div>
+<div class="screening-main"><div class="screening-title">Окончание программы</div></div>
+</div></div>
+</article><article class="schedule-card">
+<div class="schedule-day">2 ноября · День 4</div>
+<h3>Международная конкурсная программа БРИКС+</h3>
+<div class="schedule-venue">Дом журналиста · Санкт-Петербург, Невский проспект, 70</div>
+<div class="schedule-list"><div class="screening-row">
+<div class="screening-time">12:00–13:34</div>
+<div class="screening-main"><div class="screening-title">«Пять сыновей Марии»</div><div class="screening-meta">Россия</div><div class="screening-type">Полнометражный · 1 ч. 34 мин.</div></div>
+</div><div class="screening-row">
+<div class="screening-time">13:34–13:45</div>
+<div class="screening-main"><div class="screening-title">Перерыв</div></div>
+</div><div class="screening-row">
+<div class="screening-time">13:45–15:24</div>
+<div class="screening-main"><div class="screening-title">Calm Man</div><div class="screening-meta">Иран · реж. Behnoush Sadeghi</div><div class="screening-type">Игровой полнометражный · 1 ч. 39 мин.</div></div>
+</div><div class="screening-row">
+<div class="screening-time">15:24–15:35</div>
+<div class="screening-main"><div class="screening-title">Перерыв</div></div>
+</div><div class="screening-row">
+<div class="screening-time">15:35–16:53</div>
+<div class="screening-main"><div class="screening-title">Brahmakanya / The Colour of Hope</div><div class="screening-meta">Индия · реж. Dhiraj Kashyap</div><div class="screening-type">Игровой полнометражный · 1 ч. 18 мин.</div></div>
+</div><div class="screening-row">
+<div class="screening-time">16:53–17:05</div>
+<div class="screening-main"><div class="screening-title">Перерыв</div></div>
+</div><div class="screening-row">
+<div class="screening-time">17:05–19:02</div>
+<div class="screening-main"><div class="screening-title">Zero Meets Hero / Nghỉ Hè Sợ Nghỉ Hưu</div><div class="screening-meta">Вьетнам · реж. Huỳnh Lập</div><div class="screening-type">Игровой полнометражный · 1 ч. 57 мин.</div></div>
+</div><div class="screening-row">
+<div class="screening-time">19:05–20:05</div>
+<div class="screening-main"><div class="screening-title">Встреча с членами международного жюри БРИКС+</div><div class="screening-meta">Открытая встреча со зрителями и участниками фестиваля</div><div class="screening-type">Творческая программа</div></div>
+</div><div class="screening-row">
+<div class="screening-time">20:05–21:00</div>
+<div class="screening-main"><div class="screening-title">Завершение фестивального дня</div></div>
+</div></div>
+</article><article class="schedule-card">
+<div class="schedule-day">3 ноября · День 5</div>
+<h3>Итоги и торжественное закрытие</h3>
+<div class="schedule-venue">Дом журналиста · Санкт-Петербург, Невский проспект, 70</div>
+<div class="schedule-list"><div class="screening-row">
+<div class="screening-time">12:00–12:30</div>
+<div class="screening-main"><div class="screening-title">Сбор гостей</div></div>
+</div><div class="screening-row">
+<div class="screening-time">12:30–13:15</div>
+<div class="screening-main"><div class="screening-title">Подведение итогов международной конкурсной программы</div></div>
+</div><div class="screening-row">
+<div class="screening-time">13:15–14:15</div>
+<div class="screening-main"><div class="screening-title">Награждение победителей</div><div class="screening-meta">Гран-при Международного кинофестиваля БРИКС+ · Специальные призы международного жюри · Награждение победителей конкурсной программы</div><div class="screening-type">Торжественная церемония награждения</div></div>
+</div><div class="screening-row">
+<div class="screening-time">14:15–14:30</div>
+<div class="screening-main"><div class="screening-title">Перерыв</div></div>
+</div><div class="screening-row">
+<div class="screening-time">14:30–17:00</div>
+<div class="screening-main"><div class="screening-title">Заключительный показ</div><div class="screening-meta">Показ фильма-победителя / специального фильма закрытия</div><div class="screening-type">Закрытие Международного кинофестиваля БРИКС+</div></div>
+</div></div>
+</article></div>
 </div>
 </section>
 <section id="team">
@@ -1566,8 +1823,8 @@
 <div class="team-grid">
 <div class="team-card">
 <div class="team-photo-wrap">
-<img alt="Виктория Лукина" src="brics_crew_viktoria.JPG">
-</img></div>
+<img alt="Виктория Лукина" src="brics_crew_viktoria.JPG"/>
+</div>
 <div class="team-name">Виктория Лукина</div>
 <div class="team-role">Генеральный продюсер фестиваля</div>
 <div class="team-divider"></div>
@@ -1575,8 +1832,8 @@
 </div>
 <div class="team-card">
 <div class="team-photo-wrap">
-<img alt="Елена Аврамова" src="brics_crew_elena_avramova.jpg">
-</img></div>
+<img alt="Елена Аврамова" src="brics_crew_elena_avramova.jpg"/>
+</div>
 <div class="team-name">Елена Аврамова</div>
 <div class="team-role">Программный директор фестиваля</div>
 <div class="team-divider"></div>
@@ -1584,8 +1841,8 @@
 </div>
 <div class="team-card">
 <div class="team-photo-wrap">
-<img alt="Елена Бондаренко" src="brics_crew_elena_bondarenko.png">
-</img></div>
+<img alt="Елена Бондаренко" src="brics_crew_elena_bondarenko.png"/>
+</div>
 <div class="team-name">Елена Бондаренко</div>
 <div class="team-role">Директор кинообразовательных проектов фестиваля</div>
 <div class="team-divider"></div>
@@ -1593,8 +1850,8 @@
 </div>
 <div class="team-card">
 <div class="team-photo-wrap">
-<img alt="Юлия Печагина" src="brics_crew_yulia.JPG">
-</img></div>
+<img alt="Юлия Печагина" src="brics_crew_yulia.JPG"/>
+</div>
 <div class="team-name">Юлия Печагина</div>
 <div class="team-role">Исполнительный продюсер фестиваля</div>
 <div class="team-divider"></div>
