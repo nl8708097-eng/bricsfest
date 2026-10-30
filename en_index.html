@@ -1569,8 +1569,26 @@
 
 /* External support logos preserve their proportions. */
 #support img.support-logo { object-fit: contain; }
+
+/* Welcome from the jury chair */
+#welcome .welcome-panel { position: relative; overflow: hidden; display: grid; grid-template-columns: 220px minmax(0,1fr); gap: 46px; align-items: start; padding: 42px; border: 1px solid rgba(212,175,55,.34); border-radius: 28px; background: radial-gradient(ellipse at 0 0,rgba(212,175,55,.10),transparent 55%),linear-gradient(140deg,#14120e,#080808 75%); box-shadow: 0 28px 70px rgba(0,0,0,.35); }
+#welcome .welcome-author { position: relative; z-index: 1; }
+#welcome .welcome-portrait { overflow: hidden; aspect-ratio: 4 / 5; border: 1px solid rgba(212,175,55,.32); border-radius: 16px; box-shadow: 0 15px 36px rgba(0,0,0,.3); background: #111; }
+#welcome .welcome-portrait img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center 25%; }
+#welcome .welcome-author-name { margin: 20px 0 8px; color: #e2c787; font: 600 29px/1.15 'Cormorant Garamond',Georgia,serif; }
+#welcome .welcome-author-role { max-width: 230px; font-size: 12px; line-height: 1.7; color: var(--text-muted); }
+#welcome .welcome-author-rule { width: 48px; height: 1px; margin: 17px 0; background: linear-gradient(90deg,#d4af37,rgba(212,175,55,.1)); }
+#welcome .welcome-message { position: relative; margin: 0; padding: 0; border: 0; font: 400 16px/1.85 'Inter',system-ui,sans-serif; color: var(--text-main); }
+#welcome .welcome-message::before { content: '“'; position: absolute; right: -7px; top: -56px; font: 230px/1 Georgia,serif; color: rgba(212,175,55,.08); pointer-events: none; }
+#welcome .welcome-message p { position: relative; margin: 0 0 19px; }
+#welcome .welcome-message p:first-child { font-size: 18px; line-height: 1.8; color: var(--text-strong); }
+#welcome .welcome-message p:last-child { margin-bottom: 0; color: #e2c787; font-weight: 500; }
+@media (max-width: 900px) { #welcome .welcome-panel { grid-template-columns: 185px minmax(0,1fr); gap: 28px; padding: 30px; } #welcome .welcome-message { font-size: 15px; } #welcome .welcome-message p:first-child { font-size: 16px; } }
+@media (max-width: 650px) { #welcome .welcome-panel { grid-template-columns: minmax(0,1fr); gap: 25px; padding: 26px 22px; border-radius: 22px; } #welcome .welcome-author { display: grid; grid-template-columns: 104px minmax(0,1fr); gap: 20px; align-items: center; } #welcome .welcome-author-name { margin-top: 0; font-size: 26px; } #welcome .welcome-author-rule { margin: 12px 0; } #welcome .welcome-author-role { font-size: 11px; } #welcome .welcome-message { line-height: 1.8; } #welcome .welcome-message p { margin-bottom: 17px; } }
+@media (max-width: 359px) { #welcome .welcome-author { grid-template-columns: 84px minmax(0,1fr); gap: 14px; } #welcome .welcome-panel { padding: 22px 18px; } #welcome .welcome-author-name { font-size: 23px; } }
+
 </style>
-<meta name="festival-program-version" content="2026-10-29-r1"/>
+<meta name="festival-program-version" content="2026-10-30-welcome"/>
 </head>
 <body>
 <header>
@@ -1715,6 +1733,17 @@
   </section>
 
   
+<section id="welcome" aria-labelledby="welcome-title">
+<div class="premium-section-header"><div class="premium-section-kicker">Festival Opening</div><h2 class="premium-section-title" id="welcome-title">A Welcome from the Jury Chair</h2></div>
+<div class="welcome-panel">
+<div class="welcome-author"><div class="welcome-portrait"><img src="jury_jayita_ghosh_india.png" alt="Jayita Ghosh" width="440" height="550" loading="lazy" decoding="async"/></div><div class="welcome-author-caption"><h3 class="welcome-author-name" id="welcome-author">Jayita Ghosh</h3><div class="welcome-author-rule" aria-hidden="true"></div><p class="welcome-author-role">Chair of the International Jury<br/>India</p></div></div>
+<blockquote class="welcome-message" aria-describedby="welcome-author"><p>Our festival begins today, and I warmly congratulate everyone on its opening! I wish you a vibrant and successful festival filled with inspiring encounters, new discoveries and the joy of connecting with one another.</p>
+<p>May this festival become a wonderful example of friendship and cultural cooperation among the BRICS countries, bringing us closer together through the art of cinema.</p>
+<p>May it bring renewed hope, opportunities and well-deserved recognition to all the filmmakers who have put so much effort, talent and heart into their films.</p>
+<p>Wishing everyone a wonderful festival! ✨🎬</p>
+</blockquote>
+</div>
+</section>
 <section id="jury">
 <div class="premium-section-header">
 <div class="premium-section-kicker">International Jury</div>
