@@ -1380,8 +1380,23 @@
 @media (max-width: 650px) { #welcome .welcome-panel { grid-template-columns: minmax(0,1fr); gap: 25px; padding: 26px 22px; border-radius: 22px; } #welcome .welcome-author { display: grid; grid-template-columns: 104px minmax(0,1fr); gap: 20px; align-items: center; } #welcome .welcome-author-name { margin-top: 0; font-size: 26px; } #welcome .welcome-author-rule { margin: 12px 0; } #welcome .welcome-author-role { font-size: 11px; } #welcome .welcome-message { line-height: 1.8; } #welcome .welcome-message p { margin-bottom: 17px; } }
 @media (max-width: 359px) { #welcome .welcome-author { grid-template-columns: 84px minmax(0,1fr); gap: 14px; } #welcome .welcome-panel { padding: 22px 18px; } #welcome .welcome-author-name { font-size: 23px; } }
 
+
+/* Date of the chair's welcome and the final screening day */
+#welcome .welcome-quote-column { min-width: 0; }
+#welcome .welcome-date { display: flex; align-items: center; justify-content: flex-end; gap: 12px; margin-top: 22px; color: #a99b81; font-size: 11px; line-height: 1.5; letter-spacing: .05em; }
+#welcome .welcome-date::before { content: ''; width: 30px; height: 1px; background: rgba(212,175,55,.38); }
+#program .schedule-address { margin-top: 5px; font-size: 12px; line-height: 1.6; color: var(--text-main); }
+#program .schedule-card--nov3 { grid-column: 1 / -1; }
+#program .schedule-start { display: inline-flex; margin-top: 18px; padding: 8px 13px; border: 1px solid rgba(212,175,55,.3); border-radius: 999px; background: rgba(212,175,55,.06); color: #e2c787; font-size: 13px; font-weight: 600; line-height: 1.4; }
+#program .nov3-film-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 0 30px; margin: 18px 0 0; padding: 0; list-style: none; border-top: 1px solid rgba(148,163,184,.2); }
+#program .nov3-film-grid li { display: flex; gap: 14px; align-items: flex-start; min-width: 0; padding: 17px 0; border-bottom: 1px solid rgba(148,163,184,.14); }
+#program .nov3-film-grid li:last-child { grid-column: 1 / -1; border-bottom: 0; padding-bottom: 0; }
+#program .nov3-film-index { flex: 0 0 24px; color: #d8b640; font-size: 12px; font-weight: 600; font-variant-numeric: tabular-nums; line-height: 1.6; }
+#program .nov3-film-content { min-width: 0; overflow-wrap: anywhere; }
+@media (max-width: 700px) { #program .nov3-film-grid { grid-template-columns: minmax(0,1fr); } }
+
 </style>
-<meta name="festival-program-version" content="2026-10-30-welcome"/>
+<meta name="festival-program-version" content="2026-10-30-nov3"/>
 </head>
 <body>
 <header>
@@ -1535,11 +1550,11 @@
 <div class="premium-section-header"><div class="premium-section-kicker">Открытие фестиваля</div><h2 class="premium-section-title" id="welcome-title">Приветствие председателя жюри</h2></div>
 <div class="welcome-panel">
 <div class="welcome-author"><div class="welcome-portrait"><img src="jury_jayita_ghosh_india.png" alt="Джайита Гош" width="440" height="550" loading="lazy" decoding="async"/></div><div class="welcome-author-caption"><h3 class="welcome-author-name" id="welcome-author">Джайита Гош</h3><div class="welcome-author-rule" aria-hidden="true"></div><p class="welcome-author-role">Председатель международного жюри<br/>Индия</p></div></div>
-<blockquote class="welcome-message" aria-describedby="welcome-author"><p>Сегодня начинается наш фестиваль, и я от всей души поздравляю всех с его открытием! Желаю, чтобы он прошёл ярко, успешно и подарил нам вдохновляющие встречи, новые открытия и радость общения.</p>
+<div class="welcome-quote-column"><blockquote class="welcome-message" aria-describedby="welcome-author"><p>Сегодня начинается наш фестиваль, и я от всей души поздравляю всех с его открытием! Желаю, чтобы он прошёл ярко, успешно и подарил нам вдохновляющие встречи, новые открытия и радость общения.</p>
 <p>Пусть этот фестиваль станет прекрасным примером дружбы и культурного сотрудничества между странами БРИКС, сближая нас через искусство кино.</p>
 <p>Пусть он подарит новые надежды, возможности и заслуженное признание всем кинематографистам, вложившим столько труда, таланта и души в свои фильмы.</p>
 <p>Желаю всем прекрасного фестиваля! ✨🎬</p>
-</blockquote>
+</blockquote><time class="welcome-date" datetime="2026-10-30">30 октября 2026</time></div>
 </div>
 </section>
 <section id="jury">
@@ -1724,11 +1739,11 @@
 <div class="premium-section-header">
 <div class="premium-section-kicker">29 октября – 3 ноября 2026</div>
 <h2 class="premium-section-title">Программа фестиваля</h2>
-<p class="premium-section-description">29 октября — день неигрового кино в Центральном музее почвоведения имени В. В. Докучаева. 30 октября – 2 ноября — показы в Медиацентре БРИКС+. Большой зал.</p>
+<p class="premium-section-description">Программа фестивальных показов проходит в двух городах. 29 октября в Санкт-Петербурге состоялся показ неигрового кино. С 30 октября по 2 ноября показы проходят в Москве. 3 ноября конкурсные кинопоказы состоятся в Санкт-Петербурге.</p>
 </div>
 <div class="glass-block">
 <div class="program-schedule"><article class="schedule-card schedule-card--special">
-<div class="schedule-day">29 октября · 2026</div><h3>День неигрового кино</h3><div class="schedule-venue">Центральный музей почвоведения имени В. В. Докучаева · Санкт-Петербург, Биржевой проезд, 6</div>
+<div class="schedule-day">29 октября · 2026</div><h3>День неигрового кино</h3><div class="schedule-venue">Центральный музей почвоведения имени В. В. Докучаева · Санкт-Петербург, Биржевой проезд, д. 6</div>
 <div class="special-day-grid"><div class="special-day-intro"><p>Приглашаем на четыре документальных фильма о науке, изобретениях, людях и родных местах в рамках Международного кинофестиваля БРИКС+.</p><p><strong>29 октября, 16:15–18:45</strong></p><p>Вход бесплатный, необходима регистрация.<br/>Количество мест ограничено — 80 зрителей.</p><a class="registration-link" href="https://brics-film-festival-2026.timepad.ru/event/4227053/" target="_blank" rel="noopener noreferrer">Зарегистрироваться</a></div><div class="schedule-list">
 <div class="screening-row"><div class="screening-time">16:15</div><div class="screening-main"><div class="screening-title">«Искра»</div></div></div>
 <div class="screening-row"><div class="screening-time">16:42</div><div class="screening-main"><div class="screening-title">Встреча с режиссёром Евгением Карелиновым</div><div class="screening-meta">Рассказ о съёмках фильма и ответы на вопросы зрителей</div></div></div>
@@ -1740,7 +1755,7 @@
 <article class="schedule-card">
 <div class="schedule-day">30 октября · 2026</div>
 <h3>Показы фильмов БРИКС+</h3>
-<div class="schedule-venue">Медиацентр БРИКС+. Большой зал</div>
+<div class="schedule-venue">Медиацентр БРИКС+. Большой зал · Библиотека иностранной литературы</div><div class="schedule-address">Москва, ул. Николоямская, д. 1</div>
 <div class="schedule-list">
 <div class="screening-row"><div class="screening-time">14:00–16:20</div><div class="screening-main"><div class="screening-entry"><div class="screening-title">Снежный цветок / Snow Flower</div><div class="screening-meta">Россия / Индия, 2024 · 12+</div><div class="screening-type">1 ч 52 мин</div><details class="film-about"><summary>О фильме</summary><p>Индийско-российский драматический фильм на языке маратхи. Фильм снят известным индийским режиссером Гаджендрой Ахире в тесном сотрудничестве с российскими кинематографистами. История строится на эмоциональном и культурном контрасте между тропическим индийским регионом Конкан и заснеженной Сибирью.</p></details></div></div></div>
 <div class="screening-row"><div class="screening-time">16:30–18:20</div><div class="screening-main"><div class="screening-entry"><div class="screening-title">Семь вёрст до рассвета</div><div class="screening-meta">Россия, 2026 · 18+</div><div class="screening-type">1 ч 42 мин</div><details class="film-about"><summary>О фильме</summary><p>Зима 1942 года, деревня Куракино . В суровых условиях оккупированной Псковской области, Матвей Кузьмин повторяет подвиг Ивана Сусанина и предотвращает диверсию в советском тылу. Получив приказ провести вражеский отряд в тыл прорвавшихся красноармейцев, Кузьмин подчиняется. Всю ночь старик водит немцев сквозь метель по бездорожью, но враги не подозревают, что он задумал.</p></details></div></div></div>
@@ -1749,7 +1764,7 @@
 <article class="schedule-card">
 <div class="schedule-day">31 октября · 2026</div>
 <h3>Показы фильмов БРИКС+</h3>
-<div class="schedule-venue">Медиацентр БРИКС+. Большой зал</div>
+<div class="schedule-venue">Медиацентр БРИКС+. Большой зал · Библиотека иностранной литературы</div><div class="schedule-address">Москва, ул. Николоямская, д. 1</div>
 <div class="schedule-list">
 <div class="screening-row"><div class="screening-time">12:30–14:40</div><div class="screening-main"><div class="screening-block-label">Короткометражная программа</div><div class="screening-entry"><div class="screening-title">Ыби / Ybi</div><div class="screening-meta">Бразилия, 2026 · 12+</div><div class="screening-type">15 мин</div><details class="film-about"><summary>О фильме</summary><p>Фильм, обращённый к культуре коренных народов Амазонии и экологической теме в художественной форме.</p></details></div><div class="screening-entry"><div class="screening-title">Там, где текли молочные реки</div><div class="screening-meta">Россия, 2025 · 12+</div><div class="screening-type">21 мин</div><details class="film-about"><summary>О фильме</summary><p>Рассказ о Бокситогорске, поколении заводских рабочих, упадке промышленности, отъезде молодёжи и жителях, сохранивших верность родному краю.</p></details></div><div class="screening-entry"><div class="screening-title">Хаппан Саангвала / Happan Saangwala</div><div class="screening-meta">Индия, 2024 · 12+</div><div class="screening-type">32 мин</div><details class="film-about"><summary>О фильме</summary><p>Фильм посвящён исчезающему народному искусству « сваанг » и судьбе мастера Хаппана Саанги . Его внук Битту помогает деду вернуться к творчеству и соединить традиционное представление с современными технологиями.</p></details></div><div class="screening-entry"><div class="screening-title">Прощай, Париж / Farewell Paris</div><div class="screening-meta">Иран, 2024 · 18+</div><div class="screening-type">19 мин</div><details class="film-about"><summary>О фильме</summary><p>Афшин , молодой человек с синдромом Дауна, должен уехать с отцом во Францию, но неожиданное событие не позволяет отцу взять его с собой.</p></details></div><div class="screening-entry"><div class="screening-title">Демонстратор</div><div class="screening-meta">Беларусь, 2024 · 12+</div><div class="screening-type">25 мин</div><details class="film-about"><summary>О фильме</summary><p>В начале XX века фотограф и предприниматель Рихард Штремер приезжает в Минск, чтобы открыть первый кинотеатр и снять первый фильм; исполнительницей главной роли может стать жена губернатора.</p></details></div><div class="screening-entry"><div class="screening-title">Холодная весна / Cold Spring</div><div class="screening-meta">Узбекистан, 2026 · 12+</div><div class="screening-type">12 мин</div><details class="film-about"><summary>О фильме</summary><p>Гадамали и его жена — единственные жители деревни, которые не уехали в город на зиму. Когда жена впадает в кому , Гадамали предстоит принять трудное решение.</p></details></div></div></div>
 <div class="screening-row"><div class="screening-time">14:50–16:40</div><div class="screening-main"><div class="screening-entry"><div class="screening-title">Погребальный костёр / PYRE</div><div class="screening-meta">Индия, 2024 · 12+</div><div class="screening-type">1 ч 51 мин</div><details class="film-about"><summary>О фильме</summary><p>В опустевшей гималайской деревне пожилые супруги живут вдали от цивилизации, переживая одиночество и ожидая возвращения пропавшего сына. Камерная история о любви, надежде, старении и исчезающем традиционном укладе сельской Индии.</p></details></div></div></div>
@@ -1759,7 +1774,7 @@
 <article class="schedule-card">
 <div class="schedule-day">1 ноября · 2026</div>
 <h3>Показы фильмов БРИКС+</h3>
-<div class="schedule-venue">Медиацентр БРИКС+. Большой зал</div>
+<div class="schedule-venue">Медиацентр БРИКС+. Большой зал · Библиотека иностранной литературы</div><div class="schedule-address">Москва, ул. Николоямская, д. 1</div>
 <div class="schedule-list">
 <div class="screening-row"><div class="screening-time">12:00–14:00</div><div class="screening-main"><div class="screening-entry"><div class="screening-title">Ноль встречает героя / Nghỉ Hè Sợ Nghỉ Hưu</div><div class="screening-meta">Вьетнам, 2026 · 12+</div><div class="screening-type">1 ч 57 мин</div><details class="film-about"><summary>О фильме</summary><p>Дорожная история о ветеране и его внуке из поколения Z, которые разыскивают бывших товарищей; фильм о памяти и связи поколений.</p></details></div></div></div>
 <div class="screening-row"><div class="screening-time">14:30–16:15</div><div class="screening-main"><div class="screening-entry"><div class="screening-title">Хранитель поля / Guardian of the Field</div><div class="screening-meta">Иран, 2025 · 12+</div><div class="screening-type">1 ч 43 мин</div><details class="film-about"><summary>О фильме</summary><p>После исчезновения шестилетней Ясны спокойствие сельскохозяйственной деревни нарушается. Отставной эколог Ахмад Пиран возглавляет поиски и публикует видео, которое быстро становится популярным и привлекает множество добровольцев. Однако девочку спрятал в доме Ахмада его работник Айхан . В ходе поисков раскрываются тёмные тайны прошлого Ахмада, и ему приходится сделать трудный выбор.</p></details></div></div></div>
@@ -1769,13 +1784,14 @@
 <article class="schedule-card">
 <div class="schedule-day">2 ноября · 2026</div>
 <h3>Показы фильмов БРИКС+</h3>
-<div class="schedule-venue">Медиацентр БРИКС+. Большой зал</div>
+<div class="schedule-venue">Медиацентр БРИКС+. Большой зал · Библиотека иностранной литературы</div><div class="schedule-address">Москва, ул. Николоямская, д. 1</div>
 <div class="schedule-list">
 <div class="screening-row"><div class="screening-time">14:30–15:40</div><div class="screening-main"><div class="screening-entry"><div class="screening-title">Итакоатиарас / Itacoatiaras</div><div class="screening-meta">Бразилия, 2025 · 12+</div><div class="screening-type">1 ч 13 мин</div><details class="film-about"><summary>О фильме</summary><p>Документальное исследование «расписных камней», стёртой истории коренных народов Амазонии и Рио-де-Жанейро и связи этой памяти с климатическим кризисом.</p></details></div></div></div>
 <div class="screening-row"><div class="screening-time">15:40–17:00</div><div class="screening-main"><div class="screening-entry"><div class="screening-title">Михаин / Mijaín</div><div class="screening-meta">Куба, 2025 · 12+</div><div class="screening-type">1 ч 19 мин</div><details class="film-about"><summary>О фильме</summary><p>Документальный фильм о пути Михаина Лопеса к пятому олимпийскому золоту в Париже в 2024 году, его матери, тренере и родном городе Эррадура .</p></details></div></div></div>
 <div class="screening-row"><div class="screening-time">17:10–18:30</div><div class="screening-main"><div class="screening-block-label">Научно-популярная программа</div><div class="screening-entry"><div class="screening-title">Искра</div><div class="screening-meta">Россия, 2026 · 16+</div><div class="screening-type">27 мин</div><details class="film-about"><summary>О фильме</summary><p>Жизненный путь выдающегося русского изобретателя и инженера Павла Яблочкова, совершившего революцию в электротехнике.</p></details></div><div class="screening-entry"><div class="screening-title">Служба Солнца / The Sunkeepers</div><div class="screening-meta">Россия, 2026 · 12+</div><div class="screening-type">52 мин</div><details class="film-about"><summary>О фильме</summary><p>Масштабное исследование солнца: от истории советских наблюдений до строительства в Бурятии одного из крупнейших в мире гелиогеофизических комплексов.</p></details></div></div></div>
 </div>
-</article></div>
+</article>
+<article class="schedule-card schedule-card--nov3"><div class="schedule-day">3 ноября · 2026</div><h3>Конкурсные кинопоказы</h3><div class="schedule-venue">Санкт-Петербург, Дунайский проспект, д. 7</div><div class="schedule-start">Начало в 10:00</div><ol class="nov3-film-grid"><li><span class="nov3-film-index" aria-hidden="true">01</span><div class="nov3-film-content"><div class="screening-title">Холодная зима / The Long Winter</div><div class="screening-meta">Иран</div></div></li><li><span class="nov3-film-index" aria-hidden="true">02</span><div class="nov3-film-content"><div class="screening-title">Тамерлан / Rise of the Conqueror</div><div class="screening-meta">Узбекистан / Казахстан / США</div></div></li><li><span class="nov3-film-index" aria-hidden="true">03</span><div class="nov3-film-content"><div class="screening-title">People’s Child</div><div class="screening-meta">Иран</div></div></li><li><span class="nov3-film-index" aria-hidden="true">04</span><div class="nov3-film-content"><div class="screening-title">Воин от Бога / Khodaye Jang</div><div class="screening-meta">Иран</div></div></li><li><span class="nov3-film-index" aria-hidden="true">05</span><div class="nov3-film-content"><div class="screening-title">Тихий человек / Calm Man</div><div class="screening-meta">Иран</div></div></li><li><span class="nov3-film-index" aria-hidden="true">06</span><div class="nov3-film-content"><div class="screening-title">Волчья шерсть / Wolf’s Fur</div><div class="screening-meta">Иран</div></div></li><li><span class="nov3-film-index" aria-hidden="true">07</span><div class="nov3-film-content"><div class="screening-title">Петербург Поднебесный</div><div class="screening-meta">Россия, Санкт-Петербург</div></div></li></ol></article></div>
 </div>
 </section>
 <section id="team">

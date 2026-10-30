@@ -1587,8 +1587,23 @@
 @media (max-width: 650px) { #welcome .welcome-panel { grid-template-columns: minmax(0,1fr); gap: 25px; padding: 26px 22px; border-radius: 22px; } #welcome .welcome-author { display: grid; grid-template-columns: 104px minmax(0,1fr); gap: 20px; align-items: center; } #welcome .welcome-author-name { margin-top: 0; font-size: 26px; } #welcome .welcome-author-rule { margin: 12px 0; } #welcome .welcome-author-role { font-size: 11px; } #welcome .welcome-message { line-height: 1.8; } #welcome .welcome-message p { margin-bottom: 17px; } }
 @media (max-width: 359px) { #welcome .welcome-author { grid-template-columns: 84px minmax(0,1fr); gap: 14px; } #welcome .welcome-panel { padding: 22px 18px; } #welcome .welcome-author-name { font-size: 23px; } }
 
+
+/* Date of the chair's welcome and the final screening day */
+#welcome .welcome-quote-column { min-width: 0; }
+#welcome .welcome-date { display: flex; align-items: center; justify-content: flex-end; gap: 12px; margin-top: 22px; color: #a99b81; font-size: 11px; line-height: 1.5; letter-spacing: .05em; }
+#welcome .welcome-date::before { content: ''; width: 30px; height: 1px; background: rgba(212,175,55,.38); }
+#program .schedule-address { margin-top: 5px; font-size: 12px; line-height: 1.6; color: var(--text-main); }
+#program .schedule-card--nov3 { grid-column: 1 / -1; }
+#program .schedule-start { display: inline-flex; margin-top: 18px; padding: 8px 13px; border: 1px solid rgba(212,175,55,.3); border-radius: 999px; background: rgba(212,175,55,.06); color: #e2c787; font-size: 13px; font-weight: 600; line-height: 1.4; }
+#program .nov3-film-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 0 30px; margin: 18px 0 0; padding: 0; list-style: none; border-top: 1px solid rgba(148,163,184,.2); }
+#program .nov3-film-grid li { display: flex; gap: 14px; align-items: flex-start; min-width: 0; padding: 17px 0; border-bottom: 1px solid rgba(148,163,184,.14); }
+#program .nov3-film-grid li:last-child { grid-column: 1 / -1; border-bottom: 0; padding-bottom: 0; }
+#program .nov3-film-index { flex: 0 0 24px; color: #d8b640; font-size: 12px; font-weight: 600; font-variant-numeric: tabular-nums; line-height: 1.6; }
+#program .nov3-film-content { min-width: 0; overflow-wrap: anywhere; }
+@media (max-width: 700px) { #program .nov3-film-grid { grid-template-columns: minmax(0,1fr); } }
+
 </style>
-<meta name="festival-program-version" content="2026-10-30-welcome"/>
+<meta name="festival-program-version" content="2026-10-30-nov3"/>
 </head>
 <body>
 <header>
@@ -1737,11 +1752,11 @@
 <div class="premium-section-header"><div class="premium-section-kicker">Festival Opening</div><h2 class="premium-section-title" id="welcome-title">A Welcome from the Jury Chair</h2></div>
 <div class="welcome-panel">
 <div class="welcome-author"><div class="welcome-portrait"><img src="jury_jayita_ghosh_india.png" alt="Jayita Ghosh" width="440" height="550" loading="lazy" decoding="async"/></div><div class="welcome-author-caption"><h3 class="welcome-author-name" id="welcome-author">Jayita Ghosh</h3><div class="welcome-author-rule" aria-hidden="true"></div><p class="welcome-author-role">Chair of the International Jury<br/>India</p></div></div>
-<blockquote class="welcome-message" aria-describedby="welcome-author"><p>Our festival begins today, and I warmly congratulate everyone on its opening! I wish you a vibrant and successful festival filled with inspiring encounters, new discoveries and the joy of connecting with one another.</p>
+<div class="welcome-quote-column"><blockquote class="welcome-message" aria-describedby="welcome-author"><p>Our festival begins today, and I warmly congratulate everyone on its opening! I wish you a vibrant and successful festival filled with inspiring encounters, new discoveries and the joy of connecting with one another.</p>
 <p>May this festival become a wonderful example of friendship and cultural cooperation among the BRICS countries, bringing us closer together through the art of cinema.</p>
 <p>May it bring renewed hope, opportunities and well-deserved recognition to all the filmmakers who have put so much effort, talent and heart into their films.</p>
 <p>Wishing everyone a wonderful festival! ✨🎬</p>
-</blockquote>
+</blockquote><time class="welcome-date" datetime="2026-10-30">30 October 2026</time></div>
 </div>
 </section>
 <section id="jury">
@@ -1865,7 +1880,7 @@
   <div class="program-editorial-kicker"><span></span>29 OCTOBER – 3 NOVEMBER 2026<span></span></div>
   <h2>FESTIVAL PROGRAM</h2>
   <div class="program-editorial-rule"></div>
-  <p>29 October: a day of non-fiction cinema at the V. V. Dokuchaev Central Museum of Soil Science. 30 October – 2 November: screenings at the BRICS+ Media Centre. Grand Hall.</p>
+  <p>Festival screenings take place in two cities. The non-fiction cinema programme was held in Saint Petersburg on 29 October. Screenings from 30 October to 2 November take place in Moscow. Competition screenings on 3 November will take place in Saint Petersburg.</p>
 </div>
 
 <div class="program-days-premium-shell">
@@ -1886,7 +1901,7 @@
 <article class="schedule-card">
 <div class="schedule-day">30 October · 2026</div>
 <h3>BRICS+ Film Screenings</h3>
-<div class="schedule-venue">BRICS+ Media Centre. Grand Hall</div>
+<div class="schedule-venue">BRICS+ Media Centre. Grand Hall · Library for Foreign Literature</div><div class="schedule-address">Moscow, 1 Nikoloyamskaya Street</div>
 <div class="schedule-list">
 <div class="screening-row"><div class="screening-time">14:00–16:20</div><div class="screening-main"><div class="screening-entry"><div class="screening-title">Snow Flower</div><div class="screening-meta">Russia / India, 2024 · 12+</div><div class="screening-type">1 h 52 min</div><details class="film-about"><summary>About the Film</summary><p>A Marathi-language Indian-Russian drama directed by renowned Indian filmmaker Gajendra Ahire in close collaboration with Russian filmmakers. The story explores the emotional and cultural contrast between India’s tropical Konkan region and snow-covered Siberia.</p></details></div></div></div>
 <div class="screening-row"><div class="screening-time">16:30–18:20</div><div class="screening-main"><div class="screening-entry"><div class="screening-title">Seven Verst to Dawn</div><div class="screening-meta">Russia, 2026 · 18+</div><div class="screening-type">1 h 42 min</div><details class="film-about"><summary>About the Film</summary><p>Winter 1942, in the village of Kurakino. Under occupation in the Pskov region, Matvey Kuzmin repeats Ivan Susanin’s feat and prevents sabotage behind Soviet lines. Ordered to lead an enemy unit to the rear of the advancing Red Army troops, he obeys. He guides the soldiers through a blizzard all night, but they have no idea what he is planning.</p></details></div></div></div>
@@ -1895,7 +1910,7 @@
 <article class="schedule-card">
 <div class="schedule-day">31 October · 2026</div>
 <h3>BRICS+ Film Screenings</h3>
-<div class="schedule-venue">BRICS+ Media Centre. Grand Hall</div>
+<div class="schedule-venue">BRICS+ Media Centre. Grand Hall · Library for Foreign Literature</div><div class="schedule-address">Moscow, 1 Nikoloyamskaya Street</div>
 <div class="schedule-list">
 <div class="screening-row"><div class="screening-time">12:30–14:40</div><div class="screening-main"><div class="screening-block-label">Short Film Programme</div><div class="screening-entry"><div class="screening-title">Ybi</div><div class="screening-meta">Brazil, 2026 · 12+</div><div class="screening-type">15 min</div><details class="film-about"><summary>About the Film</summary><p>An artistic exploration of the cultures of the indigenous peoples of the Amazon and environmental issues.</p></details></div><div class="screening-entry"><div class="screening-title">Where Milk Rivers Once Flowed</div><div class="screening-meta">Russia, 2025 · 12+</div><div class="screening-type">21 min</div><details class="film-about"><summary>About the Film</summary><p>A story of Boksitogorsk, a generation of factory workers, industrial decline, young people leaving, and the residents who have remained loyal to their hometown.</p></details></div><div class="screening-entry"><div class="screening-title">Happan Saangwala</div><div class="screening-meta">India, 2024 · 12+</div><div class="screening-type">32 min</div><details class="film-about"><summary>About the Film</summary><p>A film about the disappearing folk art of swaang and the fate of master performer Happan Saangi. His grandson Bittu helps him return to his art, bringing traditional performance together with modern technology.</p></details></div><div class="screening-entry"><div class="screening-title">Farewell Paris</div><div class="screening-meta">Iran, 2024 · 18+</div><div class="screening-type">19 min</div><details class="film-about"><summary>About the Film</summary><p>Afshin, a young man with Down syndrome, is supposed to leave for France with his father. An unexpected event prevents his father from taking him along.</p></details></div><div class="screening-entry"><div class="screening-title">Demonstrator</div><div class="screening-meta">Belarus, 2024 · 12+</div><div class="screening-type">25 min</div><details class="film-about"><summary>About the Film</summary><p>At the beginning of the twentieth century, photographer and entrepreneur Richard Stremer arrives in Minsk to open its first cinema and make its first film. The governor’s wife may become his leading actress.</p></details></div><div class="screening-entry"><div class="screening-title">Cold Spring</div><div class="screening-meta">Uzbekistan, 2026 · 12+</div><div class="screening-type">12 min</div><details class="film-about"><summary>About the Film</summary><p>Gadamali and his wife are the only villagers who have not moved to the city for the winter. When his wife falls into a coma, Gadamali faces a difficult decision.</p></details></div></div></div>
 <div class="screening-row"><div class="screening-time">14:50–16:40</div><div class="screening-main"><div class="screening-entry"><div class="screening-title">PYRE</div><div class="screening-meta">India, 2024 · 12+</div><div class="screening-type">1 h 51 min</div><details class="film-about"><summary>About the Film</summary><p>In a deserted Himalayan village, an elderly couple live far from civilization, facing loneliness and waiting for their missing son to return. An intimate story of love, hope, ageing and the disappearance of a traditional rural way of life.</p></details></div></div></div>
@@ -1905,7 +1920,7 @@
 <article class="schedule-card">
 <div class="schedule-day">1 November · 2026</div>
 <h3>BRICS+ Film Screenings</h3>
-<div class="schedule-venue">BRICS+ Media Centre. Grand Hall</div>
+<div class="schedule-venue">BRICS+ Media Centre. Grand Hall · Library for Foreign Literature</div><div class="schedule-address">Moscow, 1 Nikoloyamskaya Street</div>
 <div class="schedule-list">
 <div class="screening-row"><div class="screening-time">12:00–14:00</div><div class="screening-main"><div class="screening-entry"><div class="screening-title">Zero Meets Hero / Nghỉ Hè Sợ Nghỉ Hưu</div><div class="screening-meta">Vietnam, 2026 · 12+</div><div class="screening-type">1 h 57 min</div><details class="film-about"><summary>About the Film</summary><p>A road story about a veteran and his grandson from Generation Z as they search for his former comrades. A film about memory and the bond between generations.</p></details></div></div></div>
 <div class="screening-row"><div class="screening-time">14:30–16:15</div><div class="screening-main"><div class="screening-entry"><div class="screening-title">Guardian of the Field</div><div class="screening-meta">Iran, 2025 · 12+</div><div class="screening-type">1 h 43 min</div><details class="film-about"><summary>About the Film</summary><p>When six-year-old Yasna disappears, the peace of a farming village is shattered. Retired environmentalist Ahmad Piran leads the search and posts a video that goes viral, drawing many volunteers. Yet it is his employee Aykhan who has hidden the girl in Ahmad’s house. The search exposes dark secrets from Ahmad’s past and forces him to make a difficult choice.</p></details></div></div></div>
@@ -1915,13 +1930,14 @@
 <article class="schedule-card">
 <div class="schedule-day">2 November · 2026</div>
 <h3>BRICS+ Film Screenings</h3>
-<div class="schedule-venue">BRICS+ Media Centre. Grand Hall</div>
+<div class="schedule-venue">BRICS+ Media Centre. Grand Hall · Library for Foreign Literature</div><div class="schedule-address">Moscow, 1 Nikoloyamskaya Street</div>
 <div class="schedule-list">
 <div class="screening-row"><div class="screening-time">14:30–15:40</div><div class="screening-main"><div class="screening-entry"><div class="screening-title">Itacoatiaras</div><div class="screening-meta">Brazil, 2025 · 12+</div><div class="screening-type">1 h 13 min</div><details class="film-about"><summary>About the Film</summary><p>A documentary exploration of “painted stones”, the erased history of the indigenous peoples of the Amazon and Rio de Janeiro, and the relationship between this memory and the climate crisis.</p></details></div></div></div>
 <div class="screening-row"><div class="screening-time">15:40–17:00</div><div class="screening-main"><div class="screening-entry"><div class="screening-title">Mijaín</div><div class="screening-meta">Cuba, 2025 · 12+</div><div class="screening-type">1 h 19 min</div><details class="film-about"><summary>About the Film</summary><p>A documentary following Mijaín López on his journey to a fifth Olympic gold medal in Paris in 2024, alongside his mother, coach and hometown of Herradura.</p></details></div></div></div>
 <div class="screening-row"><div class="screening-time">17:10–18:30</div><div class="screening-main"><div class="screening-block-label">Popular Science Programme</div><div class="screening-entry"><div class="screening-title">Iskra</div><div class="screening-meta">Russia, 2026 · 16+</div><div class="screening-type">27 min</div><details class="film-about"><summary>About the Film</summary><p>The life of the outstanding Russian inventor and engineer Pavel Yablochkov, who revolutionized electrical engineering.</p></details></div><div class="screening-entry"><div class="screening-title">The Sunkeepers</div><div class="screening-meta">Russia, 2026 · 12+</div><div class="screening-type">52 min</div><details class="film-about"><summary>About the Film</summary><p>A wide-ranging exploration of the Sun, from the history of Soviet observations to the construction of one of the world’s largest heliogeophysical complexes in Buryatia.</p></details></div></div></div>
 </div>
 </article>
+<article class="schedule-card schedule-card--nov3"><div class="schedule-day">3 November · 2026</div><h3>Competition Screenings</h3><div class="schedule-venue">Saint Petersburg, 7 Dunaysky Prospekt</div><div class="schedule-start">Starts at 10:00</div><ol class="nov3-film-grid"><li><span class="nov3-film-index" aria-hidden="true">01</span><div class="nov3-film-content"><div class="screening-title">The Long Winter</div><div class="screening-meta">Iran</div></div></li><li><span class="nov3-film-index" aria-hidden="true">02</span><div class="nov3-film-content"><div class="screening-title">Rise of the Conqueror</div><div class="screening-meta">Uzbekistan / Kazakhstan / USA</div></div></li><li><span class="nov3-film-index" aria-hidden="true">03</span><div class="nov3-film-content"><div class="screening-title">People’s Child</div><div class="screening-meta">Iran</div></div></li><li><span class="nov3-film-index" aria-hidden="true">04</span><div class="nov3-film-content"><div class="screening-title">Khodaye Jang</div><div class="screening-meta">Iran</div></div></li><li><span class="nov3-film-index" aria-hidden="true">05</span><div class="nov3-film-content"><div class="screening-title">Calm Man</div><div class="screening-meta">Iran</div></div></li><li><span class="nov3-film-index" aria-hidden="true">06</span><div class="nov3-film-content"><div class="screening-title">Wolf’s Fur</div><div class="screening-meta">Iran</div></div></li><li><span class="nov3-film-index" aria-hidden="true">07</span><div class="nov3-film-content"><div class="screening-title">Peterburg Podnebesny</div><div class="screening-meta">Russia, Saint Petersburg</div></div></li></ol></article>
 
 </div>
 </div><!-- /program-days-premium-shell -->
