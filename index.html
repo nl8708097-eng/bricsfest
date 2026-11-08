@@ -1396,7 +1396,106 @@
 @media (max-width: 700px) { #program .nov3-film-grid { grid-template-columns: minmax(0,1fr); } }
 
 </style>
-<meta name="festival-program-version" content="2026-10-30-nov3-details"/>
+<meta name="festival-content-version" content="2026-11-08-jury-video"/>
+<style id="festival-results-styles">
+
+/* Festival results: first edition, November 2026. */
+#results { --results-gold: #ddbd78; --results-muted: #b3a99a; margin-top: 44px; }
+#results .premium-section-description { max-width: 810px; font-size: 14px; line-height: 1.85; }
+#results .results-frame { overflow: hidden; padding: clamp(18px,3vw,32px); border: 1px solid rgba(212,175,55,.34); border-radius: 28px; background: radial-gradient(ellipse at 50% 0,rgba(212,175,55,.075),transparent 45%),linear-gradient(145deg,#111116,#08090c 75%); box-shadow: 0 28px 70px rgba(0,0,0,.32); }
+#results .results-photos { display: grid; grid-template-columns: minmax(0,2.65fr) minmax(0,1fr); gap: 18px; height: clamp(360px,40vw,500px); }
+#results .results-photo { display: flex; flex-direction: column; min-width: 0; min-height: 0; margin: 0; overflow: hidden; border: 1px solid rgba(212,175,55,.20); border-radius: 16px; background: #101116; }
+#results .results-photo-frame { flex: 1; min-height: 0; overflow: hidden; }
+#results .results-photo img { display: block; width: 100%; height: 100%; object-fit: cover; }
+#results .results-photo--press img { object-position: center 50%; }
+#results .results-photo--interview img { object-position: center 50%; }
+#results .results-photo figcaption { display: flex; align-items: center; min-height: 58px; padding: 12px 16px; font-size: 11px; line-height: 1.6; color: #c6bdaf; }
+#results .results-award-heading { display: grid; grid-template-columns: minmax(0,1fr) 230px; align-items: center; gap: 42px; margin-top: 30px; padding: 30px 0 24px; border-top: 1px solid rgba(212,175,55,.20); scroll-margin-top: calc(var(--header-offset) + 20px); }
+#results .results-kicker { margin: 0 0 12px; color: var(--results-gold); font-size: 10px; font-weight: 500; line-height: 1.7; letter-spacing: .15em; text-transform: uppercase; }
+#results .results-heading { margin: 0 0 16px; color: #f0e6d5; font: 600 clamp(35px,4.5vw,52px)/1.06 'Cormorant Garamond',Georgia,serif; }
+#results .results-body { max-width: 57ch; margin: 0; color: #c5bcaf; font-size: 14px; line-height: 1.85; }
+#results .results-trophy { margin: 0; text-align: center; }
+#results .results-trophy img { display: block; width: 100%; max-width: 230px; height: 265px; margin: 0 auto; object-fit: contain; filter: drop-shadow(0 14px 24px rgba(0,0,0,.4)); }
+#results .results-trophy figcaption { margin-top: 10px; color: #a99d88; font-size: 10px; line-height: 1.7; }
+#results .results-laureates { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 0 38px; margin: 0; padding: 0; list-style: none; }
+#results .results-laureate { display: grid; grid-template-columns: 25px minmax(0,1fr); gap: 14px; min-width: 0; padding: 26px 0; border-top: 1px solid rgba(212,175,55,.20); }
+#results .laureate-number { padding-top: 1px; color: #9e8752; font-size: 12px; line-height: 1.8; font-variant-numeric: tabular-nums; }
+#results .laureate-content { min-width: 0; overflow-wrap: anywhere; }
+#results .laureate-kind { margin: 0 0 7px; color: #a99d88; font-size: 9px; line-height: 1.6; letter-spacing: .12em; text-transform: uppercase; }
+#results .laureate-award { margin: 0 0 12px; color: var(--results-gold); font-size: 13px; font-weight: 500; line-height: 1.6; }
+#results .laureate-film { margin: 0; color: #f3ecdf; font: 600 29px/1.16 'Cormorant Garamond',Georgia,serif; }
+#results .laureate-original { margin-top: 5px; color: #a89e90; font-size: 11px; line-height: 1.6; }
+#results .laureate-meta { margin-top: 8px; color: #c7bfb2; font-size: 12px; line-height: 1.7; }
+#results .laureate-credits { margin-top: 6px; color: #b4aa9a; font-size: 12px; line-height: 1.7; }
+#results .laureate-people { margin-top: 10px; color: #d5ccbc; font-size: 12px; line-height: 1.75; }
+#results .laureate-people p + p { margin-top: 6px; }
+#results .laureate-people strong { font-weight: 500; color: #e9dfcd; }
+#results .results-video-panel { display: grid; grid-template-columns: minmax(0,.95fr) minmax(0,1.05fr); align-items: center; gap: 30px; margin-top: 16px; padding: 28px; border: 1px solid rgba(212,175,55,.24); border-radius: 20px; background: radial-gradient(ellipse at 100% 0,rgba(212,175,55,.07),transparent 70%),rgba(6,7,10,.65); }
+#results .results-panel-title { margin: 0 0 14px; color: #eee3d0; font: 600 clamp(28px,3.5vw,38px)/1.15 'Cormorant Garamond',Georgia,serif; }
+#results .results-video-placeholder { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; aspect-ratio: 16/9; min-width: 0; padding: 25px; border: 1px dashed rgba(212,175,55,.37); border-radius: 14px; background: radial-gradient(ellipse at center,rgba(212,175,55,.05),transparent 70%),#0c0d11; text-align: center; }
+#results .results-video-symbol { width: 44px; height: 44px; color: #a28b55; }
+#results .results-video-status { max-width: 28ch; color: #cbbd9d; font-size: 13px; line-height: 1.7; }
+#results .results-video-note { margin-top: 12px; color: var(--results-muted); font-size: 12px; line-height: 1.75; }
+#results .results-media-panel { display: grid; grid-template-columns: minmax(0,.8fr) minmax(0,1.2fr); align-items: center; gap: 38px; margin-top: 24px; padding: 28px; border: 1px solid rgba(212,175,55,.24); border-radius: 20px; background: rgba(6,7,10,.65); }
+#results .results-media-preview { display: block; min-width: 0; overflow: hidden; border: 1px solid rgba(212,175,55,.24); border-radius: 12px; background: #fff; }
+#results .results-media-preview img { display: block; width: 100%; height: auto; max-height: 430px; object-fit: contain; }
+#results .results-media-source { margin: 0 0 14px; color: #ad9d7b; font-size: 11px; line-height: 1.7; }
+#results .results-text-link { display: inline-flex; align-items: center; justify-content: center; gap: 12px; max-width: 100%; margin-top: 22px; padding: 12px 18px; border: 1px solid rgba(212,175,55,.5); border-radius: 999px; background: rgba(212,175,55,.07); color: #e8cc8c; font-size: 12px; font-weight: 500; line-height: 1.6; transition: background .2s ease; }
+#results .results-text-link:hover { background: rgba(212,175,55,.15); }
+#results .results-text-link svg { flex: 0 0 15px; width: 15px; height: 15px; }
+#results a:focus-visible { outline: 2px solid #e8cc8c; outline-offset: 5px; }
+#about .hero-actions .btn-ghost { border-color: rgba(212,175,55,.6); background: rgba(212,175,55,.10); color: #edcf85; text-align: center; }
+#about .hero-actions .btn-ghost:focus-visible { outline: 2px solid #e8cc8c; outline-offset: 5px; }
+#about .glass-pulse-inner { animation: none; }
+@media (max-width: 900px) {
+  #results .results-award-heading { grid-template-columns: minmax(0,1fr) 185px; gap: 24px; }
+  #results .results-trophy img { height: 225px; }
+  #results .results-laureates { column-gap: 24px; }
+  #results .results-video-panel, #results .results-media-panel { gap: 22px; padding: 22px; }
+}
+@media (max-width: 700px) {
+  #results .results-frame { border-radius: 22px; }
+  #results .results-photos { height: auto; grid-template-columns: minmax(0,1fr); gap: 16px; }
+  #results .results-photo-frame { flex: none; }
+  #results .results-photo img { height: auto; object-fit: contain; }
+  #results .results-photo--interview { width: 100%; max-width: 400px; justify-self: center; }
+  #results .results-photo figcaption { min-height: 0; }
+  #results .results-award-heading { margin-top: 24px; padding-top: 26px; }
+  #results .results-laureates { grid-template-columns: minmax(0,1fr); }
+  #results .results-laureate { padding: 23px 0; }
+  #results .results-video-panel, #results .results-media-panel { grid-template-columns: minmax(0,1fr); }
+  #results .results-video-panel { margin-top: 10px; }
+  #results .results-media-preview { width: 100%; max-width: 340px; margin: 0 auto; }
+  #results .results-media-panel { gap: 25px; }
+}
+@media (max-width: 480px) {
+  #results .results-award-heading { grid-template-columns: minmax(0,1fr); gap: 20px; }
+  #results .results-trophy { max-width: 220px; margin: 0 auto; }
+  #results .results-trophy img { height: 220px; }
+  #results .results-body { font-size: 13px; }
+  #results .results-laureate { grid-template-columns: 20px minmax(0,1fr); gap: 12px; }
+  #results .laureate-film { font-size: 27px; }
+  #results .laureate-award { font-size: 12px; }
+  #results .results-video-panel, #results .results-media-panel { padding: 20px 17px; border-radius: 16px; }
+  #results .results-video-placeholder { padding: 18px; }
+  #results .results-text-link { width: 100%; padding: 11px 13px; }
+}
+
+</style>
+<style id="jury-video-update-styles">
+
+/* Nine jury members, the published jury message and the English media card. */
+#jury .jury-premium-grid { display: grid !important; grid-template-columns: repeat(3,minmax(0,1fr)) !important; gap: 22px !important; align-items: stretch; }
+#jury .jury-premium-card { width: auto !important; max-width: none !important; min-width: 0 !important; }
+#results .results-video-player { display: block; width: 100%; max-width: 100%; height: auto; min-width: 0; aspect-ratio: 16 / 9; object-fit: contain; border: 1px solid rgba(212,175,55,.32); border-radius: 14px; background: #08090c; }
+#results .results-video-player:focus-visible { outline: 2px solid #e8cc8c; outline-offset: 5px; }
+#results .results-media-panel--text { grid-template-columns: minmax(0,1fr); text-align: center; }
+#results .results-media-panel--text .results-panel-title { max-width: 820px; margin-left: auto; margin-right: auto; }
+#results .results-media-panel--text .results-body { max-width: 64ch; margin-left: auto; margin-right: auto; }
+@media (max-width: 1000px) { #jury .jury-premium-grid { grid-template-columns: repeat(2,minmax(0,1fr)) !important; } }
+@media (max-width: 640px) { #jury .jury-premium-grid { grid-template-columns: minmax(0,1fr) !important; } }
+
+</style>
 </head>
 <body>
 <header>
@@ -1412,9 +1511,10 @@
 <nav>
 <div class="nav-links">
 <a href="#about">О фестивале</a>
+<a href="#results">Итоги</a>
+<a href="#news">Новости</a>
 <a href="#jury">Жюри</a>
 <a href="#reglament">Регламент</a>
-<a href="#program">Программа</a>
 <a href="#team">Команда</a>
 <a href="#support">Поддержка</a>
 </div>
@@ -1436,11 +1536,10 @@
 <div class="mobile-nav" id="mobileNav">
 <div class="mobile-nav-links">
 <a href="#about">О фестивале</a>
+<a href="#results">Итоги</a>
 <a href="#news">Новости</a>
 <a href="#jury">Жюри</a>
 <a href="#reglament">Регламент</a>
-<a href="#awards">Гран-при</a>
-<a href="#program">Программа</a>
 <a href="#team">Команда</a>
 <a href="#support">Поддержка</a>
 </div>
@@ -1454,12 +1553,9 @@
         Международный кинофестиваль стран БРИКС+
       </div>
 <h1 class="hero-title">
-        Международный кинофестиваль<br/> стран БРИКС+
+        Международный кинофестиваль<br> стран БРИКС+
       </h1>
-<p class="hero-subtitle">
-        Авторское, национальное и кросс-культурное кино на одной фестивальной площадке.
-        Премьеры, конкурсы, индустриальные питчинги и специальные программы от стран БРИКС+.
-      </p>
+<p class="hero-subtitle">Первый Международный кинофестиваль стран БРИКС+ прошёл в Москве и Санкт-Петербурге с 29 октября по 3 ноября 2026 года. Благодарим участников, международное жюри и зрителей!</p>
 <div class="hero-meta">
 <div class="hero-pill">
 <div>
@@ -1474,47 +1570,139 @@
 </div>
 </div>
 </div>
-<div class="hero-actions">
-<button class="btn-ghost" onclick="document.querySelector('#program').scrollIntoView({behavior:'smooth'})">
-          Программа 2026
-        </button>
-</div>
-<div class="hero-note">Приём заявок на конкурс 2026 года завершён. Актуальная программа показов опубликована ниже.</div>
+<div class="hero-actions"><a class="btn-ghost" href="#results">Победители фестиваля</a></div>
+<div class="hero-note">Итоги объявлены 6 ноября на пресс-конференции в ТАСС. Познакомьтесь с лауреатами фестиваля.</div>
 </div>
 <div class="hero-right">
 <div class="glass-orbit">
 <div class="glass-orbit-inner">
 <div class="glass-heading">BRICS+ 2026</div>
-<div class="glass-main-title">Время проведения: 29 октября – 3 ноября 2026</div>
+<div class="glass-main-title">Первый сезон. Итоги подведены</div>
 <div class="glass-meta-grid">
 <div class="glass-chip">
 <div class="glass-chip-label">Локация</div>
 <div class="glass-chip-value">Санкт-Петербург — Москва</div>
 </div>
 <div class="glass-chip">
-<div class="glass-chip-label">Приём заявок</div>
-<div class="glass-chip-value">Завершён</div>
+<div class="glass-chip-label">Статус</div>
+<div class="glass-chip-value">Фестиваль завершён</div>
 </div>
 </div>
 <div class="glass-stats">
 <div class="stat-pill">
-<div class="stat-number">60+</div>
-<div class="stat-label">Фильмов в программе</div>
+<div class="stat-number">12</div>
+<div class="stat-label">Наград фестиваля</div>
 </div>
 <div class="stat-pill">
-<div class="stat-number">15+</div>
-<div class="stat-label">Стран-участниц</div>
+<div class="stat-number">2</div>
+<div class="stat-label">Города проведения</div>
 </div>
 </div>
 <div class="glass-footer">
 <div class="glass-pulse"><div class="glass-pulse-inner"></div></div>
-<div class="glass-footer-text">
-<strong>Конкурсный отбор</strong><br/>
-              Игровое, документальное кино и короткий метр.
-            </div>
+<div class="glass-footer-text"><strong>Искусство кино объединяет</strong><br>Лауреаты первого сезона БРИКС+ — 2026.</div>
 <div class="glass-footer-tag">BRICS+ EDITION • 2026</div>
 </div>
 </div>
+</div>
+</div>
+</section>
+
+<section id="results" aria-labelledby="results-title">
+<div class="premium-section-header">
+<div class="premium-section-kicker">BRICS+ 2026 · Первый сезон</div>
+<h2 class="premium-section-title" id="results-title">Итоги фестиваля</h2>
+<p class="premium-section-description">С 29 октября по 3 ноября кино объединило Москву и Санкт-Петербург. 6 ноября на пресс-конференции в ТАСС были объявлены лауреаты первого Международного кинофестиваля стран БРИКС+.</p>
+</div>
+<div class="results-frame">
+<div class="results-photos">
+<figure class="results-photo results-photo--press"><div class="results-photo-frame"><img src="results_press.jpg" alt="Участники пресс-конференции об итогах кинофестиваля БРИКС+ в ТАСС" width="1290" height="753" loading="lazy" decoding="async"></div><figcaption>Пресс-конференция в ТАСС · Москва, 6 ноября 2026</figcaption></figure>
+<figure class="results-photo results-photo--interview"><div class="results-photo-frame"><img src="results_interview.jpg" alt="Интервью Ивана Болотникова в пресс-центре ТАСС" width="1102" height="1697" loading="lazy" decoding="async"></div><figcaption>Иван Болотников · Интервью в пресс-центре ТАСС</figcaption></figure>
+</div>
+<div class="results-award-heading" id="laureates">
+<div><p class="results-kicker">Решение международного жюри</p><h3 class="results-heading">Лауреаты фестиваля</h3><p class="results-body">12 наград — за искусство рассказывать истории, национальный характер и диалог культур. Поздравляем авторов, актёров и команды фильмов!</p></div>
+<figure class="results-trophy"><img src="results_trophy.png" alt="Прозрачный приз кинофестиваля БРИКС+ с гравировкой пламени" width="1143" height="1376" loading="lazy" decoding="async"><figcaption>Приз Международного кинофестиваля БРИКС+</figcaption></figure>
+</div>
+<ol class="results-laureates" aria-label="Лауреаты фестиваля">
+<li class="results-laureate">
+<span class="laureate-number" aria-hidden="true">01</span>
+<div class="laureate-content"><p class="laureate-award">Лучший полнометражный игровой фильм</p>
+<h4 class="laureate-film">Дитя народа</h4><p class="laureate-original">People’s Child</p>
+<p class="laureate-meta">Иран</p></div>
+</li>
+<li class="results-laureate">
+<span class="laureate-number" aria-hidden="true">02</span>
+<div class="laureate-content"><p class="laureate-award">Лучший короткометражный игровой фильм</p>
+<h4 class="laureate-film">Хаппан — мастер саанга</h4><p class="laureate-original">Happan Saangwala</p>
+<p class="laureate-meta">Индия</p></div>
+</li>
+<li class="results-laureate">
+<span class="laureate-number" aria-hidden="true">03</span>
+<div class="laureate-content"><p class="laureate-award">Лучший полнометражный документальный фильм</p>
+<h4 class="laureate-film">Петербург Поднебесный</h4><p class="laureate-original">Celestial Petersburg</p>
+<p class="laureate-meta">Россия</p></div>
+</li>
+<li class="results-laureate">
+<span class="laureate-number" aria-hidden="true">04</span>
+<div class="laureate-content"><p class="laureate-award">Лучший короткометражный документальный фильм</p>
+<h4 class="laureate-film">Три сестры</h4>
+<p class="laureate-meta">Россия</p></div>
+</li>
+<li class="results-laureate">
+<span class="laureate-number" aria-hidden="true">05</span>
+<div class="laureate-content"><p class="laureate-kind">Специальный приз фестиваля</p><p class="laureate-award">За оригинальность художественного замысла короткометражного игрового фильма</p>
+<h4 class="laureate-film">Ыби</h4><p class="laureate-original">Ybi</p>
+<p class="laureate-meta">Бразилия</p></div>
+</li>
+<li class="results-laureate">
+<span class="laureate-number" aria-hidden="true">06</span>
+<div class="laureate-content"><p class="laureate-kind">Специальный приз фестиваля</p><p class="laureate-award">За яркое осмысление исторических событий</p>
+<h4 class="laureate-film">Воин от Бога</h4><p class="laureate-original">«Бог войны» / Khodaye Jang</p>
+<p class="laureate-meta">Иран</p></div>
+</li>
+<li class="results-laureate">
+<span class="laureate-number" aria-hidden="true">07</span>
+<div class="laureate-content"><p class="laureate-kind">Специальный приз фестиваля</p><p class="laureate-award">Лучшая социальная драма</p>
+<h4 class="laureate-film">Тихий человек</h4><p class="laureate-original">Calm Man</p>
+<p class="laureate-meta">Иран</p></div>
+</li>
+<li class="results-laureate">
+<span class="laureate-number" aria-hidden="true">08</span>
+<div class="laureate-content"><p class="laureate-kind">Специальный приз фестиваля</p><p class="laureate-award">За внимательное отношение к памяти поколений</p>
+<h4 class="laureate-film">Ноль встречает Героя</h4><p class="laureate-original">Zero Meets Hero</p>
+<p class="laureate-meta">Вьетнам</p></div>
+</li>
+<li class="results-laureate">
+<span class="laureate-number" aria-hidden="true">09</span>
+<div class="laureate-content"><p class="laureate-kind">Специальный приз фестиваля</p><p class="laureate-award">За освещение роли науки в истории России</p>
+<h4 class="laureate-film">Искра</h4><p class="laureate-original">Iskra</p>
+<p class="laureate-meta">Россия</p><p class="laureate-credits">Режиссёр: Евгений Карелинов</p></div>
+</li>
+<li class="results-laureate">
+<span class="laureate-number" aria-hidden="true">10</span>
+<div class="laureate-content"><p class="laureate-kind">Специальный приз фестиваля</p><p class="laureate-award">За вклад в патриотическое воспитание подрастающего поколения</p>
+<h4 class="laureate-film">Семь вёрст до рассвета</h4><p class="laureate-original">Seven Verst to Dawn</p>
+<p class="laureate-meta">Россия</p><p class="laureate-credits">Режиссёр: Александр Андреев</p></div>
+</li>
+<li class="results-laureate">
+<span class="laureate-number" aria-hidden="true">11</span>
+<div class="laureate-content"><p class="laureate-kind">Специальный приз фестиваля</p><p class="laureate-award">За яркий дебют на фестивальном экране</p>
+<h4 class="laureate-film">Сохрани мою тень</h4><p class="laureate-original">Keep My Shadow</p>
+<p class="laureate-meta">Россия</p><p class="laureate-credits">Режиссёр: Игорь Журавлев</p></div>
+</li>
+<li class="results-laureate">
+<span class="laureate-number" aria-hidden="true">12</span>
+<div class="laureate-content"><p class="laureate-kind">Специальный приз фестиваля</p><p class="laureate-award">За создание яркого национального типажа и смелый поиск глубинных объединительных начал в культурах разных народов</p>
+<h4 class="laureate-film">Снежный цветок</h4><p class="laureate-original">Snow Flower</p>
+<p class="laureate-meta">Россия / Индия · совместное производство</p><div class="laureate-people"><p>Награждены актёры фильма:</p><p><strong>Чхая Кадам (Chhaya Kadam)</strong> — Нанда (Nanda)</p><p><strong>Ваибхав Мангале (Vaibhav Mangale)</strong> — Дигья (Digya)</p></div></div>
+</li>
+</ol>
+<div class="results-video-panel" aria-labelledby="results-video-title">
+<div><p class="results-kicker">Слово председателя жюри</p><h3 class="results-panel-title" id="results-video-title">Обращение по итогам фестиваля</h3><p class="results-body">Джайита Гош — председатель международного жюри кинофестиваля БРИКС+.</p></div>
+<video class="results-video-player" controls="" playsinline="" preload="none" poster="jury_jayita_ghosh_india.png" aria-label="Обращение Джайиты Гош по итогам фестиваля БРИКС+"><source src="jury_results_2026.mp4" type="video/mp4">Ваш браузер не поддерживает встроенное видео. <a href="jury_results_2026.mp4">Открыть видеозапись</a>.</video></div>
+<div class="results-media-panel" aria-labelledby="results-media-title">
+<a class="results-media-preview" href="https://vkvideo.ru/video-230907003_456239365" target="_blank" rel="noopener noreferrer"><img src="results_media.jpg" alt="Публикация «РОСМЕДИА новости» об итогах фестиваля: интервью Алексея Кравченко" width="1290" height="1670" loading="lazy" decoding="async"></a>
+<div><p class="results-kicker">Фестиваль в СМИ</p><h3 class="results-panel-title" id="results-media-title">Итоги БРИКС+ в репортаже «РОСМЕДИА»</h3><p class="results-media-source">РОСМЕДИА новости · ВК Видео</p><p class="results-body">Победители первого сезона, встреча в пресс-центре ТАСС и разговор о том, как кино объединяет культуры и кинематографистов разных стран, — в видеорепортаже «РОСМЕДИА новости».</p><a class="results-text-link" href="https://vkvideo.ru/video-230907003_456239365" target="_blank" rel="noopener noreferrer">Смотреть репортаж в ВК Видео<svg viewbox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 15 15 5M5 5h10v10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></a></div>
 </div>
 </div>
 </section>
@@ -1526,22 +1714,22 @@
 <div class="glass-block">
 <div class="news-grid">
 <article class="news-card">
-<div class="news-image-wrap"><img alt="Новость об итогах Международного кинофестиваля БРИКС+" src="news_assembly.png"/></div>
+<div class="news-image-wrap"><img alt="Новость об итогах Международного кинофестиваля БРИКС+" src="news_assembly.png"></div>
 <div class="news-tag">🌍 События</div>
-<div class="news-title">Итоги фестиваля объявят 6 ноября на пресс-конференции в ТАСС</div>
-<div class="news-text">Итоги Международного кинофестиваля стран БРИКС+ будут объявлены 6 ноября 2026 года на пресс-конференции в Информационном агентстве ТАСС.</div>
+<div class="news-title">Итоги первого кинофестиваля БРИКС+ объявлены в ТАСС</div>
+<div class="news-text">6 ноября 2026 года в пресс-центре ТАСС в Москве были объявлены лауреаты первого Международного кинофестиваля стран БРИКС+. Основные награды и специальные призы получили фильмы и актёры из стран-участниц. Полный список победителей опубликован в разделе «Итоги фестиваля».</div>
 </article>
 <article class="news-card">
-<div class="news-image-wrap"><img alt="Новые даты Международного кинофестиваля стран БРИКС+" src="news_dates.png"/></div>
+<div class="news-image-wrap"><img alt="Новые даты Международного кинофестиваля стран БРИКС+" src="news_dates.png"></div>
 <div class="news-tag">📅 Важно</div>
-<div class="news-title">Фестиваль пройдёт с 29 октября по 3 ноября</div>
-<div class="news-text">По просьбе иностранных членов жюри фестиваля мероприятия Международного кинофестиваля стран БРИКС+ и конкурсные просмотры состоятся с 29 октября по 3 ноября 2026 года.</div>
+<div class="news-title">Фестиваль прошёл в Москве и Санкт-Петербурге</div>
+<div class="news-text">С 29 октября по 3 ноября 2026 года Международный кинофестиваль стран БРИКС+ объединил показы фильмов в Москве и Санкт-Петербурге.</div>
 </article>
 <article class="news-card">
-<div class="news-image-wrap"><img alt="Завершён приём конкурсных заявок" src="news_submissions_closed.png"/></div>
-<div class="news-tag">🔥 Актуально</div>
-<div class="news-title">Завершён приём конкурсных заявок</div>
-<div class="news-text">В этом году на конкурс поступило 327 фильмов из 22 стран. Отбор фильмов завершён. Программа показов опубликована на сайте.</div>
+<div class="news-image-wrap"><img alt="Завершён приём конкурсных заявок" src="news_submissions_closed.png"></div>
+<div class="news-tag">Конкурс 2026</div>
+<div class="news-title">Конкурс первого сезона: 327 заявок из 22 стран</div>
+<div class="news-text">На конкурс первого сезона поступило 327 фильмов из 22 стран. Конкурсный отбор завершён, а имена лауреатов объявлены международным жюри.</div>
 </article>
 </div>
 </div>
@@ -1570,7 +1758,7 @@
 <div class="team-showcase jury-showcase">
 <div class="jury-premium-grid">
 <article class="jury-premium-card">
-<div class="jury-photo-wrap"><img alt="Антонио Миано" src="jury_antonio_miano_brazil.png"/></div>
+<div class="jury-photo-wrap"><img alt="Антонио Миано" src="jury_antonio_miano_brazil.png"></div>
 <div class="jury-country-badge">🇧🇷 Бразилия</div>
 <h3 class="jury-premium-name">Антонио Миано</h3>
 <div class="jury-premium-role">Актёр, режиссёр, куратор</div>
@@ -1578,7 +1766,7 @@
 <p class="jury-premium-bio">Бразильский актёр и режиссёр, работающий в кино, театре и перформансе. Автор короткометражных и документальных фильмов. Куратор кинопрограмм и проектов по развитию зрительской аудитории.</p>
 </article>
 <article class="jury-premium-card">
-<div class="jury-photo-wrap"><img alt="Паду Палмерио" src="jury_Padu Palmerio_Brazil.png"/></div>
+<div class="jury-photo-wrap"><img alt="Паду Палмерио" src="jury_Padu%20Palmerio_Brazil.png"></div>
 <div class="jury-country-badge">🇧🇷 БРАЗИЛИЯ</div>
 <h3 class="jury-premium-name">Паду Палмерио</h3>
 <div class="jury-premium-role">Режиссёр, кинооператор</div>
@@ -1586,7 +1774,7 @@
 <p class="jury-premium-bio">Бразильский режиссёр и кинооператор, работающий в игровом и документальном кино. Снимал проекты более чем в 40 странах мира и участвовал в международных кинопроектах Латинской Америки. Лауреат и номинант международных операторских премий, член жюри и наставник международных кинолабораторий.</p>
 </article>
 <article class="jury-premium-card">
-<div class="jury-photo-wrap"><img alt="Алехандро Гиль Альварес" src="jury_alejandro_gil_alvarez_cuba.png"/></div>
+<div class="jury-photo-wrap"><img alt="Алехандро Гиль Альварес" src="jury_alejandro_gil_alvarez_cuba.png"></div>
 <div class="jury-country-badge">🇨🇺 Куба</div>
 <h3 class="jury-premium-name">Алехандро Гиль Альварес</h3>
 <div class="jury-premium-role">Режиссёр, сценарист</div>
@@ -1594,7 +1782,7 @@
 <p class="jury-premium-bio">Кубинский режиссёр и сценарист, лауреат национальных культурных наград и международных кинофестивалей. Автор документальных и игровых фильмов, телевизионных проектов и музыкальных клипов. Член жюри крупнейших кинофестивалей Латинской Америки и Европы.</p>
 </article>
 <article class="jury-premium-card">
-<div class="jury-photo-wrap"><img alt="Бабак Хаджепаша" src="jury_iran_babak_khajehpasha_iran.png"/></div>
+<div class="jury-photo-wrap"><img alt="Бабак Хаджепаша" src="jury_iran_babak_khajehpasha_iran.png"></div>
 <div class="jury-country-badge">🇮🇷 Иран</div>
 <h3 class="jury-premium-name">Бабак Хаджепаша</h3>
 <div class="jury-premium-role">Режиссёр, сценарист</div>
@@ -1603,7 +1791,7 @@
 </p>
 </article>
 <article class="jury-premium-card">
-<div class="jury-photo-wrap"><img alt="Джайита Гош" src="jury_jayita_ghosh_india.png"/></div>
+<div class="jury-photo-wrap"><img alt="Джайита Гош" src="jury_jayita_ghosh_india.png"></div>
 <div class="jury-country-badge">🇮🇳 Индия</div>
 <h3 class="jury-premium-name">Джайита Гош</h3>
 <div class="jury-premium-role">Эксперт по международным культурным связям</div>
@@ -1611,7 +1799,7 @@
 <p class="jury-premium-bio">Индийский эксперт в сфере кино, международных коммуникаций и культурной дипломатии. Руководитель международных инициатив, направленных на развитие сотрудничества между творческими индустриями, бизнесом и государственными институтами. Активно содействует культурному обмену и продвижению международных кинопроектов.</p>
 </article>
 <article class="jury-premium-card">
-<div class="jury-photo-wrap"><img alt="Владимир Зинкевич" src="jury_vladimir_zinkevich_belarus.png"/></div>
+<div class="jury-photo-wrap"><img alt="Владимир Зинкевич" src="jury_vladimir_zinkevich_belarus.png"></div>
 <div class="jury-country-badge">🇧🇾 Белоруссия</div>
 <h3 class="jury-premium-name">Владимир Зинкевич</h3>
 <div class="jury-premium-role">Кинорежиссёр, сценарист</div>
@@ -1619,7 +1807,7 @@
 <p class="jury-premium-bio">Белорусский кинорежиссёр и сценарист, основатель кинокомпании «Авантдрайв». Автор популярных фильмов «Спайс Бойз» и «Добро пожаловать в семью». Обладатель награды «Лучший фильм» фестиваля онлайн-кинотеатров «Новый сезон» за лучший полнометражный фильм.</p>
 </article>
 <article class="jury-premium-card">
-<div class="jury-photo-wrap"><img alt="Иван Болотников" src="jury_ivan_bolotnikov_russia.png"/></div>
+<div class="jury-photo-wrap"><img alt="Иван Болотников" src="jury_ivan_bolotnikov_russia.png"></div>
 <div class="jury-country-badge">🇷🇺 Россия</div>
 <h3 class="jury-premium-name">Иван Болотников</h3>
 <div class="jury-premium-role">Кинорежиссёр, сценарист, продюсер</div>
@@ -1627,7 +1815,7 @@
 <p class="jury-premium-bio">Российский режиссёр, сценарист и продюсер, основатель кинокомпании «Студия „Автор“». Автор фильмов «Хармс», «Пальмира» и «Не хороните меня без Ивана». Обладатель двух «Золотых кубков» Шанхайского международного кинофестиваля, выпускник Высших курсов режиссёров и сценаристов, работал в творческой группе Алексея Германа над фильмом «Трудно быть богом».</p>
 </article>
 <article class="jury-premium-card">
-<div class="jury-photo-wrap"><img alt="Николай Изволов" src="jury_nikolai_izvolov_russia.png"/></div>
+<div class="jury-photo-wrap"><img alt="Николай Изволов" src="jury_nikolai_izvolov_russia.png"></div>
 <div class="jury-country-badge">🇷🇺 Россия</div>
 <h3 class="jury-premium-name">Николай Изволов</h3>
 <div class="jury-premium-role">Киновед, историк кино</div>
@@ -1635,20 +1823,12 @@
 <p class="jury-premium-bio">Кандидат искусствоведения, один из ведущих специалистов по истории раннего российского и советского кинематографа. Автор фундаментальных исследований и проектов по восстановлению утраченных фильмов Дзиги Вертова, Льва Кулешова и Александра Медведкина. Преподаёт во ВГИКе и на Высших курсах сценаристов и режиссёров.</p>
 </article>
 <article class="jury-premium-card">
-<div class="jury-photo-wrap"><img alt="Алексей Кравченко" src="jury_alexey_kravchenko_russia.png"/></div>
+<div class="jury-photo-wrap"><img alt="Алексей Кравченко" src="jury_alexey_kravchenko_russia.png"></div>
 <div class="jury-country-badge">🇷🇺 РОССИЯ</div>
 <h3 class="jury-premium-name">Алексей Кравченко</h3>
 <div class="jury-premium-role">Журналист-международник</div>
 <div class="team-divider"></div>
 <p class="jury-premium-bio">Журналист-международник, шеф-редактор Аналитического центра ТАСС. Специализируется на международной повестке, аналитике и освещении глобальных политических и общественных процессов.</p>
-</article>
-<article class="jury-premium-card">
-<div class="jury-photo-wrap"><img alt="Александра Очирова" src="jury_alexandra_ochirova_russia.png"/></div>
-<div class="jury-country-badge">🇷🇺 РОССИЯ</div>
-<h3 class="jury-premium-name">Александра Очирова</h3>
-<div class="jury-premium-role">Доктор философских наук, общественный деятель</div>
-<div class="team-divider"></div>
-<p class="jury-premium-bio">Доктор философских наук, действительный член Российской академии художеств. Посол доброй воли ЮНЕСКО, сопредседатель Генерального совета Ассамблеи народов мира. Сопрезидент Общероссийского общественного движения «За сбережение народа».</p>
 </article>
 </div>
 <div class="team-summary">
@@ -1690,9 +1870,7 @@
 </li>
 <li>
 <div class="reg-bullet">4</div>
-<div>
-      Победителям присуждаются Гран-при, специальные призы жюри и специальные награды фестиваля.
-    </div>
+<div>По итогам конкурсной программы вручены основные награды и специальные призы фестиваля.</div>
 </li>
 </ul>
 </div>
@@ -1706,102 +1884,15 @@
 <span class="value">Отбор фильмов завершён</span>
 </div>
 <div class="reg-pill">
-<span class="label">Отборочные результаты</span>
-<span class="value">Программа опубликована — <a href="#program">смотреть фильмы и расписание</a></span>
+<span class="label">Итоги фестиваля</span>
+<span class="value">Победители объявлены — <a href="#laureates">смотреть список лауреатов</a></span>
 </div>
 </div>
 </div>
 </div>
 </section>
-<section id="awards">
-<div class="premium-section-header">
-<div class="premium-section-kicker">Главная награда</div>
-<h2 class="premium-section-title">Гран-при</h2>
-<p class="premium-section-description">
-        Главная награда Международного кинофестиваля БРИКС+.<br/>
-        Гран-при и специальные призы вручаются по решению международного жюри.
-      </p>
-</div>
-<div class="awards-layout">
-<div class="award-image-wrap">
-<img alt="Статуэтка Гран-при фестиваля БРИКС+" src="brics_award.png"/>
-</div>
-<div class="award-description-card">
-<p class="award-description-text">
-          Статуэтка Гран-при фестиваля — символ движения культур БРИКС+, которые вращаются вокруг искусства кино и создают энергию новых историй.
-          <br/><br/>
-<span>Пламя внутри орбит</span> — метафора творца, чья работа становится центром мирового внимания.
-        </p>
-</div>
-</div>
-</section>
-<section id="program">
-<div class="premium-section-header">
-<div class="premium-section-kicker">29 октября – 3 ноября 2026</div>
-<h2 class="premium-section-title">Программа фестиваля</h2>
-<p class="premium-section-description">Программа фестивальных показов проходит в двух городах. 29 октября в Санкт-Петербурге состоялся показ неигрового кино. С 30 октября по 2 ноября показы проходят в Москве. 3 ноября конкурсные кинопоказы состоятся в Санкт-Петербурге.</p>
-</div>
-<div class="glass-block">
-<div class="program-schedule"><article class="schedule-card schedule-card--special">
-<div class="schedule-day">29 октября · 2026</div><h3>День неигрового кино</h3><div class="schedule-venue">Центральный музей почвоведения имени В. В. Докучаева · Санкт-Петербург, Биржевой проезд, д. 6</div>
-<div class="special-day-grid"><div class="special-day-intro"><p>Приглашаем на четыре документальных фильма о науке, изобретениях, людях и родных местах в рамках Международного кинофестиваля БРИКС+.</p><p><strong>29 октября, 16:15–18:45</strong></p><p>Вход бесплатный, необходима регистрация.<br/>Количество мест ограничено — 80 зрителей.</p><a class="registration-link" href="https://brics-film-festival-2026.timepad.ru/event/4227053/" target="_blank" rel="noopener noreferrer">Зарегистрироваться</a></div><div class="schedule-list">
-<div class="screening-row"><div class="screening-time">16:15</div><div class="screening-main"><div class="screening-title">«Искра»</div></div></div>
-<div class="screening-row"><div class="screening-time">16:42</div><div class="screening-main"><div class="screening-title">Встреча с режиссёром Евгением Карелиновым</div><div class="screening-meta">Рассказ о съёмках фильма и ответы на вопросы зрителей</div></div></div>
-<div class="screening-row"><div class="screening-time">17:17</div><div class="screening-main"><div class="screening-title">«Служба Солнца»</div></div></div>
-<div class="screening-row"><div class="screening-time">18:09</div><div class="screening-main"><div class="screening-title">«Сохрани мою тень»</div></div></div>
-<div class="screening-row"><div class="screening-time">18:22</div><div class="screening-main"><div class="screening-title">«Там, где текли молочные реки»</div></div></div>
-</div></div>
-</article>
-<article class="schedule-card">
-<div class="schedule-day">30 октября · 2026</div>
-<h3>Показы фильмов БРИКС+</h3>
-<div class="schedule-venue">Медиацентр БРИКС+. Большой зал · Библиотека иностранной литературы</div><div class="schedule-address">Москва, ул. Николоямская, д. 1</div>
-<div class="schedule-list">
-<div class="screening-row"><div class="screening-time">14:00–16:20</div><div class="screening-main"><div class="screening-entry"><div class="screening-title">Снежный цветок / Snow Flower</div><div class="screening-meta">Россия / Индия, 2024 · 12+</div><div class="screening-type">1 ч 52 мин</div><details class="film-about"><summary>О фильме</summary><p>Индийско-российский драматический фильм на языке маратхи. Фильм снят известным индийским режиссером Гаджендрой Ахире в тесном сотрудничестве с российскими кинематографистами. История строится на эмоциональном и культурном контрасте между тропическим индийским регионом Конкан и заснеженной Сибирью.</p></details></div></div></div>
-<div class="screening-row"><div class="screening-time">16:30–18:20</div><div class="screening-main"><div class="screening-entry"><div class="screening-title">Семь вёрст до рассвета</div><div class="screening-meta">Россия, 2026 · 18+</div><div class="screening-type">1 ч 42 мин</div><details class="film-about"><summary>О фильме</summary><p>Зима 1942 года, деревня Куракино . В суровых условиях оккупированной Псковской области, Матвей Кузьмин повторяет подвиг Ивана Сусанина и предотвращает диверсию в советском тылу. Получив приказ провести вражеский отряд в тыл прорвавшихся красноармейцев, Кузьмин подчиняется. Всю ночь старик водит немцев сквозь метель по бездорожью, но враги не подозревают, что он задумал.</p></details></div></div></div>
-</div>
-</article>
-<article class="schedule-card">
-<div class="schedule-day">31 октября · 2026</div>
-<h3>Показы фильмов БРИКС+</h3>
-<div class="schedule-venue">Медиацентр БРИКС+. Большой зал · Библиотека иностранной литературы</div><div class="schedule-address">Москва, ул. Николоямская, д. 1</div>
-<div class="schedule-list">
-<div class="screening-row"><div class="screening-time">12:30–14:40</div><div class="screening-main"><div class="screening-block-label">Короткометражная программа</div><div class="screening-entry"><div class="screening-title">Ыби / Ybi</div><div class="screening-meta">Бразилия, 2026 · 12+</div><div class="screening-type">15 мин</div><details class="film-about"><summary>О фильме</summary><p>Фильм, обращённый к культуре коренных народов Амазонии и экологической теме в художественной форме.</p></details></div><div class="screening-entry"><div class="screening-title">Там, где текли молочные реки</div><div class="screening-meta">Россия, 2025 · 12+</div><div class="screening-type">21 мин</div><details class="film-about"><summary>О фильме</summary><p>Рассказ о Бокситогорске, поколении заводских рабочих, упадке промышленности, отъезде молодёжи и жителях, сохранивших верность родному краю.</p></details></div><div class="screening-entry"><div class="screening-title">Хаппан Саангвала / Happan Saangwala</div><div class="screening-meta">Индия, 2024 · 12+</div><div class="screening-type">32 мин</div><details class="film-about"><summary>О фильме</summary><p>Фильм посвящён исчезающему народному искусству « сваанг » и судьбе мастера Хаппана Саанги . Его внук Битту помогает деду вернуться к творчеству и соединить традиционное представление с современными технологиями.</p></details></div><div class="screening-entry"><div class="screening-title">Прощай, Париж / Farewell Paris</div><div class="screening-meta">Иран, 2024 · 18+</div><div class="screening-type">19 мин</div><details class="film-about"><summary>О фильме</summary><p>Афшин , молодой человек с синдромом Дауна, должен уехать с отцом во Францию, но неожиданное событие не позволяет отцу взять его с собой.</p></details></div><div class="screening-entry"><div class="screening-title">Демонстратор</div><div class="screening-meta">Беларусь, 2024 · 12+</div><div class="screening-type">25 мин</div><details class="film-about"><summary>О фильме</summary><p>В начале XX века фотограф и предприниматель Рихард Штремер приезжает в Минск, чтобы открыть первый кинотеатр и снять первый фильм; исполнительницей главной роли может стать жена губернатора.</p></details></div><div class="screening-entry"><div class="screening-title">Холодная весна / Cold Spring</div><div class="screening-meta">Узбекистан, 2026 · 12+</div><div class="screening-type">12 мин</div><details class="film-about"><summary>О фильме</summary><p>Гадамали и его жена — единственные жители деревни, которые не уехали в город на зиму. Когда жена впадает в кому , Гадамали предстоит принять трудное решение.</p></details></div></div></div>
-<div class="screening-row"><div class="screening-time">14:50–16:40</div><div class="screening-main"><div class="screening-entry"><div class="screening-title">Погребальный костёр / PYRE</div><div class="screening-meta">Индия, 2024 · 12+</div><div class="screening-type">1 ч 51 мин</div><details class="film-about"><summary>О фильме</summary><p>В опустевшей гималайской деревне пожилые супруги живут вдали от цивилизации, переживая одиночество и ожидая возвращения пропавшего сына. Камерная история о любви, надежде, старении и исчезающем традиционном укладе сельской Индии.</p></details></div></div></div>
-<div class="screening-row"><div class="screening-time">16:50–18:30</div><div class="screening-main"><div class="screening-entry"><div class="screening-title">Тихий человек / Calm Man</div><div class="screening-meta">Иран, 2025 · реж. Behnoush Sadeghi · 12+</div><div class="screening-type">1 ч 39 мин</div><details class="film-about"><summary>О фильме</summary><p>Молодую афганскую мигрантку Нобахар вынуждают выйти замуж за пожилого Замана, но в итоге она решается самостоятельно распорядиться своей судьбой.</p></details></div></div></div>
-</div>
-</article>
-<article class="schedule-card">
-<div class="schedule-day">1 ноября · 2026</div>
-<h3>Показы фильмов БРИКС+</h3>
-<div class="schedule-venue">Медиацентр БРИКС+. Большой зал · Библиотека иностранной литературы</div><div class="schedule-address">Москва, ул. Николоямская, д. 1</div>
-<div class="schedule-list">
-<div class="screening-row"><div class="screening-time">12:00–14:00</div><div class="screening-main"><div class="screening-entry"><div class="screening-title">Ноль встречает героя / Nghỉ Hè Sợ Nghỉ Hưu</div><div class="screening-meta">Вьетнам, 2026 · 12+</div><div class="screening-type">1 ч 57 мин</div><details class="film-about"><summary>О фильме</summary><p>Дорожная история о ветеране и его внуке из поколения Z, которые разыскивают бывших товарищей; фильм о памяти и связи поколений.</p></details></div></div></div>
-<div class="screening-row"><div class="screening-time">14:30–16:15</div><div class="screening-main"><div class="screening-entry"><div class="screening-title">Хранитель поля / Guardian of the Field</div><div class="screening-meta">Иран, 2025 · 12+</div><div class="screening-type">1 ч 43 мин</div><details class="film-about"><summary>О фильме</summary><p>После исчезновения шестилетней Ясны спокойствие сельскохозяйственной деревни нарушается. Отставной эколог Ахмад Пиран возглавляет поиски и публикует видео, которое быстро становится популярным и привлекает множество добровольцев. Однако девочку спрятал в доме Ахмада его работник Айхан . В ходе поисков раскрываются тёмные тайны прошлого Ахмада, и ему приходится сделать трудный выбор.</p></details></div></div></div>
-<div class="screening-row"><div class="screening-time">16:30–18:30</div><div class="screening-main"><div class="screening-entry"><div class="screening-title">Левша</div><div class="screening-meta">Россия, 2026 · 12+</div><div class="screening-type">1 ч 57 мин</div><details class="film-about"><summary>О фильме</summary><p>Россия, конец XIX века. На фоне надвигающейся войны с Великобританией в императорском дворце находят загадочное устройство — механическую блоху. Расследовать происшествие поручают молодому офицеру Петру Огарёву, мечтающему заслужить доверие императора Александра III. В поисках истины он объединяется с Левшой — гениальным, но забытым мастером из Тулы. Вместе они погружаются в мир интриг и опасностей. Чтобы раскрыть заговор, им предстоит бросить вызов системе, разгадать семейные тайны и сделать трудный выбор между долгом и чувством. На кону — безопасность страны и их собственные судьбы.</p></details></div></div></div>
-</div>
-</article>
-<article class="schedule-card">
-<div class="schedule-day">2 ноября · 2026</div>
-<h3>Показы фильмов БРИКС+</h3>
-<div class="schedule-venue">Медиацентр БРИКС+. Большой зал · Библиотека иностранной литературы</div><div class="schedule-address">Москва, ул. Николоямская, д. 1</div>
-<div class="schedule-list">
-<div class="screening-row"><div class="screening-time">14:30–15:40</div><div class="screening-main"><div class="screening-entry"><div class="screening-title">Итакоатиарас / Itacoatiaras</div><div class="screening-meta">Бразилия, 2025 · 12+</div><div class="screening-type">1 ч 13 мин</div><details class="film-about"><summary>О фильме</summary><p>Документальное исследование «расписных камней», стёртой истории коренных народов Амазонии и Рио-де-Жанейро и связи этой памяти с климатическим кризисом.</p></details></div></div></div>
-<div class="screening-row"><div class="screening-time">15:40–17:00</div><div class="screening-main"><div class="screening-entry"><div class="screening-title">Михаин / Mijaín</div><div class="screening-meta">Куба, 2025 · 12+</div><div class="screening-type">1 ч 19 мин</div><details class="film-about"><summary>О фильме</summary><p>Документальный фильм о пути Михаина Лопеса к пятому олимпийскому золоту в Париже в 2024 году, его матери, тренере и родном городе Эррадура .</p></details></div></div></div>
-<div class="screening-row"><div class="screening-time">17:10–18:30</div><div class="screening-main"><div class="screening-block-label">Научно-популярная программа</div><div class="screening-entry"><div class="screening-title">Искра</div><div class="screening-meta">Россия, 2026 · 16+</div><div class="screening-type">27 мин</div><details class="film-about"><summary>О фильме</summary><p>Жизненный путь выдающегося русского изобретателя и инженера Павла Яблочкова, совершившего революцию в электротехнике.</p></details></div><div class="screening-entry"><div class="screening-title">Служба Солнца / The Sunkeepers</div><div class="screening-meta">Россия, 2026 · 12+</div><div class="screening-type">52 мин</div><details class="film-about"><summary>О фильме</summary><p>Масштабное исследование солнца: от истории советских наблюдений до строительства в Бурятии одного из крупнейших в мире гелиогеофизических комплексов.</p></details></div></div></div>
-</div>
-</article>
-<article class="schedule-card schedule-card--nov3"><div class="schedule-day">3 ноября · 2026</div><h3>Конкурсные кинопоказы</h3><div class="schedule-venue">Санкт-Петербург, Дунайский проспект, д. 7</div><div class="schedule-start">Начало в 10:00</div><ol class="nov3-film-grid">
-<li><span class="nov3-film-index" aria-hidden="true">01</span><div class="nov3-film-content"><div class="screening-title">Холодная зима / The Long Winter</div><div class="screening-meta">Иран · реж. Hassan Jafari</div><div class="screening-type">Неигровой полнометражный · 44 мин</div><details class="film-about"><summary>О фильме</summary><p>Гадамали и его жена — единственные жители деревни, которые не уехали на зиму в город и предпочли остаться дома. Когда жена впадает в кому, Гадамали оказывается перед трудным выбором.</p></details></div></li>
-<li><span class="nov3-film-index" aria-hidden="true">02</span><div class="nov3-film-content"><div class="screening-title">Тамерлан / Rise of the Conqueror</div><div class="screening-meta">Узбекистан / США / Казахстан · реж. Джейкоб Шварц</div><div class="screening-type">Игровой полнометражный · 1 ч 47 мин</div><details class="film-about"><summary>О фильме</summary><p>XIV век. Монгольская империя рушится, Великий Шёлковый путь погружается в хаос, некогда процветавшие города лежат в руинах. Закалённый в боях Тимур Барлас возвращается в родные края. Он не мечтает стать грозой городов и империй от Индии до Персии. Он борется за то, что дорого ему здесь и сейчас: честь семьи, любовь, будущее для своих детей и людей, которые видят в нём своего лидера.</p></details></div></li>
-<li><span class="nov3-film-index" aria-hidden="true">03</span><div class="nov3-film-content"><div class="screening-title">People’s Child</div><div class="screening-meta">Иран · реж. Mahmoud Karimi</div><div class="screening-type">Игровой полнометражный · 1 ч 57 мин 20 сек</div><details class="film-about"><summary>О фильме</summary><p>Подросток-сирота вынужден покинуть детский дом. Из своего личного дела он узнаёт, что семья потеряла его, и с надеждой отправляется на поиски родных. Он ещё не знает, что это путешествие станет для него путём взросления.</p></details></div></li>
-<li><span class="nov3-film-index" aria-hidden="true">04</span><div class="nov3-film-content"><div class="screening-title">Воин от Бога / Khodaye Jang</div><div class="screening-meta">Иран · реж. Hossein Darabi</div><div class="screening-type">Игровой полнометражный · 1 ч 53 мин</div><details class="film-about"><summary>О фильме</summary><p>Снятая на основании реальных событий, эта картина рассказывает, как Иран начинал свой собственный путь к ракетным технологиям. Остросюжетный фильм повествует о нелёгком пути «отца» ракетной программы Ирана, Хасана Техрани-Могаддама. Герой фильма, Ибрахим Шарики, собирает команду иранских специалистов, которым поручено в короткий срок остановить обстрелы иранских мирных городов и гибель мирного населения, воспользовавшись помощью ливийцев. «Воин от бога» дебютировал в 2025 году на международном кинофестивале «Фаджр» (Fajr), получив национальную премию «Хрустальный Симорг» (Crystal Simorgh).</p></details></div></li>
-<li><span class="nov3-film-index" aria-hidden="true">05</span><div class="nov3-film-content"><div class="screening-title">Тихий человек / Calm Man</div><div class="screening-meta">Иран · реж. Behnoush Sadeghi</div><div class="screening-type">Игровой полнометражный · 1 ч 39 мин</div><details class="film-about"><summary>О фильме</summary><p>Молодая афганская мигрантка Нобахар приезжает в Иран, где против своей воли становится женой пожилого мужчины по имени Заман. Брак, заключённый по необходимости и под принуждением, постепенно раскрывает непростое прошлое Замана — человека, который пытается исправить свои ошибки. Но Нобахар берёт судьбу в свои руки и впервые получает возможность выбирать.</p></details></div></li>
-<li><span class="nov3-film-index" aria-hidden="true">06</span><div class="nov3-film-content"><div class="screening-title">Волчья шерсть / Wolf’s Fur</div><div class="screening-meta">Иран · реж. Fereydoon Najafi</div><div class="screening-type">Игровой полнометражный · 1 ч 16 мин</div><details class="film-about"><summary>О фильме</summary><p>В отдалённой деревне мальчик по имени Ашу решается на смелый поступок: он отправляется с двухлетней Асмой в другую деревню, чтобы там её благословили и устроили праздник в её честь. По дороге происходит неожиданное событие, которое заставляет его выбирать между возвращением Асмы домой и собственными нуждами.</p></details></div></li>
-<li><span class="nov3-film-index" aria-hidden="true">07</span><div class="nov3-film-content"><div class="screening-title">Петербург Поднебесный</div><div class="screening-meta">Россия, Санкт-Петербург · реж. Андрей Егоров</div><div class="screening-type">Документальный фильм · 52 мин</div><details class="film-about"><summary>О фильме</summary><p>Документальный фильм повествует о взаимодействии наших стран — России и Китая — на примере Северной столицы, Санкт-Петербурга. На первый взгляд, россияне и китайцы — совершенно непохожие друг на друга народы. Нас разделяют тысячи километров и тысячелетия в истории наших цивилизаций. Но стоит лишь начать общаться, как выясняется, что у нас очень много общего во взглядах. Мы близки по духу и менталитету. И, конечно, это не случайно.</p><p>В нашем фильме мы совершим кинопутешествие по блистательному Петербургу. Очень молодой по китайским меркам город на Неве совершенно гениально впитал в себя всё лучшее в мировой культуре, искусстве, архитектуре и науке. И несмотря на то, что Петербург признан европейским городом, в нём можно найти черты и китайской культуры.</p><p>Мы увидим Санкт-Петербург глазами китайцев, живущих, работающих и учащихся в городе на Неве, и по-новому взглянем на наш город через их восприятие и отношение. Также мы встретимся и с петербуржцами, увлечёнными Китаем и китайской культурой. Через истории этих людей убедимся, что наши народы прочно связывают основанное на фундаменте истории стабильное настоящее и общий взгляд на совместное счастливое будущее.</p></details></div></li>
-</ol></article></div>
-</div>
-</section>
+
+
 <section id="team">
 <div class="premium-section-header">
 <div class="premium-section-kicker">Оргкомитет</div>
